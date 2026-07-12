@@ -393,3 +393,8 @@ body::after {
 
 
 }
+
+.profile-button {
+    background: red !important;
+    color: white !important;
+}
