@@ -2,17 +2,28 @@
     box-sizing: border-box;
 }
 
+
 body {
+
     margin: 0;
+
     height: 100vh;
+
     overflow: hidden;
+
     font-family: "Times New Roman", serif;
+
 }
 
 
+/* 背景 */
+
 .background {
+
     position: fixed;
+
     inset: 0;
+
     background:
     linear-gradient(
         135deg,
@@ -20,42 +31,71 @@ body {
         #f8eaff,
         #e8ddff
     );
+
     z-index: 0;
+
 }
 
 
+/* メイン */
+
 .top {
+
     position: relative;
+
     z-index: 1;
 
     height: 100vh;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
     text-align: center;
+
 }
 
 
+/* ロゴ */
+
 .logo {
+
     font-size: 70px;
+
     letter-spacing: 8px;
+
     color: #b49ad8;
 
+
     text-shadow:
+
     0 0 10px white,
+
     0 0 20px #d8baff;
 
 }
 
 
+/* サブタイトル */
+
 .subtitle {
+
     margin-top: 20px;
+
     font-size: 14px;
+
     letter-spacing: 5px;
+
     color: #777;
+
 }
 
+
+/* Enterボタン */
 
 .enter {
 
@@ -65,23 +105,33 @@ body {
 
     border-radius: 50px;
 
+
     text-decoration: none;
+
 
     color: white;
 
+
     background:
+
     linear-gradient(
+
         135deg,
+
         #d8c1ff,
+
         #b89ae8
+
     );
 
 
     box-shadow:
+
     0 10px 30px #cbb3ee;
 
 
     letter-spacing: 5px;
+
 
     transition: 0.3s;
 
@@ -94,6 +144,8 @@ body {
 
 }
 
+
+/* 装飾 */
 
 .decor {
 
@@ -123,72 +175,115 @@ body {
 
 }
 
+
+
+/* 光 */
+
 body::before {
 
     content: "";
 
     position: fixed;
 
+
     width: 300px;
+
     height: 300px;
 
-    background: radial-gradient(
+
+    background:
+
+    radial-gradient(
+
         circle,
+
         rgba(255,255,255,0.8),
+
         transparent 70%
+
     );
 
+
     top: 10%;
+
     left: 10%;
+
 
     animation: float 6s infinite alternate;
 
 }
 
 
+
+/* キラキラ */
+
 body::after {
 
     content: "✦ ･ﾟ ✧ ･ﾟ ✦";
 
+
     position: fixed;
 
+
     bottom: 15%;
+
     left: 50%;
+
 
     transform: translateX(-50%);
 
+
     color: rgba(255,255,255,0.8);
+
 
     font-size: 30px;
 
+
     letter-spacing: 20px;
+
 
     animation: sparkle 3s infinite;
 
 }
 
 
+
+/* アニメーション */
+
 @keyframes float {
 
+
     from {
+
         transform: translate(0,0);
+
     }
 
+
     to {
+
         transform: translate(30px,20px);
+
     }
 
 }
 
 
+
 @keyframes sparkle {
 
+
     0%,100% {
+
         opacity: 0.4;
+
     }
 
+
     50% {
+
         opacity: 1;
+
     }
 
 }
