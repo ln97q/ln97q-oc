@@ -816,12 +816,12 @@ Gothic Succubus Princess
 
 
 /* =====================
-毬専用 装飾追加
-Gothic Princess Decoration
+毬専用 装飾追加 修正版
+Gothic Succubus Princess
 ===================== */
 
 
-/* 左右レース装飾 */
+/* レース装飾 */
 
 .mari-page::before,
 .mari-page::after {
@@ -832,7 +832,7 @@ Gothic Princess Decoration
 
     top:0;
 
-    width:90px;
+    width:80px;
 
     height:100vh;
 
@@ -845,7 +845,7 @@ Gothic Princess Decoration
 
         45deg,
 
-        transparent 0px,
+        transparent,
 
         transparent 15px,
 
@@ -877,60 +877,27 @@ Gothic Princess Decoration
 
 
 
-/* カード演出 */
+
+/* カード浮遊 */
 
 .mari-card {
-
-    position:relative;
 
     transition:0.4s;
 
 }
 
 
-
 .mari-card:hover {
 
     transform:translateY(-8px);
 
-
-    box-shadow:
-
-    0 0 40px rgba(235,150,255,0.5),
-
-    inset 0 0 20px rgba(255,255,255,0.08);
-
-}
-
-
-
-
-/* 1枚目以外のカードに薔薇 */
-
-.mari-card:nth-child(3)::before {
-
-
-    content:"🥀";
-
-
-    position:absolute;
-
-
-    top:-25px;
-
-
-    right:25px;
-
-
-    font-size:35px;
-
 }
 
 
 
 
 
-/* 画像枠の宝石 */
+/* 画像の宝石 */
 
 .mari-image {
 
@@ -942,17 +909,16 @@ Gothic Princess Decoration
 
 .mari-image::after {
 
-
     content:"✦";
 
 
     position:absolute;
 
 
-    right:25px;
+    right:20px;
 
 
-    bottom:20px;
+    bottom:15px;
 
 
     color:#ffd9ff;
@@ -971,10 +937,33 @@ Gothic Princess Decoration
 
 
 
-/* 名前の発光 */
+/* STORYカードに薔薇 */
+
+.mari-card:nth-of-type(2)::after {
+
+    content:"🥀";
+
+
+    position:absolute;
+
+
+    top:-20px;
+
+
+    right:25px;
+
+
+    font-size:35px;
+
+}
+
+
+
+
+
+/* 名前発光 */
 
 .mari-page h1 {
-
 
     animation:mariGlow 3s infinite alternate;
 
@@ -998,9 +987,9 @@ Gothic Princess Decoration
 
         text-shadow:
 
-        0 0 30px #ffb5ff,
+        0 0 35px #ffb5ff,
 
-        0 0 50px #a84cff;
+        0 0 60px #a84cff;
 
     }
 
@@ -1010,20 +999,20 @@ Gothic Princess Decoration
 
 
 
-/* 背景の星 */
+/* 背景キラキラ */
 
 .mari-background::after {
 
 
     content:
 
-    "✦　･ﾟ　♡　･ﾟ　✦　♱　✦";
+    "✦　♡　♱　✦　🎀　✦　♱　♡";
 
 
     position:absolute;
 
 
-    bottom:12%;
+    bottom:10%;
 
 
     left:50%;
@@ -1032,14 +1021,12 @@ Gothic Princess Decoration
     transform:translateX(-50%);
 
 
-    color:
-
-    rgba(255,220,255,0.45);
+    color:rgba(255,220,255,0.5);
 
 
     font-size:30px;
 
 
-    letter-spacing:15px;
+    letter-spacing:10px;
 
 }
