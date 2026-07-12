@@ -17,7 +17,8 @@ body {
     position: fixed;
     inset: 0;
 
-    background: linear-gradient(
+    background:
+    linear-gradient(
         135deg,
         #ffffff,
         #f8eaff,
@@ -28,9 +29,11 @@ body {
 }
 
 
-/* トップ */
+
+/* トップページ */
 
 .top {
+
     position: relative;
     z-index: 1;
 
@@ -43,20 +46,28 @@ body {
     align-items: center;
 
     text-align: center;
+
 }
 
 
+
 .logo {
+
     font-size: 70px;
 
     letter-spacing: 8px;
 
     color: #b49ad8;
 
+
     text-shadow:
+
     0 0 10px white,
+
     0 0 20px #d8baff;
+
 }
+
 
 
 .subtitle {
@@ -72,6 +83,7 @@ body {
 }
 
 
+
 .enter {
 
     margin-top: 60px;
@@ -80,20 +92,29 @@ body {
 
     border-radius: 50px;
 
+
     text-decoration: none;
 
     color: white;
 
-    background: linear-gradient(
+
+    background:
+
+    linear-gradient(
+
         135deg,
+
         #d8c1ff,
+
         #b89ae8
+
     );
 
 }
 
 
-/* キャラクター */
+
+/* キャラクターページ */
 
 .characters {
 
@@ -108,6 +129,7 @@ body {
     text-align: center;
 
 }
+
 
 
 .characters h1 {
@@ -144,16 +166,35 @@ body {
 
     padding: 25px;
 
-    background: rgba(255,255,255,0.75);
+
+    background:
+
+    rgba(255,255,255,0.75);
+
 
     border: 2px solid #d8c1ff;
 
+
     border-radius: 25px;
 
+
     box-shadow:
+
     0 10px 30px rgba(180,154,216,0.4);
 
+
     backdrop-filter: blur(10px);
+
+
+    transition: 0.3s;
+
+}
+
+
+
+.character-card:hover {
+
+    transform: translateY(-10px);
 
 }
 
@@ -173,10 +214,16 @@ body {
     align-items: center;
 
 
-    background: linear-gradient(
+    background:
+
+    linear-gradient(
+
         135deg,
+
         #fdf8ff,
+
         #eee2ff
+
     );
 
 
@@ -189,6 +236,8 @@ body {
 
 
 .character-card h2 {
+
+    margin-top: 20px;
 
     color: #8f6fc0;
 
@@ -204,45 +253,62 @@ body {
 
     font-size: 13px;
 
+    letter-spacing: 2px;
+
 }
 
 
 
-/* ★ VIEW PROFILE ボタン ★ */
+/* VIEW PROFILE */
 
 a.profile-button {
 
     display: inline-block;
 
+
     margin-top: 20px;
 
+
     padding: 12px 35px;
+
 
     border-radius: 40px;
 
 
-    text-decoration: none !important;
+    text-decoration: none;
 
 
-    color: white !important;
+    color: white;
 
 
-    background: linear-gradient(
+    background:
+
+    linear-gradient(
+
         135deg,
+
         #e4cfff,
+
         #b58de8
-    ) !important;
+
+    );
 
 
     letter-spacing: 3px;
+
 
     font-size: 12px;
 
 
     box-shadow:
+
     0 8px 20px rgba(180,154,216,0.5);
 
+
+    transition: 0.3s;
+
 }
+
 
 
 a.profile-button:hover {
@@ -250,6 +316,7 @@ a.profile-button:hover {
     transform: scale(1.08);
 
 }
+
 
 
 /* 戻る */
@@ -260,9 +327,14 @@ a.profile-button:hover {
 
     margin-top: 50px;
 
+
     color: #a987d8;
 
+
     text-decoration: none;
+
+
+    letter-spacing: 5px;
 
 }
 
@@ -272,24 +344,31 @@ a.profile-button:hover {
 
 body::after {
 
-    content: "✦ ･ﾟ ✧ ･ﾟ ✦";
+    content:
+
+    "✦ ･ﾟ ✧ ･ﾟ ✦";
+
 
     position: fixed;
 
+
     bottom: 15%;
+
 
     left: 50%;
 
+
     transform: translateX(-50%);
 
-    color: rgba(255,255,255,0.8);
+
+    color:
+
+    rgba(255,255,255,0.8);
+
 
     font-size: 30px;
 
+
     letter-spacing: 20px;
 
-}
-
-a.profile-button {
-    background: purple !important;
 }
