@@ -20,11 +20,14 @@ body {
         #f8eaff,
         #e8ddff
     );
-    z-index: -1;
+    z-index: 0;
 }
 
 
 .top {
+    position: relative;
+    z-index: 1;
+
     height: 100vh;
     display: flex;
     flex-direction: column;
