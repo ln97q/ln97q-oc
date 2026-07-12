@@ -835,7 +835,6 @@ Gothic Princess Decoration
 
     height:100vh;
 
-
     opacity:0.25;
 
 
@@ -883,7 +882,7 @@ Gothic Princess Decoration
 
 /* バラの飾り */
 
-.mari-card:nth-of-type(2)::before {
+.mari-card:nth-child(3)::before {
 
 
     content:"🥀";
@@ -908,7 +907,7 @@ Gothic Princess Decoration
 
 
 
-/* カードを少し浮かせる */
+/* カード演出 */
 
 .mari-card {
 
@@ -941,7 +940,19 @@ Gothic Princess Decoration
 
 
 
-/* 宝石っぽい光 */
+
+/* 宝石の光 */
+
+.mari-image {
+
+
+    position:relative;
+
+
+}
+
+
+
 
 .mari-image::after {
 
@@ -966,6 +977,7 @@ Gothic Princess Decoration
 
     text-shadow:
 
+
     0 0 15px white;
 
 
@@ -975,7 +987,8 @@ Gothic Princess Decoration
 
 
 
-/* ふわっと光る名前 */
+
+/* 名前の発光 */
 
 .mari-page h1 {
 
@@ -994,11 +1007,15 @@ Gothic Princess Decoration
 
     from {
 
+
         text-shadow:
+
 
         0 0 10px #d77aff;
 
+
     }
+
 
 
     to {
@@ -1006,9 +1023,11 @@ Gothic Princess Decoration
 
         text-shadow:
 
+
         0 0 30px #ffb5ff,
 
         0 0 50px #a84cff;
+
 
     }
 
@@ -1020,7 +1039,8 @@ Gothic Princess Decoration
 
 
 
-/* 背景の小さな星 */
+
+/* 背景の星 */
 
 .mari-background::after {
 
@@ -1042,7 +1062,11 @@ Gothic Princess Decoration
     transform:translateX(-50%);
 
 
-    color:rgba(255,220,255,0.45);
+
+    color:
+
+    rgba(255,220,255,0.45);
+
 
 
     font-size:30px;
