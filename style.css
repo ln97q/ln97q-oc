@@ -37,7 +37,6 @@ body {
 }
 
 
-
 /* トップページ */
 
 .top {
@@ -59,7 +58,6 @@ body {
     text-align: center;
 
 }
-
 
 
 .logo {
@@ -103,7 +101,9 @@ body {
 
     border-radius: 50px;
 
+
     text-decoration: none;
+
 
     color: white;
 
@@ -132,39 +132,7 @@ body {
 
 
 
-.decor {
-
-    position: absolute;
-
-    color: white;
-
-    font-size: 50px;
-
-}
-
-
-
-.ribbon {
-
-    top: 20%;
-
-    left: 20%;
-
-}
-
-
-
-.wing {
-
-    bottom: 20%;
-
-    right: 20%;
-
-}
-
-
-
-/* キャラクターページ */
+/* キャラクター一覧 */
 
 .characters {
 
@@ -317,15 +285,79 @@ body {
 
 
 
+/* VIEW PROFILE ボタン */
+
+.profile-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+
+    padding: 12px 30px;
+
+
+    border-radius: 30px;
+
+
+    text-decoration: none;
+
+
+    color: white;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #d8c1ff,
+
+        #b89ae8
+
+    );
+
+
+    letter-spacing: 3px;
+
+
+    font-size: 12px;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(180,154,216,0.4);
+
+
+    transition: 0.3s;
+
+}
+
+
+
+.profile-button:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+
+/* 戻る */
+
 .back {
 
     display: inline-block;
 
     margin-top: 50px;
 
+
     color: #a987d8;
 
+
     text-decoration: none;
+
 
     letter-spacing: 5px;
 
@@ -333,39 +365,7 @@ body {
 
 
 
-/* キラキラ演出 */
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    width: 300px;
-
-    height: 300px;
-
-
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        rgba(255,255,255,0.8),
-
-        transparent 70%
-
-    );
-
-
-    top: 10%;
-
-    left: 10%;
-
-}
-
-
+/* キラキラ */
 
 body::after {
 
@@ -373,6 +373,7 @@ body::after {
 
 
     position: fixed;
+
 
     bottom: 15%;
 
@@ -387,6 +388,8 @@ body::after {
 
     font-size: 30px;
 
+
     letter-spacing: 20px;
+
 
 }
