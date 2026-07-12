@@ -287,3 +287,164 @@ body::after {
     }
 
 }
+
+.characters {
+
+    position: relative;
+
+    z-index: 1;
+
+    min-height: 100vh;
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+}
+
+
+
+.characters h1 {
+
+    color: #b49ad8;
+
+    font-size: 45px;
+
+    letter-spacing: 8px;
+
+    text-shadow:
+
+    0 0 10px white,
+
+    0 0 20px #d8baff;
+
+}
+
+
+
+.card-area {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+
+}
+
+
+
+.character-card {
+
+    width: 260px;
+
+    padding: 25px;
+
+    background:
+
+    rgba(255,255,255,0.7);
+
+
+    border: 2px solid #d8c1ff;
+
+    border-radius: 25px;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(180,154,216,0.4);
+
+
+    backdrop-filter: blur(10px);
+
+
+    transition: 0.3s;
+
+}
+
+
+
+.character-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+.character-image {
+
+    height: 220px;
+
+    border-radius: 20px;
+
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #fdf8ff,
+
+    #eee2ff
+
+    );
+
+
+    color: #c5a9e8;
+
+    font-size: 50px;
+
+}
+
+
+
+.character-card h2 {
+
+    margin-top: 20px;
+
+    color: #8f6fc0;
+
+    letter-spacing: 5px;
+
+}
+
+
+
+.character-card p {
+
+    color: #777;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.back {
+
+    display: inline-block;
+
+    margin-top: 50px;
+
+    color: #a987d8;
+
+    text-decoration: none;
+
+    letter-spacing: 5px;
+
+}
