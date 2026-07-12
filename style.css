@@ -607,13 +607,13 @@ Gothic Succubus Princess
 
 .mari-card {
 
-    width:650px;
+    width:480px;
 
     max-width:90%;
 
-    margin:40px auto;
+    margin:35px auto;
 
-    padding:45px;
+    padding:35px;
 
 
     background:
@@ -702,7 +702,7 @@ Gothic Succubus Princess
 
 .mari-image {
 
-    height:330px;
+    height:300px;
 
     border-radius:25px;
 
@@ -742,7 +742,7 @@ Gothic Succubus Princess
 
     max-width:90%;
 
-    max-height:310px;
+    max-height:280px;
 
     object-fit:contain;
 
@@ -778,11 +778,18 @@ Gothic Succubus Princess
 
 .mari-card h2 {
 
-    font-size:36px;
+    font-size:32px;
 
-    margin-bottom:30px;
+    margin-bottom:25px;
+
+    text-align:center;
+
+    color:#f1b9ff;
+
+    letter-spacing:8px;
 
 }
+
 
 
 /* 本文 */
@@ -791,11 +798,11 @@ Gothic Succubus Princess
 
     color:#f8eaff;
 
-    font-size:20px;
+    font-size:18px;
 
-    line-height:2.3;
+    line-height:2.2;
 
-    letter-spacing:3px;
+    letter-spacing:2px;
 
     text-align:left;
 
