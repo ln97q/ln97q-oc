@@ -586,17 +586,17 @@ Gothic Succubus Princess
 
 .mari-card {
 
-
-    width:700px;
-
+    width:650px;
 
     max-width:90%;
 
-
-    margin:35px auto;
-
+    margin:40px auto;
 
     padding:45px;
+
+    border-radius:35px;
+
+}
 
 
 
