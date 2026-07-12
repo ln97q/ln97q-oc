@@ -814,13 +814,14 @@ Gothic Succubus Princess
 
 }
 
+
 /* =====================
 毬専用 装飾追加
 Gothic Princess Decoration
 ===================== */
 
 
-/* 左右のレース風装飾 */
+/* 左右レース装飾 */
 
 .mari-page::before,
 .mari-page::after {
@@ -860,13 +861,11 @@ Gothic Princess Decoration
 }
 
 
-
 .mari-page::before {
 
     left:0;
 
 }
-
 
 
 .mari-page::after {
@@ -878,9 +877,35 @@ Gothic Princess Decoration
 
 
 
+/* カード演出 */
+
+.mari-card {
+
+    position:relative;
+
+    transition:0.4s;
+
+}
 
 
-/* バラの飾り */
+
+.mari-card:hover {
+
+    transform:translateY(-8px);
+
+
+    box-shadow:
+
+    0 0 40px rgba(235,150,255,0.5),
+
+    inset 0 0 20px rgba(255,255,255,0.08);
+
+}
+
+
+
+
+/* 1枚目以外のカードに薔薇 */
 
 .mari-card:nth-child(3)::before {
 
@@ -899,58 +924,19 @@ Gothic Princess Decoration
 
     font-size:35px;
 
-
 }
 
 
 
 
 
-
-/* カード演出 */
-
-.mari-card {
-
-
-    transition:0.4s;
-
-
-}
-
-
-
-.mari-card:hover {
-
-
-    transform:translateY(-8px);
-
-
-    box-shadow:
-
-
-    0 0 40px rgba(235,150,255,0.5),
-
-    inset 0 0 20px rgba(255,255,255,0.08);
-
-
-}
-
-
-
-
-
-
-
-/* 宝石の光 */
+/* 画像枠の宝石 */
 
 .mari-image {
 
-
     position:relative;
 
-
 }
-
 
 
 
@@ -963,26 +949,23 @@ Gothic Princess Decoration
     position:absolute;
 
 
-    color:#ffd9ff;
-
-
-    font-size:35px;
-
-
     right:25px;
 
 
     bottom:20px;
 
 
-    text-shadow:
+    color:#ffd9ff;
 
+
+    font-size:35px;
+
+
+    text-shadow:
 
     0 0 15px white;
 
-
 }
-
 
 
 
@@ -993,10 +976,7 @@ Gothic Princess Decoration
 .mari-page h1 {
 
 
-    animation:
-
-    mariGlow 3s infinite alternate;
-
+    animation:mariGlow 3s infinite alternate;
 
 }
 
@@ -1007,34 +987,24 @@ Gothic Princess Decoration
 
     from {
 
-
         text-shadow:
 
-
         0 0 10px #d77aff;
-
 
     }
 
 
-
     to {
 
-
         text-shadow:
-
 
         0 0 30px #ffb5ff,
 
         0 0 50px #a84cff;
 
-
     }
 
-
 }
-
-
 
 
 
@@ -1062,17 +1032,14 @@ Gothic Princess Decoration
     transform:translateX(-50%);
 
 
-
     color:
 
     rgba(255,220,255,0.45);
-
 
 
     font-size:30px;
 
 
     letter-spacing:15px;
-
 
 }
