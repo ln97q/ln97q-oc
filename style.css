@@ -119,6 +119,7 @@ body {
     right: 20%;
 
 }
+
 body::before {
 
     content: "";
