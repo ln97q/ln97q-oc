@@ -16,6 +16,8 @@ body {
 }
 
 
+/* 背景 */
+
 .background {
 
     position: fixed;
@@ -23,6 +25,7 @@ body {
     inset: 0;
 
     background:
+
     linear-gradient(
         135deg,
         #ffffff,
@@ -36,13 +39,13 @@ body {
 
 
 
-/* 共通 */
+/* 全体 */
 
 .characters {
 
     position: relative;
 
-    z-index: 2;
+    z-index: 1;
 
     min-height: 100vh;
 
@@ -66,81 +69,6 @@ body {
 
 
 
-/* 一覧ページ */
-
-.card-area {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    flex-wrap: wrap;
-
-    margin-top: 50px;
-
-}
-
-
-.character-card {
-
-    width: 260px;
-
-    padding: 25px;
-
-    background: rgba(255,255,255,0.75);
-
-    border: 2px solid #d8c1ff;
-
-    border-radius: 25px;
-
-    box-shadow:
-
-    0 10px 30px rgba(180,154,216,0.4);
-
-}
-
-
-
-.character-image {
-
-    height: 220px;
-
-    border-radius: 20px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    overflow: hidden;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #fdf8ff,
-        #eee2ff
-    );
-
-}
-
-
-
-.character-image img {
-
-    max-width: 100%;
-
-    max-height: 100%;
-
-    object-fit: contain;
-
-}
-
-
-
 /* プロフィールページ */
 
 .profile-page {
@@ -155,35 +83,46 @@ body {
 
 
 
+/* カード */
+
 .profile-card {
 
-    width: 500px;
+    width: 420px;
 
     max-width: 90%;
 
     padding: 30px;
 
-    margin: 30px auto;
+    margin: 25px auto;
 
-    background: rgba(255,255,255,0.8);
+
+    background:
+
+    rgba(255,255,255,0.85);
+
 
     border: 2px solid #d8c1ff;
 
-    border-radius: 30px;
+
+    border-radius: 25px;
+
 
     box-shadow:
 
-    0 10px 30px rgba(180,154,216,0.4);
+    0 10px 30px rgba(180,154,216,0.35);
 
 }
 
 
 
+/* 画像枠 */
+
 .profile-image {
 
     width: 100%;
 
-    height: 300px;
+    height: 280px;
+
 
     display: flex;
 
@@ -191,9 +130,12 @@ body {
 
     align-items: center;
 
+
     overflow: hidden;
 
-    border-radius: 25px;
+
+    border-radius: 20px;
+
 
     background:
 
@@ -207,11 +149,13 @@ body {
 
 
 
+/* 立ち絵 */
+
 .profile-image img {
 
-    max-width: 100%;
+    max-width: 85%;
 
-    max-height: 100%;
+    max-height: 260px;
 
     object-fit: contain;
 
@@ -219,7 +163,11 @@ body {
 
 
 
+/* 文字 */
+
 .profile-card h2 {
+
+    margin-top: 25px;
 
     color: #8f6fc0;
 
@@ -249,7 +197,7 @@ body {
 
     display: inline-block;
 
-    margin-top: 50px;
+    margin-top: 40px;
 
     color: #a987d8;
 
