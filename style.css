@@ -206,3 +206,18 @@ body {
     letter-spacing: 5px;
 
 }
+
+/* プロフィール本文 左寄せ */
+
+.profile-card {
+
+    text-align: left;
+
+}
+
+
+.profile-card h2 {
+
+    text-align: center;
+
+}
