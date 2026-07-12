@@ -778,11 +778,14 @@ Gothic Succubus Princess
 
 .mari-card h2 {
 
+    font-size:28px;
+
     text-align:center;
 
     color:#f1b9ff;
 
     letter-spacing:8px;
+
 
     text-shadow:
 
@@ -798,9 +801,11 @@ Gothic Succubus Princess
 
     color:#f5e7fa;
 
-    line-height:2.2;
+    font-size:17px;
 
-    letter-spacing:1px;
+    line-height:2.5;
+
+    letter-spacing:2px;
 
 }
 
@@ -810,7 +815,7 @@ Gothic Succubus Princess
 
 .mari-card:nth-of-type(2)::before {
 
-    content:"🥀";
+    content:"♥";
 
     position:absolute;
 
