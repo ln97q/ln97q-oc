@@ -289,3 +289,7 @@ body::after {
     letter-spacing: 20px;
 
 }
+
+a.profile-button {
+    background: purple !important;
+}
