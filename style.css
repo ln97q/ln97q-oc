@@ -410,420 +410,107 @@ Gothic Succubus Princess
 ===================== */
 
 
+/* 背景 */
+
 .mari-body {
 
-    background:#08050c;
+    background:#07040b;
 
 }
-
-
 
 
 
 .mari-background {
 
-
     position:fixed;
-
 
     inset:0;
 
-
     background:
 
     radial-gradient(
-        circle at 50% 0%,
-        #6b327d,
-        #120818 45%,
+        circle at top,
+        #71358a,
+        #180b22 45%,
         #050308 100%
     );
 
-
     z-index:0;
-
 
 }
 
 
-
-/* 背景装飾 */
 
 .mari-background::before {
 
-
-    content:"♡  ✦  🎀  ♱  ✦  🐑  ✦  ♱  🎀  ♡";
-
+    content:"♡　🎀　♱　✦　🐑　✦　♱　🎀　♡";
 
     position:absolute;
 
-
-    top:12%;
-
+    top:10%;
 
     left:50%;
 
-
     transform:translateX(-50%);
 
+    color:rgba(255,210,255,0.35);
 
-    color:rgba(245,190,255,0.35);
+    font-size:32px;
 
-
-    font-size:35px;
-
-
-    letter-spacing:15px;
-
+    letter-spacing:12px;
 
     white-space:nowrap;
 
+}
+
+
+
+.mari-background::after {
+
+    content:"✦　♡　♱　🎀　✦　♱　♡";
+
+    position:absolute;
+
+    bottom:10%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:rgba(255,220,255,0.4);
+
+    font-size:28px;
+
+    letter-spacing:15px;
 
 }
 
 
 
+/* ページ */
 
 .mari-page {
 
-
     position:relative;
-
 
     z-index:1;
 
-
     min-height:100vh;
-
 
     padding:60px 20px;
 
-
     text-align:center;
-
 
     color:#fff0ff;
 
-
 }
 
 
 
-
-
-/* 名前 */
-
-.mari-page h1 {
-
-
-    font-size:60px;
-
-
-    letter-spacing:15px;
-
-
-    color:#f4d0ff;
-
-
-    text-shadow:
-
-
-    0 0 10px #d77aff,
-
-    0 0 30px #8c3db3;
-
-
-}
-
-
-
-
-.subtitle-mari {
-
-
-    margin-top:-20px;
-
-
-    letter-spacing:10px;
-
-
-    color:#dca8ff;
-
-
-}
-
-
-
-
-
-/* 上の飾り */
-
-.mari-decor {
-
-
-    font-size:30px;
-
-
-    letter-spacing:15px;
-
-
-    color:#ffd1fa;
-
-
-    text-shadow:
-
-    0 0 15px #e98cff;
-
-
-}
-
-
-
-
-
-
-
-/* カード */
-
-.mari-card {
-
-    width:650px;
-
-    max-width:90%;
-
-    margin:40px auto;
-
-    padding:45px;
-
-    border-radius:35px;
-
-}
-
-
-
-    background:
-
-
-    linear-gradient(
-
-        135deg,
-
-        rgba(35,15,45,0.95),
-
-        rgba(10,5,15,0.95)
-
-    );
-
-
-
-    border:
-
-
-    2px solid #d9b36c;
-
-
-
-    border-radius:35px;
-
-
-
-    box-shadow:
-
-
-    0 0 25px rgba(230,150,255,0.3),
-
-    inset 0 0 20px rgba(255,220,255,0.05);
-
-
-
-    position:relative;
-
-
-}
-
-
-
-
-
-/* カード四隅リボン風 */
-
-.mari-card::before {
-
-
-    content:"♡";
-
-
-    position:absolute;
-
-
-    top:12px;
-
-
-    left:18px;
-
-
-    color:#ffb9ee;
-
-
-    font-size:20px;
-
-
-}
-
-
-.mari-card::after {
-
-
-    content:"🎀";
-
-
-    position:absolute;
-
-
-    bottom:10px;
-
-
-    right:18px;
-
-
-    font-size:18px;
-
-
-}
-
-
-
-
-
-
-
-/* 画像 */
-
-.mari-image {
-
-
-    height:330px;
-
-
-    border-radius:25px;
-
-
-    background:
-
-
-    radial-gradient(
-
-        circle,
-
-        #51245f,
-
-        #120818
-
-    );
-
-
-    border:
-
-    1px solid #d9b36c;
-
-
-}
-
-
-
-
-.mari-image img {
-
-
-    max-height:310px;
-
-
-    max-width:90%;
-
-
-    object-fit:contain;
-
-
-}
-
-
-
-
-
-
-
-.mari-card h2 {
-
-
-    text-align:center;
-
-
-    color:#f1b9ff;
-
-
-    letter-spacing:8px;
-
-
-    text-shadow:
-
-
-    0 0 10px #b65cff;
-
-
-}
-
-
-
-
-.mari-card p {
-
-
-    color:#f0e2f5;
-
-
-    line-height:2.2;
-
-
-    letter-spacing:1px;
-
-
-}
-
-
-
-
-
-/* 戻る */
-
-.mari-back {
-
-
-    display:inline-block;
-
-
-    margin-top:60px;
-
-
-    color:#f0b8ff;
-
-
-    text-decoration:none;
-
-
-    letter-spacing:8px;
-
-
-}
-
-
-/* =====================
-毬専用 装飾追加 修正版
-Gothic Succubus Princess
-===================== */
-
-
-/* レース装飾 */
+/* 横のレース */
 
 .mari-page::before,
+
 .mari-page::after {
 
     content:"";
@@ -832,12 +519,11 @@ Gothic Succubus Princess
 
     top:0;
 
-    width:80px;
+    width:70px;
 
     height:100vh;
 
     opacity:0.25;
-
 
     background:
 
@@ -849,14 +535,13 @@ Gothic Succubus Princess
 
         transparent 15px,
 
-        #e9b7ff 16px,
+        #e8b5ff 16px,
 
         transparent 18px
 
     );
 
-
-    z-index:0;
+    z-index:-1;
 
 }
 
@@ -876,30 +561,176 @@ Gothic Succubus Princess
 
 
 
+/* 飾り */
+
+.mari-decor {
+
+    font-size:30px;
+
+    letter-spacing:12px;
+
+    color:#ffd5f7;
+
+}
 
 
-/* カード浮遊 */
+
+/* 名前 */
+
+.mari-page h1 {
+
+    font-size:60px;
+
+    letter-spacing:15px;
+
+    color:#f5d8ff;
+
+    animation:mariGlow 3s infinite alternate;
+
+}
+
+
+
+.subtitle-mari {
+
+    margin-top:-20px;
+
+    letter-spacing:10px;
+
+    color:#ddaaff;
+
+}
+
+
+
+/* カード */
 
 .mari-card {
+
+    width:650px;
+
+    max-width:90%;
+
+    margin:40px auto;
+
+    padding:45px;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(45,20,60,0.95),
+
+        rgba(10,5,15,0.95)
+
+    );
+
+
+    border:2px solid #d9b36c;
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+    0 0 25px rgba(220,150,255,0.35),
+
+    inset 0 0 25px rgba(255,220,255,0.05);
+
+
+    position:relative;
 
     transition:0.4s;
 
 }
 
 
+
 .mari-card:hover {
 
     transform:translateY(-8px);
+
+
+    box-shadow:
+
+    0 0 45px rgba(240,150,255,0.55);
 
 }
 
 
 
+/* ハートとリボン */
+
+.mari-card::before {
+
+    content:"♡";
+
+    position:absolute;
+
+    top:15px;
+
+    left:20px;
+
+    color:#ffb8ed;
+
+    font-size:22px;
+
+}
 
 
-/* 画像の宝石 */
+
+.mari-card::after {
+
+    content:"🎀";
+
+    position:absolute;
+
+    bottom:12px;
+
+    right:20px;
+
+    font-size:20px;
+
+}
+
+
+
+/* 画像枠 */
 
 .mari-image {
+
+    height:330px;
+
+    border-radius:25px;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        #622878,
+
+        #130818
+
+    );
+
+
+    border:1px solid #d9b36c;
 
     position:relative;
 
@@ -907,25 +738,33 @@ Gothic Succubus Princess
 
 
 
+.mari-image img {
+
+    max-width:90%;
+
+    max-height:310px;
+
+    object-fit:contain;
+
+}
+
+
+
+/* 宝石 */
+
 .mari-image::after {
 
     content:"✦";
 
-
     position:absolute;
-
 
     right:20px;
 
-
     bottom:15px;
 
-
-    color:#ffd9ff;
-
+    color:#ffe0ff;
 
     font-size:35px;
-
 
     text-shadow:
 
@@ -935,23 +774,51 @@ Gothic Succubus Princess
 
 
 
+/* 見出し */
+
+.mari-card h2 {
+
+    text-align:center;
+
+    color:#f1b9ff;
+
+    letter-spacing:8px;
+
+    text-shadow:
+
+    0 0 15px #b65cff;
+
+}
 
 
-/* STORYカードに薔薇 */
 
-.mari-card:nth-of-type(2)::after {
+/* 本文 */
+
+.mari-card p {
+
+    color:#f5e7fa;
+
+    line-height:2.2;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* STORY装飾 */
+
+.mari-card:nth-of-type(2)::before {
 
     content:"🥀";
 
-
     position:absolute;
-
 
     top:-20px;
 
+    left:auto;
 
     right:25px;
-
 
     font-size:35px;
 
@@ -959,20 +826,27 @@ Gothic Succubus Princess
 
 
 
+/* 戻る */
 
+.mari-back {
 
-/* 名前発光 */
+    display:inline-block;
 
-.mari-page h1 {
+    margin-top:60px;
 
-    animation:mariGlow 3s infinite alternate;
+    color:#f0b8ff;
+
+    text-decoration:none;
+
+    letter-spacing:8px;
 
 }
 
 
 
-@keyframes mariGlow {
+/* 光 */
 
+@keyframes mariGlow {
 
     from {
 
@@ -993,44 +867,4 @@ Gothic Succubus Princess
 
     }
 
-}
-
-
-
-
-
-/* 背景キラキラ */
-
-.mari-background::after {
-
-
-    content:
-
-    "✦　♡　♱　✦　🎀　✦　♱　♡";
-
-
-    position:absolute;
-
-
-    bottom:10%;
-
-
-    left:50%;
-
-
-    transform:translateX(-50%);
-
-
-    color:rgba(255,220,255,0.5);
-
-
-    font-size:30px;
-
-
-    letter-spacing:10px;
-
-}
-
-.mari-card {
-    width: 700px !important;
 }
