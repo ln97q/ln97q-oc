@@ -496,3 +496,50 @@ CHARACTERS
     object-fit:contain !important;
 
 }
+
+/* =====================
+   CHARACTER IMAGE OVERFLOW FIX
+===================== */
+
+
+.card-area .character-card {
+
+    overflow:hidden !important;
+
+}
+
+
+
+.card-area .character-image {
+
+    width:100% !important;
+
+    height:220px !important;
+
+    overflow:hidden !important;
+
+    display:flex !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+}
+
+
+
+.card-area .character-image img {
+
+    display:block !important;
+
+    max-width:90% !important;
+
+    max-height:200px !important;
+
+    width:auto !important;
+
+    height:auto !important;
+
+    object-fit:contain !important;
+
+}
