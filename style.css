@@ -399,3 +399,35 @@ CHARACTERS
 
 
 }
+
+
+/* =====================
+   Character画像調整
+===================== */
+
+.character-image {
+
+    width:100%;
+
+    height:250px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+.character-image img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
