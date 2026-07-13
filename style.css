@@ -1651,3 +1651,255 @@ CONTRACT MARK
 
 
 }
+
+
+/* =========================
+   花乃院 栞 DIARY
+   Broken Love Record
+========================= */
+
+
+.shiori-diary-body {
+
+    margin:0;
+
+    min-height:100vh;
+
+    font-family:
+    "Times New Roman",
+    serif;
+
+    color:#111;
+
+}
+
+
+
+
+.shiori-diary-background {
+
+    position:fixed;
+
+    inset:0;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #e5e5e5
+    );
+
+
+    z-index:-1;
+
+}
+
+
+
+
+.shiori-diary-page {
+
+
+    width:90%;
+
+    max-width:700px;
+
+
+    margin:80px auto;
+
+
+}
+
+
+
+
+
+.shiori-diary-card {
+
+
+    background:#fff;
+
+
+    padding:55px 45px;
+
+
+    border:
+
+    1px solid #111;
+
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,0.35);
+
+
+}
+
+
+
+
+
+.shiori-diary-card h1 {
+
+
+    text-align:center;
+
+
+    font-size:60px;
+
+
+    letter-spacing:15px;
+
+
+    font-weight:normal;
+
+
+}
+
+
+
+
+
+.diary-subtitle {
+
+
+    text-align:center;
+
+
+    letter-spacing:8px;
+
+
+    color:#666;
+
+
+    margin-bottom:60px;
+
+
+}
+
+
+
+
+
+.diary-entry {
+
+
+    border-bottom:
+
+    1px solid #ccc;
+
+
+    padding:30px 0;
+
+
+}
+
+
+
+.date {
+
+
+    font-size:18px;
+
+
+    letter-spacing:5px;
+
+
+    color:#555;
+
+
+}
+
+
+
+
+
+.diary-entry p {
+
+
+    line-height:2.5;
+
+
+    letter-spacing:2px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.danger {
+
+
+    color:#800000;
+
+
+}
+
+
+
+
+
+.diary-entry:last-of-type {
+
+
+    border-bottom:none;
+
+
+}
+
+
+
+
+
+.diary-lock {
+
+
+    text-align:center;
+
+
+    margin-top:70px;
+
+
+    font-size:25px;
+
+
+    letter-spacing:10px;
+
+
+    color:#800000;
+
+
+}
+
+
+
+
+.diary-back {
+
+
+    display:block;
+
+
+    text-align:center;
+
+
+    margin-top:50px;
+
+
+    color:#111;
+
+
+    text-decoration:none;
+
+
+    letter-spacing:8px;
+
+
+}
