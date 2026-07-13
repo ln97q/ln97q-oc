@@ -461,8 +461,10 @@
 
 }
 
+
 /* =========================
-   GALLERY
+   GALLERY 横スクロール
+   Gothic Photo Archive
 ========================= */
 
 
@@ -470,17 +472,54 @@
 
     display:flex;
 
-    flex-direction:column;
+    flex-direction:row;
 
-    gap:40px;
+    gap:25px;
+
+    overflow-x:auto;
+
+    padding:25px 10px 35px;
 
     margin-top:35px;
+
+
+    scroll-snap-type:x mandatory;
+
+    -webkit-overflow-scrolling:touch;
 
 }
 
 
 
+/* 横スクロールバー */
+
+.mari-gallery::-webkit-scrollbar {
+
+    height:8px;
+
+}
+
+
+.mari-gallery::-webkit-scrollbar-thumb {
+
+    background:#d9a0ff;
+
+    border-radius:20px;
+
+}
+
+
+
+/* 写真カード */
+
 .gallery-frame {
+
+
+    flex:0 0 300px;
+
+
+    scroll-snap-align:center;
+
 
     position:relative;
 
@@ -501,7 +540,9 @@
     padding:18px;
 
 
-    border:3px solid #d9b36c;
+    border:
+
+    3px solid #d9b36c;
 
 
     border-radius:25px;
@@ -511,53 +552,74 @@
 
     0 0 25px rgba(255,190,255,0.45);
 
+
 }
+
+
 
 
 
 .gallery-frame::before {
 
+
     content:"✦";
+
 
     position:absolute;
 
+
     top:-18px;
 
+
     left:50%;
+
 
     transform:translateX(-50%);
 
 
     color:#ffd8ff;
 
+
     font-size:28px;
+
 
     text-shadow:
 
     0 0 15px white;
 
+
 }
+
+
 
 
 
 .gallery-frame img {
 
+
     width:100%;
 
-    max-height:500px;
+
+    height:380px;
+
 
     object-fit:contain;
 
 
     border-radius:18px;
 
+
     display:block;
+
 
 }
 
 
 
+
+
 .gallery-frame p {
+
 
     margin:18px 0 5px;
 
@@ -570,18 +632,18 @@
 
     font-size:18px;
 
+
     letter-spacing:6px;
 
-
-    font-family:
-
-    "Times New Roman", serif;
 
 }
 
 
 
+
+
 .gallery-subtitle {
+
 
     text-align:center;
 
@@ -597,11 +659,15 @@
 
     margin-bottom:25px;
 
+
 }
 
 
 
+
+
 .gallery-text {
+
 
     margin-top:35px;
 
@@ -613,6 +679,7 @@
 
 
     line-height:2.5;
+
 
 }
 
