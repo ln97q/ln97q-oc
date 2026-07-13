@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>花乃院 栞 | ROOM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="shiori-room-body">
+
+
+<div class="shiori-room-background"></div>
+
+
+
+<main class="shiori-room-page">
+
+
+
+<section class="shiori-room-card">
+
+
+
+<h1>
+ROOM
+</h1>
+
+
+<p class="room-subtitle">
+KANOIN SHIORI / PRIVATE ROOM
+</p>
+
+
+
+<div class="room-image">
+
+<img src="" alt="room">
+
+</div>
+
+
+
+
+<div class="room-text">
+
+
+<h2>
+THE ROOM
+</h2>
+
+
+<p>
+
+ここは、栞が守ると決めた場所。
+
+</p>
+
+
+<p>
+
+外の世界は危険だから。
+
+<br>
+
+傷つくものがたくさんあるから。
+
+</p>
+
+
+<p>
+
+だから、ここなら大丈夫。
+
+<br>
+
+ずっと一緒にいられる。
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<div class="room-item">
+
+
+<h2>
+MEMORIES
+</h2>
+
+
+
+<p>
+
+白い花束。
+
+</p>
+
+
+<p>
+
+毎日書き続けた日記。
+
+</p>
+
+
+<p>
+
+呼ばれることのない名前を
+何度も練習した紙。
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="room-lock">
+
+
+✦  LOCKED ✦
+
+
+</div>
+
+
+
+<a href="shiori.html" class="room-back">
+
+BACK
+
+</a>
+
+
+
+</section>
+
+
+</main>
+
+
+</body>
+
+</html>
