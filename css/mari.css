@@ -498,24 +498,6 @@ GALLERY
 /* =====================
 CONTRACT MARK
 ===================== */
-.mari-mark {
-    width: 180px;
-    height: 180px;
-    margin: 30px auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 2px solid #d9a0ff;
-    border-radius: 50%;
-}
-
-.mari-mark img {
-    width: 80%;
-    height: auto;
-    border: none;
-}
 
 /* =========================
    花乃院 毬 写真館 + 契約印
