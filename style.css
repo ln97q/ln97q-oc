@@ -461,3 +461,38 @@ CHARACTERS
     max-height:200px;
 
 }
+
+/* =====================
+   CHARACTER IMAGE 強制修正
+===================== */
+
+.card-area .character-card .character-image {
+
+    height:220px !important;
+
+    width:100% !important;
+
+    overflow:hidden !important;
+
+    display:flex !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+}
+
+
+.card-area .character-card .character-image img {
+
+    width:auto !important;
+
+    height:auto !important;
+
+    max-width:85% !important;
+
+    max-height:190px !important;
+
+    object-fit:contain !important;
+
+}
