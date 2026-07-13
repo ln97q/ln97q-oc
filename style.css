@@ -2314,3 +2314,32 @@ Private Black Record
     }
 
 }
+
+/* =========================
+SHIORI PROFILE BACK
+========================= */
+
+.shiori-back {
+
+    display:inline-block;
+
+    margin-top:50px;
+
+    color:#111;
+
+    text-decoration:none;
+
+    letter-spacing:8px;
+
+    font-size:14px;
+
+    transition:0.3s;
+
+}
+
+
+.shiori-back:hover {
+
+    letter-spacing:12px;
+
+}
