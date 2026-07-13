@@ -4,7 +4,9 @@
 ========================= */
 
 
-/* 背景 */
+/* =========================
+   背景
+========================= */
 
 .shiori-body {
 
@@ -28,9 +30,9 @@
 
         circle at top,
 
-        #3b101d,
+        #4a1528,
 
-        #13060d 45%,
+        #15070e 45%,
 
         #020102 100%
 
@@ -40,11 +42,11 @@
 
 
 
-/* 闇の装飾 */
+/* 背景装飾 */
 
 .shiori-background::before {
 
-    content:"♱　✦　†　♡　†　✦　♱";
+    content:"♱　✦　†　🥀　†　✦　♱";
 
     position:absolute;
 
@@ -54,7 +56,8 @@
 
     transform:translateX(-50%);
 
-    color:rgba(255,170,180,0.25);
+
+    color:rgba(255,190,200,0.25);
 
     font-size:32px;
 
@@ -68,7 +71,7 @@
 
 .shiori-background::after {
 
-    content:"✦　♱　🥀　†　🥀　♱　✦";
+    content:"🥀　†　✦　♱　✦　†　🥀";
 
     position:absolute;
 
@@ -78,15 +81,23 @@
 
     transform:translateX(-50%);
 
-    color:rgba(255,200,200,0.25);
+
+    color:rgba(255,190,200,0.25);
 
     font-size:28px;
+
+    letter-spacing:12px;
 
 }
 
 
 
-/* ページ */
+
+
+/* =========================
+   ページ
+========================= */
+
 
 .shiori-page {
 
@@ -100,13 +111,19 @@
 
     text-align:center;
 
-    color:#fff0f2;
+    color:#fff0f3;
 
 }
 
 
 
-/* タイトル */
+
+
+
+/* =========================
+   タイトル
+========================= */
+
 
 .shiori-decor {
 
@@ -114,7 +131,7 @@
 
     letter-spacing:12px;
 
-    color:#ffb7c2;
+    color:#ffb5c5;
 
 }
 
@@ -126,7 +143,7 @@
 
     letter-spacing:15px;
 
-    color:#f5d8dd;
+    color:#ffe3e8;
 
     animation:shioriGlow 3s infinite alternate;
 
@@ -140,13 +157,20 @@
 
     letter-spacing:10px;
 
-    color:#d98c9b;
+    color:#d994a5;
 
 }
 
 
 
-/* カード */
+
+
+
+
+/* =========================
+   カード
+========================= */
+
 
 .shiori-card {
 
@@ -165,23 +189,24 @@
 
         135deg,
 
-        rgba(35,12,20,0.95),
+        rgba(45,15,25,0.95),
 
-        rgba(5,2,5,0.98)
+        rgba(8,3,7,0.98)
 
     );
 
 
-    border:2px solid #b88b8f;
+    border:2px solid #b99a9f;
 
     border-radius:35px;
 
 
     box-shadow:
 
-    0 0 30px rgba(180,20,50,0.25),
 
-    inset 0 0 30px rgba(255,200,200,0.05);
+    0 0 30px rgba(170,20,50,0.35),
+
+    inset 0 0 25px rgba(255,220,220,0.05);
 
 
     position:relative;
@@ -190,7 +215,9 @@
 
 
 
-/* 薔薇 */
+
+/* 薔薇装飾 */
+
 
 .shiori-card::before {
 
@@ -218,7 +245,7 @@
 
     right:20px;
 
-    color:#ffb7c2;
+    color:#ffb5c5;
 
     font-size:25px;
 
@@ -226,7 +253,14 @@
 
 
 
-/* 画像 */
+
+
+
+
+/* =========================
+   画像
+========================= */
+
 
 .shiori-image {
 
@@ -235,6 +269,7 @@
     border-radius:25px;
 
     overflow:hidden;
+
 
     display:flex;
 
@@ -249,14 +284,14 @@
 
         circle,
 
-        #551525,
+        #65172e,
 
         #080208
 
     );
 
 
-    border:1px solid #b88b8f;
+    border:1px solid #b99a9f;
 
 }
 
@@ -274,23 +309,29 @@
 
 
 
-/* 見出し */
+
+
+
+
+
+/* =========================
+   文字
+========================= */
+
 
 .shiori-card h2 {
 
     font-size:32px;
 
+    margin-bottom:25px;
+
     letter-spacing:8px;
 
-    color:#ffb7c2;
-
-    margin-bottom:25px;
+    color:#ffb5c5;
 
 }
 
 
-
-/* 本文 */
 
 .shiori-card p {
 
@@ -308,51 +349,238 @@
 
 
 
-/* セリフ */
+
+
+
+/* =========================
+   セリフ
+========================= */
+
 
 .shiori-quote {
 
     padding:25px;
 
+
     background:
 
-    rgba(0,0,0,0.35);
+    rgba(0,0,0,0.4);
 
 
     border-left:
 
-    3px solid #b31235;
+    3px solid #9e1835;
 
 
-    color:#ffdce2;
+    color:#ffdbe2;
+
+
+    font-size:17px;
 
     line-height:2.3;
 
     text-align:left;
 
-    font-size:17px;
-
 }
 
 
 
-/* WARNING */
+
+
+
+
+/* =========================
+   WARNING
+========================= */
+
 
 .shiori-warning {
 
     text-align:center !important;
 
-    color:#ff6b86 !important;
+    color:#ff718d !important;
 
     letter-spacing:8px;
-
-    font-family:"Times New Roman",serif;
 
 }
 
 
 
-/* 戻る */
+
+
+
+
+/* =========================
+   GALLERY
+========================= */
+
+
+.shiori-gallery {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    margin-top:35px;
+
+}
+
+
+
+.gallery-frame {
+
+    position:relative;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #fff8fa,
+
+        #f2d8df
+
+    );
+
+
+    padding:18px;
+
+
+    border:
+
+    3px solid #b99a9f;
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.gallery-frame img {
+
+    width:100%;
+
+    max-height:500px;
+
+    object-fit:contain;
+
+    border-radius:18px;
+
+}
+
+
+
+.gallery-frame p {
+
+    text-align:center;
+
+    color:#6b2638;
+
+    letter-spacing:6px;
+
+}
+
+
+
+
+
+.gallery-subtitle {
+
+    text-align:center;
+
+    color:#e8b4c0;
+
+    letter-spacing:6px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   契約印
+========================= */
+
+
+.mark-card {
+
+    text-align:center;
+
+}
+
+
+
+.shiori-mark {
+
+    width:90%;
+
+    min-height:250px;
+
+    margin:35px auto;
+
+    padding:35px;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        #65172e,
+
+        #080208
+
+    );
+
+
+    border:
+
+    1px solid #b99a9f;
+
+
+    border-radius:30px;
+
+
+}
+
+
+
+.shiori-mark img {
+
+    max-width:85%;
+
+    max-height:400px;
+
+    object-fit:contain;
+
+}
+
+
+
+
+
+
+/* =========================
+   戻る
+========================= */
+
 
 .shiori-back {
 
@@ -360,7 +588,7 @@
 
     margin-top:60px;
 
-    color:#ffb7c2;
+    color:#ffb5c5;
 
     text-decoration:none;
 
@@ -370,72 +598,117 @@
 
 
 
-/* 光 */
+
+
+
+/* =========================
+   光
+========================= */
+
 
 @keyframes shioriGlow {
 
-    from {
 
-        text-shadow:
+from {
 
-        0 0 10px #8b102b;
+    text-shadow:
 
-    }
-
-
-    to {
-
-        text-shadow:
-
-        0 0 30px #ff5577,
-
-        0 0 60px #7a001b;
-
-    }
+    0 0 10px #8f1635;
 
 }
 
 
 
-/* スマホ */
+to {
+
+    text-shadow:
+
+    0 0 35px #ff6685,
+
+    0 0 60px #700019;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   スマホ
+========================= */
+
 
 @media(max-width:600px){
 
 
-    .shiori-page h1 {
+.shiori-page {
 
-        font-size:40px;
+    padding:40px 15px;
 
-        letter-spacing:8px;
-
-    }
+}
 
 
-    .shiori-card {
 
-        padding:25px;
+.shiori-page h1 {
 
-    }
+    font-size:40px;
 
+    letter-spacing:8px;
 
-    .shiori-card h2 {
-
-        font-size:24px;
-
-    }
+}
 
 
-    .shiori-card p {
 
-        font-size:15px;
+.shiori-decor {
 
-    }
+    font-size:22px;
+
+}
 
 
-    .shiori-image {
 
-        height:250px;
+.shiori-card {
 
-    }
+    padding:25px;
+
+}
+
+
+
+.shiori-card h2 {
+
+    font-size:24px;
+
+}
+
+
+
+.shiori-card p {
+
+    font-size:15px;
+
+}
+
+
+
+.shiori-image {
+
+    height:250px;
+
+}
+
+
+
+.shiori-mark {
+
+    padding:20px;
+
+}
+
 
 }
