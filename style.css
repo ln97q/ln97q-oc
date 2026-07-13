@@ -917,3 +917,372 @@ CONTRACT MARK
     box-shadow:
     0 0 30px rgba(220,150,255,0.45);
 }
+
+```css
+/* =========================
+   花乃院 毬 写真館 + 契約印
+   Gothic Princess Archive
+========================= */
+
+
+
+/* 写真館 */
+
+.mari-gallery {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    margin-top:35px;
+
+}
+
+
+
+
+
+.gallery-frame {
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #fff8ff,
+        #ead5ff
+    );
+
+
+    padding:18px;
+
+
+    border:
+
+    3px solid #d9b36c;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 0 25px rgba(255,190,255,0.45);
+
+
+}
+
+
+
+
+
+.gallery-frame::before {
+
+
+    content:"✦";
+
+
+    position:absolute;
+
+
+    top:-18px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    color:#ffd8ff;
+
+
+    font-size:28px;
+
+
+    text-shadow:
+
+    0 0 15px #ffffff;
+
+
+}
+
+
+
+
+
+
+
+.gallery-frame img {
+
+
+    width:100%;
+
+
+    max-height:500px;
+
+
+    object-fit:contain;
+
+
+    border-radius:18px;
+
+
+    display:block;
+
+
+}
+
+
+
+
+
+.gallery-frame p {
+
+
+    margin:18px 0 5px;
+
+
+    text-align:center;
+
+
+    color:#6b3b82;
+
+
+    font-size:18px;
+
+
+    letter-spacing:6px;
+
+
+    font-family:
+
+    "Times New Roman", serif;
+
+
+}
+
+
+
+
+
+
+
+/* 写真館タイトル */
+
+.gallery-subtitle {
+
+
+    text-align:center;
+
+
+    color:#e5b9ff;
+
+
+    font-size:17px;
+
+
+    letter-spacing:6px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+
+
+.gallery-text {
+
+
+    margin-top:35px;
+
+
+    text-align:center !important;
+
+
+    color:#f8eaff;
+
+
+    line-height:2.5;
+
+
+}
+
+
+
+
+
+
+
+/* 契約印展示 */
+
+.mark-card {
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.mari-mark {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    margin:30px auto;
+
+
+    padding:35px;
+
+
+    width:90%;
+
+
+    background:
+
+
+    radial-gradient(
+
+        circle,
+
+        #632b78,
+
+        #100612
+
+    );
+
+
+    border-radius:30px;
+
+
+    border:
+
+    1px solid #d9b36c;
+
+
+    box-shadow:
+
+
+    inset 0 0 25px rgba(255,220,255,0.15),
+
+    0 0 30px rgba(220,150,255,0.35);
+
+
+}
+
+
+
+
+
+
+.mari-mark img {
+
+
+    max-width:85%;
+
+
+    max-height:400px;
+
+
+    object-fit:contain;
+
+
+    filter:
+
+
+    drop-shadow(
+
+        0 0 20px #ffb7ff
+
+    );
+
+
+}
+
+
+
+
+
+
+/* ギャラリーカードだけ少し特別感 */
+
+.mari-gallery-card {
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(55,25,70,0.98),
+
+        rgba(15,7,22,0.98)
+
+    );
+
+
+}
+
+
+
+
+
+/* スマホ対応 */
+
+@media(max-width:600px){
+
+
+    .gallery-frame {
+
+
+        padding:12px;
+
+
+    }
+
+
+
+    .gallery-frame p {
+
+
+        font-size:14px;
+
+
+        letter-spacing:3px;
+
+
+    }
+
+
+
+    .mari-mark {
+
+
+        padding:20px;
+
+    }
+
+
+}
+```
