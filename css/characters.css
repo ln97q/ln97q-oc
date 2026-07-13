@@ -1,445 +1,244 @@
 /* =========================
    CHARACTERS PAGE
-   Sweet Gothic Character Room
+   Sweet Gothic Doll Room
 ========================= */
-
-
 /* =========================
    PAGE
 ========================= */
-
-
 .characters {
-
     position:relative;
-
     z-index:1;
-
     min-height:100vh;
-
     padding:60px 20px;
-
     text-align:center;
-
     overflow:hidden;
-
 }
-
-
-/* 背景装飾 */
-
-.characters::before {
-
-    content:"♡　✦　♡　✧　🎀　✦　♡";
-
-    position:fixed;
-
-    top:10%;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    color:rgba(220,170,255,.35);
-
-    font-size:30px;
-
-    letter-spacing:15px;
-
-    white-space:nowrap;
-
-    z-index:-1;
-
-}
-
-
-.characters::after {
-
-    content:"✦　♡　✦　♡　✦";
-
-    position:fixed;
-
-    bottom:10%;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    color:rgba(255,190,230,.35);
-
-    font-size:25px;
-
-    letter-spacing:20px;
-
-    z-index:-1;
-
-}
-
-
-
 /* =========================
    TITLE
 ========================= */
-
-
 .characters h1 {
-
     margin:0;
-
     font-size:55px;
-
     letter-spacing:12px;
-
     color:#b58de8;
-
     text-shadow:
-
     0 0 10px white,
-
-    0 0 25px #e3caff;
-
+    0 0 25px #e5caff;
+    position:relative;
 }
-
-
 .characters h1::before {
-
     content:"♡ ";
-
+    color:#ffafd8;
 }
-
-
 .characters h1::after {
-
     content:" ♡";
-
+    color:#ffafd8;
 }
-
-
-
+/* =========================
+   BACKGROUND DECOR
+========================= */
+.characters::before {
+    content:
+    "♡　✦　♡　🎀　✧　♡　✦　♡";
+    position:fixed;
+    top:12%;
+    left:50%;
+    transform:translateX(-50%);
+    color:rgba(220,170,255,.45);
+    font-size:32px;
+    letter-spacing:15px;
+    white-space:nowrap;
+    z-index:-1;
+}
+.characters::after {
+    content:
+    "✦　♡　✦　🎀　✦";
+    position:fixed;
+    bottom:10%;
+    left:50%;
+    transform:translateX(-50%);
+    color:rgba(255,170,220,.4);
+    font-size:28px;
+    letter-spacing:20px;
+    z-index:-1;
+}
 /* =========================
    CARD AREA
 ========================= */
-
-
 .card-area {
-
     display:flex;
-
     justify-content:center;
-
-    gap:35px;
-
+    gap:40px;
     flex-wrap:wrap;
-
-    margin-top:55px;
-
+    margin-top:60px;
 }
-
-
-
 /* =========================
    CHARACTER CARD
 ========================= */
-
-
 .character-card {
-
     width:270px;
-
     padding:30px;
-
-
     background:
-
-    rgba(255,255,255,.75);
-
-
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.95),
+        rgba(250,240,255,.85)
+    );
     border:
-
-    3px dashed #e2c7ff;
-
-
-    border-radius:45px;
-
-
+    4px dashed #d9b8ff;
+    border-radius:50px;
     box-shadow:
-
-    0 15px 40px rgba(180,140,230,.25),
-
-    inset 0 0 20px white;
-
-
+    0 15px 35px rgba(180,140,230,.35),
+    inset 0 0 25px white;
     position:relative;
-
-    transition:.3s;
-
+    overflow:hidden;
+    transition:.35s;
 }
-
-
-
 .character-card:hover {
-
-    transform:translateY(-10px);
-
+    transform:
+    translateY(-12px)
+    rotate(1deg);
+    box-shadow:
+    0 25px 50px rgba(180,140,230,.45),
+    inset 0 0 30px white;
 }
-
-
-
-/* 飾り */
-
+/* ハート */
 .character-card::before {
-
     content:"♡";
-
     position:absolute;
-
     top:15px;
-
     left:20px;
-
-    color:#ffb6dc;
-
-    font-size:22px;
-
+    color:#ff9fce;
+    font-size:25px;
 }
-
-
+/* キラキラ */
 .character-card::after {
-
     content:"✦";
-
     position:absolute;
-
     bottom:15px;
-
     right:20px;
-
-    color:#d5b0ff;
-
-    font-size:20px;
-
+    color:#cda5ff;
+    font-size:24px;
 }
-
-
-
 /* =========================
    IMAGE
 ========================= */
-
-
 .character-image {
-
     width:100%;
-
     height:250px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow:hidden;
-
-    border-radius:35px;
-
-
+    border-radius:40px;
     background:
-
     linear-gradient(
-
         135deg,
-
-        #fff7ff,
-
+        #fff8ff,
         #eadcff
-
     );
-
-
-    border:2px solid #f0d9ff;
-
+    border:
+    2px solid #f3dfff;
+    box-shadow:
+    inset 0 0 20px white;
 }
-
-
 .character-image img {
-
     max-width:85%;
-
     max-height:230px;
-
+    width:auto;
+    height:auto;
     object-fit:contain;
-
 }
-
-
-
 /* =========================
-   TEXT
+   NAME
 ========================= */
-
-
 .character-card h2 {
-
     margin-top:25px;
-
-    color:#936bc9;
-
     font-size:25px;
-
+    color:#936bc9;
     letter-spacing:5px;
-
 }
-
-
-.character-card p {
-
-    color:#777;
-
-    font-size:14px;
-
-    line-height:1.8;
-
-}
-
-
-
 /* =========================
-   PROFILE BUTTON
+   DESCRIPTION
 ========================= */
-
-
+.character-card p {
+    color:#777;
+    font-size:14px;
+    line-height:1.8;
+}
+/* =========================
+   BUTTON
+========================= */
 .profile-button {
-
     display:inline-block;
-
     margin-top:25px;
-
     padding:14px 38px;
-
     border-radius:50px;
-
     text-decoration:none;
-
     color:white;
-
-    letter-spacing:3px;
-
+    font-family:"Fredoka",sans-serif;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:1px;
     background:
-
     linear-gradient(
-
         135deg,
-
-        #e7caff,
-
+        #eddbff,
         #b58de8
-
     );
-
-
+    border:
+    2px solid rgba(255,255,255,.8);
     box-shadow:
-
-    0 6px 0 #9c72d0;
-
-
+    0 7px 0 #9b70d2,
+    0 10px 25px rgba(180,140,230,.4);
     transition:.25s;
-
 }
-
-
 .profile-button::before {
-
     content:"♡ ";
-
 }
-
-
 .profile-button::after {
-
     content:" ♡";
-
 }
-
-
 .profile-button:hover {
-
-    transform:translateY(4px);
-
+    transform:
+    translateY(4px)
+    scale(1.05);
     box-shadow:
-
-    0 2px 0 #9c72d0;
-
+    0 3px 0 #9b70d2,
+    0 8px 20px rgba(180,140,230,.35);
 }
-
-
-
 /* =========================
    BACK
 ========================= */
-
-
 .back {
-
     display:inline-block;
-
     margin-top:70px;
-
     color:#b58de8;
-
     text-decoration:none;
-
     letter-spacing:8px;
-
 }
-
-
 .back::before {
-
     content:"♡ ";
-
 }
-
-
 .back::after {
-
     content:" ♡";
-
 }
-
-
-
 /* =========================
    MOBILE
 ========================= */
-
-
 @media(max-width:600px){
-
-
     .characters {
-
         padding:40px 15px;
-
     }
-
-
     .characters h1 {
-
         font-size:38px;
-
         letter-spacing:7px;
-
     }
-
-
     .character-card {
-
         width:90%;
-
         max-width:320px;
-
     }
-
-
+    .character-image {
+        height:230px;
+    }
 }
