@@ -681,3 +681,34 @@
     object-fit:contain !important;
 
 }
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.ibuki-image {
+
+    height:300px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+}
+
+
+.ibuki-image img {
+
+    max-width:90%;
+
+    max-height:280px;
+
+    object-fit:contain;
+
+}
