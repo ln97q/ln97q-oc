@@ -468,27 +468,71 @@
 ========================= */
 
 
+/* =========================
+   GALLERY 横スクロール化
+========================= */
+
 .mari-gallery {
 
     display:flex;
 
     flex-direction:row;
 
-    gap:25px;
-
-    overflow-x:auto;
-
-    padding:25px 10px 35px;
+    gap:30px;
 
     margin-top:35px;
 
+    overflow-x:auto;
+
+    padding:20px 10px 30px;
 
     scroll-snap-type:x mandatory;
 
-    -webkit-overflow-scrolling:touch;
+}
+
+
+/* スクロールバー調整 */
+
+.mari-gallery::-webkit-scrollbar {
+
+    height:8px;
 
 }
 
+
+.mari-gallery::-webkit-scrollbar-thumb {
+
+    background:#d9a0ff;
+
+    border-radius:20px;
+
+}
+
+
+
+/* ギャラリー1枚 */
+
+.gallery-frame {
+
+    flex:0 0 320px;
+
+    scroll-snap-align:center;
+
+}
+
+
+
+/* スマホ */
+
+@media(max-width:600px){
+
+    .gallery-frame {
+
+        flex:0 0 85%;
+
+    }
+
+}
 
 
 /* 横スクロールバー */
