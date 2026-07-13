@@ -504,79 +504,6 @@
 
 
 
-
-
-/* =========================
-   契約印
-========================= */
-
-
-.mark-card {
-
-    text-align:center;
-
-}
-
-
-
-.shiori-mark {
-
-    width:90%;
-
-    min-height:250px;
-
-    margin:35px auto;
-
-    padding:35px;
-
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        #65172e,
-
-        #080208
-
-    );
-
-
-    border:
-
-    1px solid #b99a9f;
-
-
-    border-radius:30px;
-
-
-}
-
-
-
-.shiori-mark img {
-
-    max-width:85%;
-
-    max-height:400px;
-
-    object-fit:contain;
-
-}
-
-
-
-
-
-
 /* =========================
    戻る
 ========================= */
@@ -699,14 +626,6 @@ to {
 .shiori-image {
 
     height:250px;
-
-}
-
-
-
-.shiori-mark {
-
-    padding:20px;
 
 }
 
