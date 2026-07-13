@@ -2131,3 +2131,186 @@ White Gothic Archive
     }
 
 }
+
+/* =========================
+SHIORI DIARY
+Private Black Record
+========================= */
+
+
+.shiori-diary-body {
+
+    margin:0;
+
+    font-family:"Times New Roman",serif;
+
+    color:#111;
+
+}
+
+
+
+.shiori-diary-background {
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #eeeeee
+    );
+
+    z-index:-1;
+
+}
+
+
+
+.shiori-diary-page {
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+
+
+.shiori-mark {
+
+    font-size:30px;
+
+    letter-spacing:15px;
+
+}
+
+
+
+.shiori-diary-page h1 {
+
+    font-size:60px;
+
+    letter-spacing:15px;
+
+    line-height:1.2;
+
+}
+
+
+
+.shiori-diary-sub {
+
+    letter-spacing:8px;
+
+    color:#555;
+
+}
+
+
+
+.record {
+
+    margin-top:60px;
+
+}
+
+
+
+.record article {
+
+
+    background:#fff;
+
+
+    border:
+
+    1px solid #111;
+
+
+    padding:35px;
+
+
+    margin-bottom:45px;
+
+
+    text-align:left;
+
+
+    box-shadow:
+
+    5px 5px 0 #111;
+
+
+}
+
+
+
+.record-date {
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+}
+
+
+
+.record h2 {
+
+    font-size:28px;
+
+    letter-spacing:8px;
+
+    border-bottom:
+
+    1px solid #111;
+
+    padding-bottom:15px;
+
+}
+
+
+
+.record p {
+
+    line-height:2.3;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.shiori-back {
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    color:#111;
+
+    text-decoration:none;
+
+    letter-spacing:6px;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .shiori-diary-page h1{
+
+        font-size:42px;
+
+    }
+
+}
