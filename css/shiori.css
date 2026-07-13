@@ -1,104 +1,146 @@
 /* =========================
- 花乃院 栞
- SHIORI
- Dark Gothic Incubus
+   花乃院 栞 専用ページ
+   Gothic Incubus Prince
 ========================= */
 
 
-body.shiori-body{
+/* 背景 */
 
-    margin:0;
-    min-height:100vh;
+.shiori-body {
 
-    font-family:"Times New Roman",serif;
-
-    color:#f7ecff;
-
-    background:#030205 !important;
+    background:#050205;
 
 }
 
 
 
-/* 背景 */
-
-.shiori-background{
+.shiori-background {
 
     position:fixed;
 
     inset:0;
 
-    background:
-    radial-gradient(
-        circle at top,
-        #632070,
-        #1b0824 45%,
-        #030204 100%
-    );
-
     z-index:0;
+
+    background:
+
+    radial-gradient(
+
+        circle at top,
+
+        #3b101d,
+
+        #13060d 45%,
+
+        #020102 100%
+
+    );
 
 }
 
 
 
-.shiori-page{
+/* 闇の装飾 */
+
+.shiori-background::before {
+
+    content:"♱　✦　†　♡　†　✦　♱";
+
+    position:absolute;
+
+    top:10%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:rgba(255,170,180,0.25);
+
+    font-size:32px;
+
+    letter-spacing:12px;
+
+    white-space:nowrap;
+
+}
+
+
+
+.shiori-background::after {
+
+    content:"✦　♱　🥀　†　🥀　♱　✦";
+
+    position:absolute;
+
+    bottom:10%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:rgba(255,200,200,0.25);
+
+    font-size:28px;
+
+}
+
+
+
+/* ページ */
+
+.shiori-page {
 
     position:relative;
 
-    z-index:2;
+    z-index:1;
 
-    width:90%;
+    min-height:100vh;
 
-    max-width:720px;
-
-    margin:70px auto;
+    padding:60px 20px;
 
     text-align:center;
+
+    color:#fff0f2;
 
 }
 
 
 
-/* 装飾 */
+/* タイトル */
 
-.shiori-decor{
-
-    color:#ffb8ed;
+.shiori-decor {
 
     font-size:30px;
 
     letter-spacing:12px;
 
+    color:#ffb7c2;
+
 }
 
 
 
-/* 名前 */
-
-.shiori-page h1{
-
-    color:white;
+.shiori-page h1 {
 
     font-size:60px;
 
     letter-spacing:15px;
 
-    text-shadow:
+    color:#f5d8dd;
 
-    0 0 10px white,
-
-    0 0 35px #a84cff;
+    animation:shioriGlow 3s infinite alternate;
 
 }
 
 
 
-.shiori-english{
+.shiori-english {
 
-    color:#d9a8ff;
+    margin-top:-20px;
 
-    letter-spacing:12px;
+    letter-spacing:10px;
+
+    color:#d98c9b;
 
 }
 
@@ -106,31 +148,79 @@ body.shiori-body{
 
 /* カード */
 
-.shiori-card{
+.shiori-card {
+
+    width:480px;
+
+    max-width:90%;
 
     margin:35px auto;
 
-    padding:40px;
+    padding:35px;
 
 
     background:
 
     linear-gradient(
+
         135deg,
-        rgba(45,15,55,0.96),
-        rgba(5,3,8,0.98)
+
+        rgba(35,12,20,0.95),
+
+        rgba(5,2,5,0.98)
+
     );
 
 
-    border:2px solid #d9b36c;
+    border:2px solid #b88b8f;
 
     border-radius:35px;
 
 
     box-shadow:
 
-    0 0 40px rgba(160,60,200,.45);
+    0 0 30px rgba(180,20,50,0.25),
 
+    inset 0 0 30px rgba(255,200,200,0.05);
+
+
+    position:relative;
+
+}
+
+
+
+/* 薔薇 */
+
+.shiori-card::before {
+
+    content:"🥀";
+
+    position:absolute;
+
+    top:15px;
+
+    left:20px;
+
+    font-size:20px;
+
+}
+
+
+
+.shiori-card::after {
+
+    content:"†";
+
+    position:absolute;
+
+    bottom:12px;
+
+    right:20px;
+
+    color:#ffb7c2;
+
+    font-size:25px;
 
 }
 
@@ -138,14 +228,13 @@ body.shiori-body{
 
 /* 画像 */
 
-.shiori-image{
+.shiori-image {
 
-    width:320px;
+    height:320px;
 
-    height:520px;
+    border-radius:25px;
 
-    margin:30px auto;
-
+    overflow:hidden;
 
     display:flex;
 
@@ -154,31 +243,30 @@ body.shiori-body{
     align-items:center;
 
 
-    overflow:hidden;
-
-
     background:
 
     radial-gradient(
+
         circle,
-        #4c1760,
-        #050207
+
+        #551525,
+
+        #080208
+
     );
 
 
-    border:1px solid #d9b36c;
-
-    border-radius:25px;
+    border:1px solid #b88b8f;
 
 }
 
 
 
-.shiori-image img{
+.shiori-image img {
 
-    width:100%;
+    max-width:90%;
 
-    height:100%;
+    max-height:300px;
 
     object-fit:contain;
 
@@ -188,15 +276,15 @@ body.shiori-body{
 
 /* 見出し */
 
-.shiori-card h2{
+.shiori-card h2 {
 
-    margin-top:50px;
+    font-size:32px;
 
-    color:#f1b9ff;
+    letter-spacing:8px;
 
-    font-size:30px;
+    color:#ffb7c2;
 
-    letter-spacing:10px;
+    margin-bottom:25px;
 
 }
 
@@ -204,15 +292,17 @@ body.shiori-body{
 
 /* 本文 */
 
-.shiori-card p{
+.shiori-card p {
 
-    color:#f7eaff;
+    color:#fae9ed;
 
-    text-align:center;
+    font-size:18px;
 
-    line-height:2.5;
+    line-height:2.2;
 
-    letter-spacing:3px;
+    letter-spacing:2px;
+
+    text-align:left;
 
 }
 
@@ -220,37 +310,43 @@ body.shiori-body{
 
 /* セリフ */
 
-.shiori-quote{
+.shiori-quote {
 
-    margin-top:40px;
+    padding:25px;
 
-    padding:30px;
+    background:
 
-
-    background:#050308;
-
-
-    border-left:5px solid #800000;
+    rgba(0,0,0,0.35);
 
 
-    color:white;
+    border-left:
+
+    3px solid #b31235;
 
 
-    line-height:2.5;
+    color:#ffdce2;
+
+    line-height:2.3;
+
+    text-align:left;
+
+    font-size:17px;
 
 }
 
 
 
-/* 警告 */
+/* WARNING */
 
-.shiori-warning{
+.shiori-warning {
 
-    margin-top:50px;
+    text-align:center !important;
 
-    color:#d9b36c;
+    color:#ff6b86 !important;
 
     letter-spacing:8px;
+
+    font-family:"Times New Roman",serif;
 
 }
 
@@ -258,56 +354,88 @@ body.shiori-body{
 
 /* 戻る */
 
-.shiori-back{
+.shiori-back {
 
-    display:block;
+    display:inline-block;
 
-    margin:60px auto;
+    margin-top:60px;
 
-    color:#f5c8ff;
+    color:#ffb7c2;
 
     text-decoration:none;
+
+    letter-spacing:8px;
 
 }
 
 
 
+/* 光 */
+
+@keyframes shioriGlow {
+
+    from {
+
+        text-shadow:
+
+        0 0 10px #8b102b;
+
+    }
+
+
+    to {
+
+        text-shadow:
+
+        0 0 30px #ff5577,
+
+        0 0 60px #7a001b;
+
+    }
+
+}
+
+
+
+/* スマホ */
+
 @media(max-width:600px){
 
-    .shiori-card{
+
+    .shiori-page h1 {
+
+        font-size:40px;
+
+        letter-spacing:8px;
+
+    }
+
+
+    .shiori-card {
 
         padding:25px;
 
     }
 
 
-    .shiori-page h1{
+    .shiori-card h2 {
 
-        font-size:40px;
+        font-size:24px;
+
+    }
+
+
+    .shiori-card p {
+
+        font-size:15px;
 
     }
 
 
-    .shiori-image{
+    .shiori-image {
 
-        width:90%;
-
-        height:500px;
+        height:250px;
 
     }
 
-}
-
-body.shiori-body {
-    background:#030205 !important;
-}
-
-.shiori-background {
-    background:
-    radial-gradient(
-        circle at top,
-        #632070,
-        #1b0824 40%,
-        #030204 100%
-    ) !important;
 }
