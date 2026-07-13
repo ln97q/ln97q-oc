@@ -878,3 +878,17 @@ CONTRACT MARK
 
 
 }
+
+body.mari-body {
+    background:#07040b !important;
+}
+
+.mari-background {
+    background:
+    radial-gradient(
+        circle at top,
+        #71358a,
+        #180b22 45%,
+        #050308 100%
+    ) !important;
+}
