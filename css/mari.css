@@ -499,17 +499,22 @@ GALLERY
 CONTRACT MARK
 ===================== */
 .mari-mark {
-    display:flex;
-    justify-content:center;
-    margin:25px 0;
+    width: 180px;
+    height: 180px;
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #d9a0ff;
+    border-radius: 50%;
 }
+
 .mari-mark img {
-    width:260px;
-    max-width:90%;
-    border-radius:25px;
-    border:1px solid #d9b36c;
-    box-shadow:
-    0 0 30px rgba(220,150,255,0.45);
+    width: 80%;
+    height: auto;
+    border: none;
 }
 
 /* =========================
