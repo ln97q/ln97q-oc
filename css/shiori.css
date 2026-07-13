@@ -722,3 +722,69 @@ to {
     letter-spacing:5px;
 
 }
+
+
+/* =========================
+   GALLERY 横スクロール
+========================= */
+
+
+.shiori-gallery {
+
+    display:flex;
+
+    flex-direction:row;
+
+    gap:30px;
+
+    margin-top:35px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding:20px 10px 35px;
+
+    scroll-snap-type:x mandatory;
+
+}
+
+
+
+.shiori-gallery::-webkit-scrollbar {
+
+    height:8px;
+
+}
+
+
+
+.shiori-gallery::-webkit-scrollbar-thumb {
+
+    background:#d9a0ff;
+
+    border-radius:20px;
+
+}
+
+
+
+.shiori-gallery .gallery-frame {
+
+    flex:0 0 320px;
+
+    scroll-snap-align:center;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .shiori-gallery .gallery-frame {
+
+        flex:0 0 85%;
+
+    }
+
+}
