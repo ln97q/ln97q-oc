@@ -852,3 +852,38 @@
     }
 
 }
+
+.mari-mark {
+    width:220px;
+    height:220px;
+    margin:35px auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #632b78,
+        #100612
+    );
+
+    border:none;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 30px rgba(220,150,255,0.5),
+    inset 0 0 25px rgba(255,220,255,0.2);
+}
+
+
+.mari-mark img {
+
+    max-width:80%;
+    max-height:80%;
+
+    object-fit:contain;
+
+}
