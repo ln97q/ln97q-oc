@@ -297,3 +297,17 @@ body.shiori-body{
     }
 
 }
+
+body.shiori-body {
+    background:#030205 !important;
+}
+
+.shiori-background {
+    background:
+    radial-gradient(
+        circle at top,
+        #632070,
+        #1b0824 40%,
+        #030204 100%
+    ) !important;
+}
