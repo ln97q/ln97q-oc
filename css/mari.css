@@ -632,32 +632,6 @@
 
 
 
-.mari-mark img {
-
-
-    max-width:80%;
-
-
-    max-height:80%;
-
-
-    object-fit:contain;
-
-
-
-    filter:
-
-
-    drop-shadow(
-
-        0 0 20px #ffb7ff
-
-    );
-
-}
-
-
-
 /* =========================
    特別カード
 ========================= */
@@ -750,30 +724,6 @@
 
 
 
-.mari-mark img {
-
-
-    max-width:85%;
-
-
-    max-height:400px;
-
-
-    object-fit:contain;
-
-
-    filter:
-
-
-    drop-shadow(
-
-        0 0 20px #ffb7ff
-
-    );
-
-}
-
-
 /* 契約印 最終調整 */
 
 .mark-card .mari-mark {
@@ -819,5 +769,47 @@
     max-height:400px;
 
     object-fit:contain;
+
+}
+
+
+/* =========================
+   契約印 完全四角固定
+========================= */
+
+.mark-card .mari-mark {
+
+    width:90%;
+
+    height:auto;
+
+    min-height:250px;
+
+    border-radius:30px !important;
+
+    border:1px solid #d9b36c !important;
+
+    background:
+    radial-gradient(
+        circle,
+        #632b78,
+        #100612
+    ) !important;
+
+}
+
+
+
+.mark-card .mari-mark img {
+
+    width:auto;
+
+    height:auto;
+
+    max-width:85%;
+
+    max-height:400px;
+
+    border-radius:0 !important;
 
 }
