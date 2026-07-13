@@ -2575,26 +2575,38 @@ CONTRACT MARK
 
 
 /* =========================
-   花乃院 栞 SHIORI
-   Silent Nightmare
+   花乃院 栞
+   SHIORI
+   Gothic Nightmare Prince
 ========================= */
 
 
+/* BODY */
+
 .shiori-body {
 
-    background:#ffffff;
+    margin:0;
 
-    color:#111;
+    min-height:100vh;
 
     font-family:
     "Times New Roman",
     serif;
 
+    color:#f5eaff;
+
+    background:#050308;
+
+    overflow-x:hidden;
+
 }
 
 
 
-/* 背景 */
+/* =========================
+背景
+========================= */
+
 
 .shiori-background {
 
@@ -2605,17 +2617,44 @@ CONTRACT MARK
 
     background:
 
-    linear-gradient(
-        135deg,
-        #ffffff,
-        #eeeeee,
-        #cccccc
+    radial-gradient(
+        circle at top,
+        #51205f,
+        #120817 45%,
+        #020102 100%
     );
 
 
-    z-index:-1;
+    z-index:-2;
 
 }
+
+
+
+.shiori-background::before {
+
+    content:"♱　✦　♡　†　✦　♱";
+
+    position:absolute;
+
+    top:8%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+
+    color:
+
+    rgba(255,220,255,0.25);
+
+
+    font-size:35px;
+
+    letter-spacing:15px;
+
+}
+
 
 
 .shiori-background::after {
@@ -2631,53 +2670,64 @@ CONTRACT MARK
 
     radial-gradient(
         circle,
-        transparent 30%,
-        rgba(0,0,0,0.35)
+        transparent 20%,
+        rgba(0,0,0,0.8)
     );
 
 }
 
 
 
+/* =========================
+ページ
+========================= */
 
-/* ページ */
 
 .shiori-page {
 
     width:90%;
 
-    max-width:700px;
+    max-width:720px;
 
-    margin:90px auto;
+    margin:80px auto;
 
 }
 
 
 
-/* カード */
+/* =========================
+カード
+========================= */
+
 
 .shiori-card {
 
 
     background:
 
-    rgba(255,255,255,0.95);
+    linear-gradient(
+        135deg,
+        rgba(30,12,40,0.95),
+        rgba(5,2,10,0.98)
+    );
 
 
-    padding:55px 40px;
+    padding:60px 45px;
 
 
     border:
 
-    1px solid #111;
+    2px solid #d9b36c;
 
 
-    border-radius:5px;
+    border-radius:35px;
 
 
     box-shadow:
 
-    0 25px 60px rgba(0,0,0,0.35);
+    0 0 35px rgba(220,150,255,0.35),
+
+    inset 0 0 40px rgba(255,200,255,0.05);
 
 
     position:relative;
@@ -2687,12 +2737,65 @@ CONTRACT MARK
 
 
 
-/* 名前 */
+/* 飾り */
+
+.shiori-card::before {
+
+    content:"♱";
+
+
+    position:absolute;
+
+    top:-25px;
+
+    left:25px;
+
+
+    font-size:45px;
+
+
+    color:#ffd6ff;
+
+
+}
+
+
+
+.shiori-card::after {
+
+    content:"†";
+
+
+    position:absolute;
+
+    right:20px;
+
+    bottom:15px;
+
+
+    font-size:100px;
+
+
+    color:#d9b36c;
+
+    opacity:0.15;
+
+}
+
+
+
+/* =========================
+名前
+========================= */
+
 
 .shiori-card h1 {
 
 
-    font-size:55px;
+    text-align:center;
+
+
+    font-size:60px;
 
 
     letter-spacing:18px;
@@ -2701,14 +2804,15 @@ CONTRACT MARK
     font-weight:normal;
 
 
-    color:#000;
+    color:#f5d8ff;
 
 
-    text-align:center;
+    text-shadow:
+
+    0 0 20px #b45cff;
 
 
 }
-
 
 
 
@@ -2718,10 +2822,10 @@ CONTRACT MARK
     text-align:center;
 
 
-    letter-spacing:10px;
+    letter-spacing:12px;
 
 
-    color:#555;
+    color:#ddaaff;
 
 
     margin-bottom:50px;
@@ -2730,28 +2834,230 @@ CONTRACT MARK
 
 
 
+/* =========================
+画像
+========================= */
 
-/* セリフ */
+
+.shiori-image {
+
+
+    height:330px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        #542066,
+        #08040c
+    );
+
+
+    border:
+
+    1px solid #d9b36c;
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.shiori-image img {
+
+
+    max-width:90%;
+
+    max-height:310px;
+
+    object-fit:contain;
+
+
+}
+
+
+
+/* =========================
+セリフ
+========================= */
+
 
 .quote {
 
 
-    background:#000;
+    margin-top:40px;
 
 
-    color:#fff;
+    background:#08050b;
+
+
+    border-left:
+
+    5px solid #8b0000;
 
 
     padding:30px;
 
 
-    line-height:2.5;
+    color:#fff;
+
+
+    line-height:2.6;
 
 
     letter-spacing:3px;
 
 
-    margin-bottom:50px;
+    box-shadow:
+
+    inset 0 0 25px rgba(255,255,255,0.05);
+
+
+}
+
+
+
+
+
+/* =========================
+見出し
+========================= */
+
+
+.shiori-card h2 {
+
+
+    margin-top:55px;
+
+
+    color:#f1b9ff;
+
+
+    font-size:25px;
+
+
+    letter-spacing:10px;
+
+
+    text-align:center;
+
+
+    border-bottom:
+
+    1px solid rgba(217,179,108,0.5);
+
+
+    padding-bottom:15px;
+
+
+}
+
+
+
+/* =========================
+本文
+========================= */
+
+
+.profile p,
+.character p,
+.memory p {
+
+
+    color:#f8eaff;
+
+
+    text-align:center;
+
+
+    line-height:2.8;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+/* =========================
+血筋装飾
+========================= */
+
+
+.shiori-card h2::before {
+
+
+    content:"♡";
+
+
+    color:#ffb8ed;
+
+
+    margin-right:15px;
+
+
+}
+
+
+.shiori-card h2::after {
+
+
+    content:"♱";
+
+
+    color:#d9b36c;
+
+
+    margin-left:15px;
+
+
+}
+
+
+
+/* =========================
+BACK
+========================= */
+
+
+.shiori-back {
+
+
+    display:block;
+
+
+    width:max-content;
+
+
+    margin:70px auto;
+
+
+    color:#f1b9ff;
+
+
+    text-decoration:none;
+
+
+    letter-spacing:10px;
+
+
+    transition:0.4s;
 
 
     position:relative;
@@ -2761,7 +3067,7 @@ CONTRACT MARK
 
 
 
-.quote::before {
+.shiori-back::after {
 
 
     content:"";
@@ -2773,861 +3079,56 @@ CONTRACT MARK
     left:0;
 
 
-    top:0;
+    bottom:-10px;
 
 
-    height:100%;
+    width:100%;
 
 
-    width:5px;
+    height:1px;
 
 
-    background:#8b0000;
-
-
-}
-
-
-
-/* 見出し */
-
-.shiori-card h2 {
-
-
-    font-size:24px;
-
-
-    letter-spacing:8px;
-
-
-    color:#000;
-
-
-    border-bottom:
-
-    1px solid #000;
-
-
-    padding-bottom:15px;
+    background:#d9b36c;
 
 
 }
 
-
-
-
-/* 内容 */
-
-.profile p,
-.character p,
-.memory p {
-
-
-    text-align:center;
-
-
-    color:#222;
-
-
-    line-height:2.8;
-
-
-    letter-spacing:2px;
-
-
-}
-
-
-
-/* 怖い装飾 */
-
-.shiori-card::before {
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    top:-20px;
-
-
-    left:30px;
-
-
-    width:80px;
-
-
-    height:80px;
-
-
-    border:
-
-    1px solid #111;
-
-
-    border-radius:50%;
-
-
-    opacity:0.2;
-
-}
-
-
-
-.shiori-card::after {
-
-
-    content:"†";
-
-
-    position:absolute;
-
-
-    bottom:20px;
-
-
-    right:25px;
-
-
-    font-size:80px;
-
-
-    color:#000;
-
-
-    opacity:0.12;
-
-}
-
-
-
-/* hover */
-
-.shiori-card:hover {
-
-
-    box-shadow:
-
-    0 0 80px rgba(0,0,0,0.45);
-
-
-}
-
-
-
-/* スマホ */
-
-@media(max-width:600px){
-
-
-    .shiori-card{
-
-        padding:35px 20px;
-
-    }
-
-
-    .shiori-card h1{
-
-        font-size:38px;
-
-        letter-spacing:10px;
-
-    }
-
-
-}
-
-
-/* =========================
-   花乃院 栞 DIARY
-   Broken Love Record
-========================= */
-
-
-.shiori-diary-body {
-
-    margin:0;
-
-    min-height:100vh;
-
-    font-family:
-    "Times New Roman",
-    serif;
-
-    color:#111;
-
-}
-
-
-
-
-.shiori-diary-background {
-
-    position:fixed;
-
-    inset:0;
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ffffff,
-        #e5e5e5
-    );
-
-
-    z-index:-1;
-
-}
-
-
-
-
-.shiori-diary-page {
-
-
-    width:90%;
-
-    max-width:700px;
-
-
-    margin:80px auto;
-
-
-}
-
-
-
-
-
-.shiori-diary-card {
-
-
-    background:#fff;
-
-
-    padding:55px 45px;
-
-
-    border:
-
-    1px solid #111;
-
-
-    box-shadow:
-
-    0 30px 70px rgba(0,0,0,0.35);
-
-
-}
-
-
-
-
-
-.shiori-diary-card h1 {
-
-
-    text-align:center;
-
-
-    font-size:60px;
-
-
-    letter-spacing:15px;
-
-
-    font-weight:normal;
-
-
-}
-
-
-
-
-
-.diary-subtitle {
-
-
-    text-align:center;
-
-
-    letter-spacing:8px;
-
-
-    color:#666;
-
-
-    margin-bottom:60px;
-
-
-}
-
-
-
-
-
-.diary-entry {
-
-
-    border-bottom:
-
-    1px solid #ccc;
-
-
-    padding:30px 0;
-
-
-}
-
-
-
-.date {
-
-
-    font-size:18px;
-
-
-    letter-spacing:5px;
-
-
-    color:#555;
-
-
-}
-
-
-
-
-
-.diary-entry p {
-
-
-    line-height:2.5;
-
-
-    letter-spacing:2px;
-
-
-    text-align:center;
-
-
-}
-
-
-
-
-
-.danger {
-
-
-    color:#800000;
-
-
-}
-
-
-
-
-
-.diary-entry:last-of-type {
-
-
-    border-bottom:none;
-
-
-}
-
-
-
-
-
-.diary-lock {
-
-
-    text-align:center;
-
-
-    margin-top:70px;
-
-
-    font-size:25px;
-
-
-    letter-spacing:10px;
-
-
-    color:#800000;
-
-
-}
-
-
-
-
-.diary-back {
-
-
-    display:block;
-
-
-    text-align:center;
-
-
-    margin-top:50px;
-
-
-    color:#111;
-
-
-    text-decoration:none;
-
-
-    letter-spacing:8px;
-
-
-}
-
-
-/* =========================
-DIARY
-White Gothic Archive
-========================= */
-
-
-.diary-body {
-
-    margin:0;
-
-    background:#ffffff;
-
-    color:#111;
-
-    font-family:"Times New Roman", serif;
-
-}
-
-
-
-.diary-background {
-
-    position:fixed;
-
-    inset:0;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ffffff,
-        #f5f5f5,
-        #dddddd
-    );
-
-    z-index:-1;
-
-}
-
-
-
-.diary-page {
-
-    width:90%;
-
-    max-width:800px;
-
-    margin:80px auto;
-
-    text-align:center;
-
-}
-
-
-
-.diary-symbol {
-
-    font-size:35px;
-
-    letter-spacing:15px;
-
-}
-
-
-
-.diary-page h1 {
-
-    font-size:70px;
-
-    letter-spacing:20px;
-
-    margin:20px 0;
-
-}
-
-
-
-.diary-sub {
-
-    letter-spacing:8px;
-
-    color:#555;
-
-}
-
-
-
-.diary-list {
-
-    margin-top:60px;
-
-}
-
-
-
-.diary-card {
-
-
-    background:white;
-
-
-    border:
-
-    1px solid #111;
-
-
-    padding:35px;
-
-
-    margin:40px auto;
-
-
-    text-align:left;
-
-
-    max-width:600px;
-
-
-    box-shadow:
-
-    8px 8px 0 #111;
-
-
-    transition:0.3s;
-
-
-}
-
-
-
-.diary-card:hover {
-
-    transform:translateY(-8px);
-
-}
-
-
-
-.date {
-
-    font-size:13px;
-
-    letter-spacing:3px;
-
-}
-
-
-
-.diary-card h2 {
-
-    font-size:30px;
-
-    letter-spacing:8px;
-
-}
-
-
-
-.diary-card p {
-
-    line-height:2;
-
-}
-
-
-
-.diary-card a {
-
-
-    display:inline-block;
-
-
-    margin-top:20px;
-
-
-    color:white;
-
-
-    background:#111;
-
-
-    padding:12px 30px;
-
-
-    text-decoration:none;
-
-
-    letter-spacing:5px;
-
-
-}
-
-
-
-.diary-back {
-
-    display:inline-block;
-
-    margin-top:60px;
-
-    color:#111;
-
-    text-decoration:none;
-
-    letter-spacing:8px;
-
-}
-
-
-
-@media(max-width:600px){
-
-    .diary-page h1{
-
-        font-size:45px;
-
-    }
-
-
-    .diary-card{
-
-        padding:25px;
-
-    }
-
-}
-
-/* =========================
-SHIORI DIARY
-Private Black Record
-========================= */
-
-
-.shiori-diary-body {
-
-    margin:0;
-
-    font-family:"Times New Roman",serif;
-
-    color:#111;
-
-}
-
-
-
-.shiori-diary-background {
-
-    position:fixed;
-
-    inset:0;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #ffffff,
-        #eeeeee
-    );
-
-    z-index:-1;
-
-}
-
-
-
-.shiori-diary-page {
-
-    width:90%;
-
-    max-width:700px;
-
-    margin:70px auto;
-
-    text-align:center;
-
-}
-
-
-
-.shiori-mark {
-
-    font-size:30px;
-
-    letter-spacing:15px;
-
-}
-
-
-
-.shiori-diary-page h1 {
-
-    font-size:60px;
-
-    letter-spacing:15px;
-
-    line-height:1.2;
-
-}
-
-
-
-.shiori-diary-sub {
-
-    letter-spacing:8px;
-
-    color:#555;
-
-}
-
-
-
-.record {
-
-    margin-top:60px;
-
-}
-
-
-
-.record article {
-
-
-    background:#fff;
-
-
-    border:
-
-    1px solid #111;
-
-
-    padding:35px;
-
-
-    margin-bottom:45px;
-
-
-    text-align:left;
-
-
-    box-shadow:
-
-    5px 5px 0 #111;
-
-
-}
-
-
-
-.record-date {
-
-    font-size:13px;
-
-    letter-spacing:4px;
-
-}
-
-
-
-.record h2 {
-
-    font-size:28px;
-
-    letter-spacing:8px;
-
-    border-bottom:
-
-    1px solid #111;
-
-    padding-bottom:15px;
-
-}
-
-
-
-.record p {
-
-    line-height:2.3;
-
-    letter-spacing:2px;
-
-}
-
-
-
-.shiori-back {
-
-    display:inline-block;
-
-    margin-top:40px;
-
-    color:#111;
-
-    text-decoration:none;
-
-    letter-spacing:6px;
-
-}
-
-
-
-@media(max-width:600px){
-
-    .shiori-diary-page h1{
-
-        font-size:42px;
-
-    }
-
-}
-
-/* =========================
-SHIORI PROFILE BACK
-========================= */
-
-.shiori-back {
-
-    display:inline-block;
-
-    margin-top:50px;
-
-    color:#111;
-
-    text-decoration:none;
-
-    letter-spacing:8px;
-
-    font-size:14px;
-
-    transition:0.3s;
-
-}
 
 
 .shiori-back:hover {
 
-    letter-spacing:12px;
+
+    color:#fff;
+
+
+    letter-spacing:16px;
+
+
+}
+
+
+
+/* =========================
+スマホ
+========================= */
+
+
+@media(max-width:600px){
+
+
+    .shiori-card {
+
+        padding:40px 20px;
+
+    }
+
+
+    .shiori-card h1 {
+
+        font-size:40px;
+
+        letter-spacing:10px;
+
+    }
 
 }
