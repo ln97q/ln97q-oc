@@ -918,7 +918,6 @@ CONTRACT MARK
     0 0 30px rgba(220,150,255,0.45);
 }
 
-```css
 /* =========================
    花乃院 毬 写真館 + 契約印
    Gothic Princess Archive
@@ -1526,7 +1525,7 @@ CONTRACT MARK
 .shiori-card::before {
 
 
-    content:"🥀";
+    content:"✝️";
 
 
     position:absolute;
