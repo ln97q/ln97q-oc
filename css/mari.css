@@ -853,37 +853,91 @@
 
 }
 
+/* =========================
+   CONTRACT MARK
+========================= */
+
+
+.mark-card {
+
+    text-align:center;
+
+}
+
+
+
 .mari-mark {
-    width:220px;
-    height:220px;
+
+    width:90%;
+
     margin:35px auto;
 
+    padding:35px;
+
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
+
+
     background:
+
     radial-gradient(
+
         circle,
+
         #632b78,
+
         #100612
+
     );
 
-    border:none;
 
-    border-radius:50%;
+
+    border:
+
+    1px solid #d9b36c;
+
+
+
+    border-radius:30px;
+
+
 
     box-shadow:
-    0 0 30px rgba(220,150,255,0.5),
-    inset 0 0 25px rgba(255,220,255,0.2);
+
+
+    inset 0 0 25px rgba(255,220,255,0.15),
+
+
+    0 0 30px rgba(220,150,255,0.35);
+
 }
+
 
 
 .mari-mark img {
 
-    max-width:80%;
-    max-height:80%;
+
+    max-width:85%;
+
+
+    max-height:400px;
+
 
     object-fit:contain;
+
+
+    filter:
+
+
+    drop-shadow(
+
+        0 0 20px #ffb7ff
+
+    );
 
 }
