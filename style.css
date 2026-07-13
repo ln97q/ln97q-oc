@@ -1286,3 +1286,280 @@ CONTRACT MARK
 
 }
 ```
+
+/* =========================
+   花乃院 栞 SHIORI
+   ========================= */
+
+
+.shiori-body {
+
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: serif;
+
+    color: #4b294f;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* 背景 */
+
+.shiori-background {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,220,240,0.8),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        135deg,
+        #fff0fa,
+        #ead8ff,
+        #f6d9e8
+    );
+
+    z-index: -1;
+
+}
+
+
+
+/* ページ */
+
+.shiori-page {
+
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: 80px auto;
+
+}
+
+
+
+/* カード */
+
+.shiori-card {
+
+    background:
+
+    rgba(255,255,255,0.65);
+
+
+    backdrop-filter: blur(12px);
+
+
+    padding: 45px 35px;
+
+
+    border-radius: 30px;
+
+
+    border:
+
+    2px solid rgba(160,110,180,0.35);
+
+
+    box-shadow:
+
+    0 0 35px rgba(120,70,150,0.2);
+
+
+    position: relative;
+
+}
+
+
+
+/* タイトル */
+
+.shiori-card h1 {
+
+    text-align: center;
+
+
+    font-size: 42px;
+
+
+    letter-spacing: 8px;
+
+
+    color: #6b3b72;
+
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.english {
+
+
+    text-align:center;
+
+
+    letter-spacing:5px;
+
+
+    color:#a06aa8;
+
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* セリフ */
+
+.quote {
+
+
+    background:
+
+    rgba(255,240,250,0.8);
+
+
+    border-left:
+
+    5px solid #b88ac5;
+
+
+    padding:20px;
+
+
+    border-radius:15px;
+
+
+    line-height:2;
+
+
+    margin-bottom:40px;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+/* 見出し */
+
+.shiori-card h2 {
+
+
+    font-size:20px;
+
+
+    color:#80508a;
+
+
+    letter-spacing:4px;
+
+
+    border-bottom:
+
+    1px solid rgba(120,80,150,0.3);
+
+
+    padding-bottom:10px;
+
+
+    margin-top:45px;
+
+
+}
+
+
+
+/* プロフィール */
+
+.profile p {
+
+
+    line-height:2;
+
+
+    margin:10px 0;
+
+
+}
+
+
+
+/* 本文 */
+
+.character p,
+.memory p {
+
+
+    line-height:2.2;
+
+
+    text-align:center;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+/* 病み感の装飾 */
+
+.shiori-card::before {
+
+
+    content:"🥀";
+
+
+    position:absolute;
+
+
+    top:-25px;
+
+
+    left:-15px;
+
+
+    font-size:40px;
+
+}
+
+
+
+.shiori-card::after {
+
+
+    content:"🌙";
+
+
+    position:absolute;
+
+
+    bottom:-25px;
+
+
+    right:-10px;
+
+
+    font-size:45px;
+
+}
