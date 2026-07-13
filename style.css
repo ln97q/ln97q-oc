@@ -431,3 +431,73 @@ CHARACTERS
     object-fit:contain;
 
 }
+
+/* =====================
+   CHARACTER IMAGE FINAL
+   顔アップ表示用
+===================== */
+
+
+.character-image {
+
+    height:220px;
+
+    width:100%;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #fdf8ff,
+        #eee2ff
+    );
+
+}
+
+
+.character-image img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+
+
+/* 一颯さんだけ少し暗め */
+
+.character-image img[alt="御堂羽 一颯"] {
+
+    filter:
+
+    brightness(0.75)
+    contrast(1.15);
+
+}
+
+
+
+/* 栞くん少し透明感 */
+
+.character-image img[alt="花乃院 栞"] {
+
+    filter:
+
+    contrast(1.05);
+
+}
