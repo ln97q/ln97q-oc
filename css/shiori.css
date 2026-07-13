@@ -1,1 +1,531 @@
+/* =========================
+   花乃院 栞
+   SHIORI
+   Broken Incubus
+========================= */
 
+
+body.shiori-body {
+
+    margin:0;
+
+    min-height:100vh;
+
+    font-family:"Times New Roman", serif;
+
+    color:#f7ecff;
+
+    background:#050307;
+
+}
+
+
+
+/* 背景 */
+
+.shiori-background {
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        #632070 0%,
+        #1b0824 40%,
+        #030204 100%
+    );
+
+    z-index:0;
+
+}
+
+
+
+.shiori-background::before {
+
+    content:"♱　✦　†　♡　†　✦　♱";
+
+    position:absolute;
+
+    top:8%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:rgba(255,210,255,0.22);
+
+    font-size:32px;
+
+    letter-spacing:15px;
+
+}
+
+
+
+.shiori-background::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle,
+        transparent 10%,
+        rgba(0,0,0,0.9)
+    );
+
+}
+
+
+
+/* ページ */
+
+.shiori-page {
+
+    position:relative;
+
+    z-index:1;
+
+    width:90%;
+
+    max-width:720px;
+
+    margin:70px auto;
+
+}
+
+
+
+/* メインカード */
+
+.shiori-card {
+
+    position:relative;
+
+    padding:55px 45px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(40,12,50,0.96),
+        rgba(3,2,6,0.98)
+    );
+
+
+    border:
+
+    2px solid #b88b45;
+
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+    0 0 50px rgba(170,60,220,0.35),
+
+    inset 0 0 40px rgba(255,255,255,0.03);
+
+
+}
+
+
+
+/* 飾り */
+
+.shiori-card::before {
+
+    content:"♱";
+
+    position:absolute;
+
+    top:-25px;
+
+    left:25px;
+
+    font-size:55px;
+
+    color:#f3c9ff;
+
+}
+
+
+
+.shiori-card::after {
+
+    content:"†";
+
+    position:absolute;
+
+    right:25px;
+
+    bottom:15px;
+
+    font-size:130px;
+
+    color:#d9b36c;
+
+    opacity:0.1;
+
+}
+
+
+
+
+
+/* 装飾 */
+
+.shiori-decor {
+
+    text-align:center;
+
+    color:#ffb8ed;
+
+    font-size:28px;
+
+    letter-spacing:12px;
+
+}
+
+
+
+/* 名前 */
+
+.shiori-card h1 {
+
+    text-align:center;
+
+    margin-top:30px;
+
+    font-size:62px;
+
+    letter-spacing:18px;
+
+    font-weight:normal;
+
+    color:#fff;
+
+
+    text-shadow:
+
+    0 0 10px white,
+
+    0 0 35px #a84cff;
+
+}
+
+
+
+.shiori-english {
+
+    text-align:center;
+
+    color:#d9a8ff !important;
+
+    letter-spacing:12px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+/* 写真 */
+
+.shiori-image {
+
+    width:320px;
+
+    height:520px;
+
+    margin:30px auto;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        #35103f,
+        #050208
+    );
+
+
+    border:
+
+    1px solid #d9b36c;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 0 35px rgba(220,150,255,0.35);
+
+}
+
+
+
+.shiori-image img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+
+
+
+/* セリフ */
+
+.shiori-quote {
+
+    margin-top:45px;
+
+    padding:35px;
+
+
+    background:
+
+    rgba(0,0,0,0.55);
+
+
+    border-left:
+
+    5px solid #7b0010;
+
+
+    color:#fff;
+
+
+    line-height:2.4;
+
+    letter-spacing:3px;
+
+
+    box-shadow:
+
+    inset 0 0 30px rgba(255,0,50,0.08);
+
+}
+
+
+
+
+
+/* 見出し */
+
+.shiori-card h2 {
+
+    margin-top:60px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    letter-spacing:10px;
+
+    color:#efbaff;
+
+
+    border-bottom:
+
+    1px solid rgba(217,179,108,0.5);
+
+
+    padding-bottom:15px;
+
+}
+
+
+
+.shiori-card h2::before {
+
+    content:"♡";
+
+    color:#ff9fdc;
+
+    margin-right:15px;
+
+}
+
+
+
+.shiori-card h2::after {
+
+    content:"♱";
+
+    color:#d9b36c;
+
+    margin-left:15px;
+
+}
+
+
+
+
+
+/* 本文 */
+
+.shiori-card p {
+
+    color:#f7eaff;
+
+    text-align:center;
+
+    line-height:2.7;
+
+    letter-spacing:3px;
+
+}
+
+
+
+
+
+/* 警告文 */
+
+.shiori-warning {
+
+    margin-top:60px;
+
+    text-align:center;
+
+    color:#d9b36c;
+
+    letter-spacing:8px;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+/* 戻る */
+
+.shiori-back {
+
+    display:block;
+
+    width:max-content;
+
+    margin:60px auto;
+
+    color:#f5c8ff;
+
+    text-decoration:none;
+
+    letter-spacing:8px;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .shiori-card{
+
+        padding:40px 20px;
+
+    }
+
+
+    .shiori-card h1{
+
+        font-size:40px;
+
+        letter-spacing:10px;
+
+    }
+
+
+    .shiori-image{
+
+        width:90%;
+
+        height:500px;
+
+    }
+
+}
+
+
+/* =========================
+   SHIORI FINAL FIX
+========================= */
+
+body.shiori-body {
+    background:#050307 !important;
+    color:#f7ecff !important;
+}
+
+
+body.shiori-body .shiori-background {
+    display:block !important;
+    position:fixed !important;
+    inset:0 !important;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #632070,
+        #1b0824 45%,
+        #030204
+    ) !important;
+
+    z-index:0 !important;
+}
+
+
+body.shiori-body .shiori-page {
+    position:relative !important;
+    z-index:2 !important;
+}
+
+
+body.shiori-body .shiori-card {
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(40,12,50,0.96),
+        rgba(3,2,6,0.98)
+    ) !important;
+
+    color:#f7ecff !important;
+
+}
+
+
+body.shiori-body .shiori-card p {
+
+    color:#f7eaff !important;
+
+}
