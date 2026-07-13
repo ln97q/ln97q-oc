@@ -1,10 +1,12 @@
-/* =====================
-花乃院 毬 専用ページ
-Gothic Succubus Princess
-===================== */
+/* =========================
+   花乃院 毬 専用ページ
+   Gothic Succubus Princess
+========================= */
 
 
-/* 背景 */
+/* =========================
+   基本
+========================= */
 
 .mari-body {
 
@@ -20,16 +22,21 @@ Gothic Succubus Princess
 
     inset:0;
 
+    z-index:0;
+
     background:
 
     radial-gradient(
-        circle at top,
-        #71358a,
-        #180b22 45%,
-        #050308 100%
-    );
 
-    z-index:0;
+        circle at top,
+
+        #71358a,
+
+        #180b22 45%,
+
+        #050308 100%
+
+    );
 
 }
 
@@ -81,7 +88,9 @@ Gothic Succubus Princess
 
 
 
-/* ページ */
+/* =========================
+   ページ
+========================= */
 
 .mari-page {
 
@@ -101,7 +110,7 @@ Gothic Succubus Princess
 
 
 
-/* 横のレース */
+/* 左右レース */
 
 .mari-page::before,
 
@@ -140,11 +149,13 @@ Gothic Succubus Princess
 }
 
 
+
 .mari-page::before {
 
     left:0;
 
 }
+
 
 
 .mari-page::after {
@@ -155,7 +166,10 @@ Gothic Succubus Princess
 
 
 
-/* 飾り */
+/* =========================
+   タイトル
+========================= */
+
 
 .mari-decor {
 
@@ -168,8 +182,6 @@ Gothic Succubus Princess
 }
 
 
-
-/* 名前 */
 
 .mari-page h1 {
 
@@ -197,7 +209,10 @@ Gothic Succubus Princess
 
 
 
-/* カード */
+/* =========================
+   カード
+========================= */
+
 
 .mari-card {
 
@@ -247,16 +262,9 @@ Gothic Succubus Princess
 
     transform:translateY(-8px);
 
-
-    box-shadow:
-
-    0 0 45px rgba(240,150,255,0.55);
-
 }
 
 
-
-/* ハートとリボン */
 
 .mari-card::before {
 
@@ -292,7 +300,10 @@ Gothic Succubus Princess
 
 
 
-/* 画像枠 */
+/* =========================
+   プロフィール画像
+========================= */
+
 
 .mari-image {
 
@@ -344,8 +355,6 @@ Gothic Succubus Princess
 
 
 
-/* 宝石 */
-
 .mari-image::after {
 
     content:"✦";
@@ -360,15 +369,16 @@ Gothic Succubus Princess
 
     font-size:35px;
 
-    text-shadow:
-
-    0 0 15px white;
+    text-shadow:0 0 15px white;
 
 }
 
 
 
-/* 見出し */
+/* =========================
+   文字
+========================= */
+
 
 .mari-card h2 {
 
@@ -386,8 +396,6 @@ Gothic Succubus Princess
 
 
 
-/* 本文 */
-
 .mari-card p {
 
     color:#f8eaff;
@@ -404,27 +412,10 @@ Gothic Succubus Princess
 
 
 
-/* STORY装飾 */
+/* =========================
+   戻る
+========================= */
 
-.mari-card:nth-of-type(2)::before {
-
-    content:"♥";
-
-    position:absolute;
-
-    top:-20px;
-
-    left:auto;
-
-    right:25px;
-
-    font-size:35px;
-
-}
-
-
-
-/* 戻る */
 
 .mari-back {
 
@@ -442,7 +433,10 @@ Gothic Succubus Princess
 
 
 
-/* 光 */
+/* =========================
+   光アニメーション
+========================= */
+
 
 @keyframes mariGlow {
 
@@ -467,46 +461,10 @@ Gothic Succubus Princess
 
 }
 
-
-/* =====================
-GALLERY
-===================== */
-.mari-gallery {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:25px;
-}
-.mari-gallery img {
-    width:180px;
-    height:240px;
-    object-fit:cover;
-    border-radius:20px;
-    border:1px solid #d9b36c;
-    box-shadow:
-    0 0 20px rgba(220,150,255,0.35);
-    transition:0.3s;
-}
-.mari-gallery img:hover {
-    transform:scale(1.05);
-}
-.gallery-text {
-    margin-top:25px;
-    text-align:center !important;
-}
-/* =====================
-CONTRACT MARK
-===================== */
-
 /* =========================
-   花乃院 毬 写真館 + 契約印
-   Gothic Princess Archive
+   GALLERY
 ========================= */
 
-
-
-/* 写真館 */
 
 .mari-gallery {
 
@@ -522,27 +480,28 @@ CONTRACT MARK
 
 
 
-
-
 .gallery-frame {
 
     position:relative;
 
+
     background:
 
     linear-gradient(
+
         135deg,
+
         #fff8ff,
+
         #ead5ff
+
     );
 
 
     padding:18px;
 
 
-    border:
-
-    3px solid #d9b36c;
+    border:3px solid #d9b36c;
 
 
     border-radius:25px;
@@ -552,76 +511,53 @@ CONTRACT MARK
 
     0 0 25px rgba(255,190,255,0.45);
 
-
 }
-
-
 
 
 
 .gallery-frame::before {
 
-
     content:"✦";
-
 
     position:absolute;
 
-
     top:-18px;
 
-
     left:50%;
-
 
     transform:translateX(-50%);
 
 
     color:#ffd8ff;
 
-
     font-size:28px;
-
 
     text-shadow:
 
-    0 0 15px #ffffff;
-
+    0 0 15px white;
 
 }
 
 
 
-
-
-
-
 .gallery-frame img {
-
 
     width:100%;
 
-
     max-height:500px;
-
 
     object-fit:contain;
 
 
     border-radius:18px;
 
-
     display:block;
-
 
 }
 
 
 
-
-
 .gallery-frame p {
-
 
     margin:18px 0 5px;
 
@@ -634,7 +570,6 @@ CONTRACT MARK
 
     font-size:18px;
 
-
     letter-spacing:6px;
 
 
@@ -642,19 +577,11 @@ CONTRACT MARK
 
     "Times New Roman", serif;
 
-
 }
 
 
 
-
-
-
-
-/* 写真館タイトル */
-
 .gallery-subtitle {
-
 
     text-align:center;
 
@@ -670,17 +597,11 @@ CONTRACT MARK
 
     margin-bottom:25px;
 
-
 }
 
 
 
-
-
-
-
 .gallery-text {
-
 
     margin-top:35px;
 
@@ -693,30 +614,31 @@ CONTRACT MARK
 
     line-height:2.5;
 
-
 }
 
 
 
+/* =========================
+   CONTRACT MARK
+========================= */
 
-
-
-
-/* 契約印展示 */
 
 .mark-card {
 
-
     text-align:center;
 
-
 }
-
-
 
 
 
 .mari-mark {
+
+    width:220px;
+
+    height:220px;
+
+
+    margin:35px auto;
 
 
     display:flex;
@@ -727,14 +649,6 @@ CONTRACT MARK
 
     align-items:center;
 
-
-    margin:30px auto;
-
-
-    padding:35px;
-
-
-    width:90%;
 
 
     background:
@@ -751,39 +665,40 @@ CONTRACT MARK
     );
 
 
-    border-radius:30px;
-
 
     border:
 
-    1px solid #d9b36c;
+    2px solid #d9a0ff;
+
+
+
+    border-radius:50%;
+
 
 
     box-shadow:
 
 
-    inset 0 0 25px rgba(255,220,255,0.15),
+    0 0 30px rgba(220,150,255,0.5),
 
-    0 0 30px rgba(220,150,255,0.35);
 
+    inset 0 0 25px rgba(255,220,255,0.2);
 
 }
-
-
-
 
 
 
 .mari-mark img {
 
 
-    max-width:85%;
+    max-width:80%;
 
 
-    max-height:400px;
+    max-height:80%;
 
 
     object-fit:contain;
+
 
 
     filter:
@@ -795,15 +710,14 @@ CONTRACT MARK
 
     );
 
-
 }
 
 
 
+/* =========================
+   特別カード
+========================= */
 
-
-
-/* ギャラリーカードだけ少し特別感 */
 
 .mari-gallery-card {
 
@@ -817,27 +731,99 @@ CONTRACT MARK
 
         rgba(55,25,70,0.98),
 
+
         rgba(15,7,22,0.98)
 
     );
-
 
 }
 
 
 
+/* =========================
+   スマホ対応
+========================= */
 
-
-/* スマホ対応 */
 
 @media(max-width:600px){
+
+
+    .mari-page {
+
+        padding:40px 15px;
+
+    }
+
+
+
+    .mari-page h1 {
+
+
+        font-size:40px;
+
+
+        letter-spacing:8px;
+
+    }
+
+
+
+    .mari-decor {
+
+
+        font-size:22px;
+
+
+        letter-spacing:5px;
+
+    }
+
+
+
+    .mari-card {
+
+
+        padding:25px;
+
+    }
+
+
+
+    .mari-card h2 {
+
+
+        font-size:24px;
+
+
+        letter-spacing:5px;
+
+    }
+
+
+
+    .mari-card p {
+
+
+        font-size:15px;
+
+
+    }
+
+
+
+    .mari-image {
+
+
+        height:250px;
+
+    }
+
 
 
     .gallery-frame {
 
 
         padding:12px;
-
 
     }
 
@@ -851,7 +837,6 @@ CONTRACT MARK
 
         letter-spacing:3px;
 
-
     }
 
 
@@ -859,23 +844,11 @@ CONTRACT MARK
     .mari-mark {
 
 
-        padding:20px;
+        width:170px;
+
+
+        height:170px;
 
     }
 
-
-}
-
-body.mari-body {
-    background:#07040b !important;
-}
-
-.mari-background {
-    background:
-    radial-gradient(
-        circle at top,
-        #71358a,
-        #180b22 45%,
-        #050308 100%
-    ) !important;
 }
