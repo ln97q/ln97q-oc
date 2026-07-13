@@ -941,3 +941,52 @@
     );
 
 }
+
+
+/* 契約印 最終調整 */
+
+.mark-card .mari-mark {
+
+    width:90%;
+
+    height:auto;
+
+    min-height:250px;
+
+    margin:35px auto;
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #632b78,
+        #100612
+    );
+
+    border:1px solid #d9b36c;
+
+    border-radius:30px;
+
+    box-shadow:
+    inset 0 0 25px rgba(255,220,255,0.15),
+    0 0 30px rgba(220,150,255,0.35);
+
+}
+
+
+.mark-card .mari-mark img {
+
+    max-width:85%;
+
+    max-height:400px;
+
+    object-fit:contain;
+
+}
