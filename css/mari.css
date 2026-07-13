@@ -924,3 +924,91 @@
     border-radius:0 !important;
 
 }
+
+/* =========================
+   GALLERY 横スクロール化
+========================= */
+
+
+.mari-gallery {
+
+    display:flex;
+
+    flex-direction:row;
+
+    gap:30px;
+
+    margin-top:35px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding:20px 10px 35px;
+
+    scroll-snap-type:x mandatory;
+
+}
+
+
+/* ギャラリーカード */
+
+.mari-gallery .gallery-frame {
+
+    flex:0 0 320px;
+
+    scroll-snap-align:center;
+
+}
+
+
+/* 画像サイズ */
+
+.mari-gallery .gallery-frame img {
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:contain;
+
+}
+
+
+/* スクロールバー */
+
+.mari-gallery::-webkit-scrollbar {
+
+    height:8px;
+
+}
+
+
+.mari-gallery::-webkit-scrollbar-thumb {
+
+    background:#d9a0ff;
+
+    border-radius:20px;
+
+}
+
+
+
+/* スマホ */
+
+@media(max-width:600px){
+
+    .mari-gallery .gallery-frame {
+
+        flex:0 0 85%;
+
+    }
+
+
+    .mari-gallery .gallery-frame img {
+
+        height:300px;
+
+    }
+
+}
