@@ -788,3 +788,81 @@ to {
     }
 
 }
+
+
+/* =========================
+   栞 GALLERY 最終修正版
+========================= */
+
+
+.shiori-gallery {
+
+    display:flex !important;
+
+    flex-direction:row !important;
+
+    gap:30px;
+
+    margin-top:35px;
+
+    overflow-x:auto !important;
+
+    overflow-y:hidden;
+
+    padding:20px 10px 35px;
+
+    scroll-snap-type:x mandatory;
+
+}
+
+
+
+.shiori-gallery .gallery-frame {
+
+    flex:0 0 320px !important;
+
+    scroll-snap-align:center;
+
+}
+
+
+
+.shiori-gallery .gallery-frame img {
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:contain;
+
+}
+
+
+
+.shiori-gallery::-webkit-scrollbar {
+
+    height:8px;
+
+}
+
+
+
+.shiori-gallery::-webkit-scrollbar-thumb {
+
+    background:#ff9fbb;
+
+    border-radius:20px;
+
+}
+
+
+
+@media(max-width:600px){
+
+    .shiori-gallery .gallery-frame {
+
+        flex:0 0 85% !important;
+
+    }
+
+}
