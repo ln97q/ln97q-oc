@@ -2577,11 +2577,9 @@ CONTRACT MARK
 /* =========================
    花乃院 栞
    SHIORI
-   Gothic Nightmare Prince
+   Dark Gothic Prince
 ========================= */
 
-
-/* BODY */
 
 .shiori-body {
 
@@ -2589,23 +2587,14 @@ CONTRACT MARK
 
     min-height:100vh;
 
-    font-family:
-    "Times New Roman",
-    serif;
+    font-family:"Times New Roman", serif;
 
-    color:#f5eaff;
+    color:#f7ecff;
 
-    background:#050308;
-
-    overflow-x:hidden;
+    background:#030205;
 
 }
 
-
-
-/* =========================
-背景
-========================= */
 
 
 .shiori-background {
@@ -2614,16 +2603,14 @@ CONTRACT MARK
 
     inset:0;
 
-
     background:
 
     radial-gradient(
         circle at top,
-        #51205f,
-        #120817 45%,
-        #020102 100%
+        #4b185b,
+        #120718 40%,
+        #010101 100%
     );
-
 
     z-index:-2;
 
@@ -2633,7 +2620,7 @@ CONTRACT MARK
 
 .shiori-background::before {
 
-    content:"♱　✦　♡　†　✦　♱";
+    content:"♱　✦　†　♡　†　✦　♱";
 
     position:absolute;
 
@@ -2643,15 +2630,11 @@ CONTRACT MARK
 
     transform:translateX(-50%);
 
-
-    color:
-
-    rgba(255,220,255,0.25);
-
-
     font-size:35px;
 
-    letter-spacing:15px;
+    letter-spacing:18px;
+
+    color:rgba(255,220,255,0.25);
 
 }
 
@@ -2665,23 +2648,19 @@ CONTRACT MARK
 
     inset:0;
 
-
     background:
 
     radial-gradient(
         circle,
-        transparent 20%,
-        rgba(0,0,0,0.8)
+        transparent 15%,
+        rgba(0,0,0,0.85)
     );
 
 }
 
 
 
-/* =========================
-ページ
-========================= */
-
+/* PAGE */
 
 .shiori-page {
 
@@ -2695,20 +2674,16 @@ CONTRACT MARK
 
 
 
-/* =========================
-カード
-========================= */
-
+/* CARD */
 
 .shiori-card {
-
 
     background:
 
     linear-gradient(
         135deg,
-        rgba(30,12,40,0.95),
-        rgba(5,2,10,0.98)
+        rgba(45,15,55,0.95),
+        rgba(5,3,8,0.98)
     );
 
 
@@ -2725,37 +2700,32 @@ CONTRACT MARK
 
     box-shadow:
 
-    0 0 35px rgba(220,150,255,0.35),
+    0 0 45px rgba(150,60,200,0.45),
 
-    inset 0 0 40px rgba(255,200,255,0.05);
+    inset 0 0 50px rgba(255,255,255,0.04);
 
 
     position:relative;
-
 
 }
 
 
 
-/* 飾り */
+/* 装飾 */
 
 .shiori-card::before {
 
     content:"♱";
 
-
     position:absolute;
 
-    top:-25px;
+    top:-30px;
 
     left:25px;
 
-
-    font-size:45px;
-
+    font-size:55px;
 
     color:#ffd6ff;
-
 
 }
 
@@ -2765,68 +2735,53 @@ CONTRACT MARK
 
     content:"†";
 
-
     position:absolute;
 
-    right:20px;
+    right:25px;
 
-    bottom:15px;
+    bottom:20px;
 
-
-    font-size:100px;
-
+    font-size:120px;
 
     color:#d9b36c;
 
-    opacity:0.15;
+    opacity:0.12;
 
 }
 
 
 
-/* =========================
-名前
-========================= */
-
+/* NAME */
 
 .shiori-card h1 {
 
-
     text-align:center;
 
+    font-size:65px;
 
-    font-size:60px;
-
-
-    letter-spacing:18px;
-
+    letter-spacing:20px;
 
     font-weight:normal;
 
-
-    color:#f5d8ff;
-
+    color:#ffffff;
 
     text-shadow:
 
-    0 0 20px #b45cff;
+    0 0 10px #fff,
 
+    0 0 35px #a84cff;
 
 }
 
 
 
-.english {
-
+.shiori-english {
 
     text-align:center;
 
+    letter-spacing:15px;
 
-    letter-spacing:12px;
-
-
-    color:#ddaaff;
-
+    color:#d9a8ff;
 
     margin-bottom:50px;
 
@@ -2834,25 +2789,17 @@ CONTRACT MARK
 
 
 
-/* =========================
-画像
-========================= */
-
+/* IMAGE */
 
 .shiori-image {
 
-
     height:330px;
-
 
     display:flex;
 
-
     justify-content:center;
 
-
     align-items:center;
-
 
     overflow:hidden;
 
@@ -2861,8 +2808,8 @@ CONTRACT MARK
 
     radial-gradient(
         circle,
-        #542066,
-        #08040c
+        #70217d,
+        #050208
     );
 
 
@@ -2873,13 +2820,11 @@ CONTRACT MARK
 
     border-radius:25px;
 
-
 }
 
 
 
 .shiori-image img {
-
 
     max-width:90%;
 
@@ -2887,37 +2832,31 @@ CONTRACT MARK
 
     object-fit:contain;
 
-
 }
 
 
 
-/* =========================
-セリフ
-========================= */
+/* QUOTE */
+
+.shiori-quote {
+
+    margin-top:45px;
+
+    padding:35px;
 
 
-.quote {
-
-
-    margin-top:40px;
-
-
-    background:#08050b;
+    background:#050308;
 
 
     border-left:
 
-    5px solid #8b0000;
-
-
-    padding:30px;
+    5px solid #800000;
 
 
     color:#fff;
 
 
-    line-height:2.6;
+    line-height:2.5;
 
 
     letter-spacing:3px;
@@ -2925,130 +2864,91 @@ CONTRACT MARK
 
     box-shadow:
 
-    inset 0 0 25px rgba(255,255,255,0.05);
-
+    inset 0 0 30px rgba(255,255,255,0.05);
 
 }
 
 
 
-
-
-/* =========================
-見出し
-========================= */
-
+/* TITLE */
 
 .shiori-card h2 {
 
+    margin-top:60px;
 
-    margin-top:55px;
-
-
-    color:#f1b9ff;
-
-
-    font-size:25px;
-
-
-    letter-spacing:10px;
+    padding-bottom:15px;
 
 
     text-align:center;
+
+
+    font-size:28px;
+
+
+    letter-spacing:12px;
+
+
+    color:#f1b9ff;
 
 
     border-bottom:
 
     1px solid rgba(217,179,108,0.5);
 
-
-    padding-bottom:15px;
-
-
 }
 
-
-
-/* =========================
-本文
-========================= */
-
-
-.profile p,
-.character p,
-.memory p {
-
-
-    color:#f8eaff;
-
-
-    text-align:center;
-
-
-    line-height:2.8;
-
-
-    letter-spacing:3px;
-
-
-}
-
-
-
-/* =========================
-血筋装飾
-========================= */
 
 
 .shiori-card h2::before {
 
-
     content:"♡";
-
-
-    color:#ffb8ed;
-
 
     margin-right:15px;
 
+    color:#ff9fdc;
 
 }
+
 
 
 .shiori-card h2::after {
 
-
     content:"♱";
-
-
-    color:#d9b36c;
-
 
     margin-left:15px;
 
+    color:#d9b36c;
 
 }
 
 
 
-/* =========================
-BACK
-========================= */
+.shiori-card p {
 
+    text-align:center;
+
+    line-height:2.8;
+
+    letter-spacing:3px;
+
+    color:#f7eaff;
+
+}
+
+
+
+/* BACK */
 
 .shiori-back {
 
-
     display:block;
-
 
     width:max-content;
 
+    margin:70px auto 20px;
 
-    margin:70px auto;
 
-
-    color:#f1b9ff;
+    color:#f5c8ff;
 
 
     text-decoration:none;
@@ -3059,75 +2959,36 @@ BACK
 
     transition:0.4s;
 
-
-    position:relative;
-
-
-}
-
-
-
-.shiori-back::after {
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    left:0;
-
-
-    bottom:-10px;
-
-
-    width:100%;
-
-
-    height:1px;
-
-
-    background:#d9b36c;
-
-
 }
 
 
 
 .shiori-back:hover {
 
-
-    color:#fff;
-
+    color:white;
 
     letter-spacing:16px;
-
 
 }
 
 
 
-/* =========================
-スマホ
-========================= */
-
+/* MOBILE */
 
 @media(max-width:600px){
 
-
-    .shiori-card {
+    .shiori-card{
 
         padding:40px 20px;
 
     }
 
 
-    .shiori-card h1 {
+    .shiori-card h1{
 
-        font-size:40px;
+        font-size:42px;
 
-        letter-spacing:10px;
+        letter-spacing:12px;
 
     }
 
