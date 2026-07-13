@@ -570,3 +570,18 @@ CHARACTERS
     object-fit:contain;
 
 }
+
+/* キャラクター一覧 アイコン調整 */
+
+.character-image {
+    font-size:50px;
+    color:#b49ad8;
+}
+
+.character-image img {
+    width:auto;
+    height:auto;
+    max-width:90%;
+    max-height:220px;
+    object-fit:contain;
+}
