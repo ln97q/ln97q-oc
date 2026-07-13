@@ -872,3 +872,48 @@ Gothic Succubus Princess
     }
 
 }
+
+
+/* =====================
+GALLERY
+===================== */
+.mari-gallery {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+.mari-gallery img {
+    width:180px;
+    height:240px;
+    object-fit:cover;
+    border-radius:20px;
+    border:1px solid #d9b36c;
+    box-shadow:
+    0 0 20px rgba(220,150,255,0.35);
+    transition:0.3s;
+}
+.mari-gallery img:hover {
+    transform:scale(1.05);
+}
+.gallery-text {
+    margin-top:25px;
+    text-align:center !important;
+}
+/* =====================
+CONTRACT MARK
+===================== */
+.mari-mark {
+    display:flex;
+    justify-content:center;
+    margin:25px 0;
+}
+.mari-mark img {
+    width:260px;
+    max-width:90%;
+    border-radius:25px;
+    border:1px solid #d9b36c;
+    box-shadow:
+    0 0 30px rgba(220,150,255,0.45);
+}
