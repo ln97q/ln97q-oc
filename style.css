@@ -1288,7 +1288,7 @@ CONTRACT MARK
 
 /* =========================
    花乃院 栞 SHIORI
-   Nightmare Incubus
+   Silent Nightmare
 ========================= */
 
 
@@ -1303,6 +1303,7 @@ CONTRACT MARK
     serif;
 
 }
+
 
 
 /* 背景 */
@@ -1320,7 +1321,7 @@ CONTRACT MARK
         135deg,
         #ffffff,
         #eeeeee,
-        #dcdcdc
+        #cccccc
     );
 
 
@@ -1329,12 +1330,9 @@ CONTRACT MARK
 }
 
 
-/* 黒い影 */
-
-.shiori-background::before {
+.shiori-background::after {
 
     content:"";
-
 
     position:absolute;
 
@@ -1345,11 +1343,12 @@ CONTRACT MARK
 
     radial-gradient(
         circle,
-        transparent 40%,
-        rgba(0,0,0,0.25)
+        transparent 30%,
+        rgba(0,0,0,0.35)
     );
 
 }
+
 
 
 
@@ -1359,9 +1358,9 @@ CONTRACT MARK
 
     width:90%;
 
-    max-width:720px;
+    max-width:700px;
 
-    margin:80px auto;
+    margin:90px auto;
 
 }
 
@@ -1374,10 +1373,10 @@ CONTRACT MARK
 
     background:
 
-    rgba(255,255,255,0.92);
+    rgba(255,255,255,0.95);
 
 
-    padding:50px 40px;
+    padding:55px 40px;
 
 
     border:
@@ -1385,48 +1384,16 @@ CONTRACT MARK
     1px solid #111;
 
 
-    border-radius:0;
+    border-radius:5px;
 
 
     box-shadow:
 
-    0 20px 50px rgba(0,0,0,0.25);
+    0 25px 60px rgba(0,0,0,0.35);
 
 
     position:relative;
 
-
-    overflow:hidden;
-
-}
-
-
-
-/* ひび割れっぽい影 */
-
-.shiori-card::before {
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    inset:0;
-
-
-    background:
-
-    linear-gradient(
-        120deg,
-        transparent 45%,
-        rgba(0,0,0,0.05),
-        transparent 55%
-    );
-
-
-    pointer-events:none;
 
 }
 
@@ -1440,19 +1407,20 @@ CONTRACT MARK
     font-size:55px;
 
 
-    letter-spacing:15px;
-
-
-    color:#050505;
-
-
-    text-align:center;
+    letter-spacing:18px;
 
 
     font-weight:normal;
 
 
+    color:#000;
+
+
+    text-align:center;
+
+
 }
+
 
 
 
@@ -1462,13 +1430,16 @@ CONTRACT MARK
     text-align:center;
 
 
-    letter-spacing:8px;
+    letter-spacing:10px;
 
 
     color:#555;
 
 
+    margin-bottom:50px;
+
 }
+
 
 
 
@@ -1477,25 +1448,22 @@ CONTRACT MARK
 .quote {
 
 
-    margin-top:50px;
+    background:#000;
 
 
-    padding:25px;
+    color:#fff;
 
 
-    background:#111;
+    padding:30px;
 
 
-    color:white;
+    line-height:2.5;
 
 
-    border-radius:0;
+    letter-spacing:3px;
 
 
-    line-height:2.3;
-
-
-    letter-spacing:2px;
+    margin-bottom:50px;
 
 
     position:relative;
@@ -1504,8 +1472,6 @@ CONTRACT MARK
 }
 
 
-
-/* 赤い線 */
 
 .quote::before {
 
@@ -1518,16 +1484,17 @@ CONTRACT MARK
 
     left:0;
 
+
     top:0;
-
-
-    width:4px;
 
 
     height:100%;
 
 
-    background:#800000;
+    width:5px;
+
+
+    background:#8b0000;
 
 
 }
@@ -1539,40 +1506,42 @@ CONTRACT MARK
 .shiori-card h2 {
 
 
-    color:#111;
-
-
-    font-size:22px;
+    font-size:24px;
 
 
     letter-spacing:8px;
 
 
+    color:#000;
+
+
     border-bottom:
 
-    1px solid #111;
+    1px solid #000;
 
 
     padding-bottom:15px;
+
 
 }
 
 
 
-/* 本文 */
+
+/* 内容 */
 
 .profile p,
 .character p,
 .memory p {
 
 
+    text-align:center;
+
+
     color:#222;
 
 
-    line-height:2.5;
-
-
-    text-align:center;
+    line-height:2.8;
 
 
     letter-spacing:2px;
@@ -1582,18 +1551,42 @@ CONTRACT MARK
 
 
 
-/* 一部だけ赤文字にできる用 */
+/* 怖い装飾 */
 
-.shiori-danger {
+.shiori-card::before {
 
 
-    color:#800000;
+    content:"";
+
+
+    position:absolute;
+
+
+    top:-20px;
+
+
+    left:30px;
+
+
+    width:80px;
+
+
+    height:80px;
+
+
+    border:
+
+    1px solid #111;
+
+
+    border-radius:50%;
+
+
+    opacity:0.2;
 
 }
 
 
-
-/* 装飾 */
 
 .shiori-card::after {
 
@@ -1604,32 +1597,32 @@ CONTRACT MARK
     position:absolute;
 
 
+    bottom:20px;
+
+
     right:25px;
 
 
-    bottom:15px;
+    font-size:80px;
 
 
-    font-size:70px;
+    color:#000;
 
 
-    color:#111;
-
-
-    opacity:0.15;
+    opacity:0.12;
 
 }
 
 
 
-/* ホラーっぽい揺れ */
+/* hover */
 
 .shiori-card:hover {
 
 
     box-shadow:
 
-    0 0 60px rgba(0,0,0,0.4);
+    0 0 80px rgba(0,0,0,0.45);
 
 
 }
@@ -1640,6 +1633,7 @@ CONTRACT MARK
 
 @media(max-width:600px){
 
+
     .shiori-card{
 
         padding:35px 20px;
@@ -1649,8 +1643,11 @@ CONTRACT MARK
 
     .shiori-card h1{
 
-        font-size:40px;
+        font-size:38px;
+
+        letter-spacing:10px;
 
     }
+
 
 }
