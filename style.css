@@ -399,42 +399,8 @@ CHARACTERS
 
 
 }
-
-
 /* =====================
-   Character画像調整
-===================== */
-
-.character-image {
-
-    width:100%;
-
-    height:250px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    overflow:hidden;
-
-}
-
-
-.character-image img {
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-}
-
-/* =====================
-   CHARACTER IMAGE FINAL
-   顔アップ表示用
+   Character Image Fix
 ===================== */
 
 
@@ -465,39 +431,33 @@ CHARACTERS
 }
 
 
+
 .character-image img {
 
-    width:100%;
+    display:block;
 
-    height:100%;
+    max-width:90%;
 
-    object-fit:cover;
+    max-height:200px;
 
-    object-position:center;
+    width:auto;
 
-}
+    height:auto;
 
-
-
-/* 一颯さんだけ少し暗め */
-
-.character-image img[alt="御堂羽 一颯"] {
-
-    filter:
-
-    brightness(0.75)
-    contrast(1.15);
+    object-fit:contain;
 
 }
 
 
 
-/* 栞くん少し透明感 */
+/* 顔アップ画像用 */
 
-.character-image img[alt="花乃院 栞"] {
+.character-image img[src*="ibuki"],
+.character-image img[src*="shiori"],
+.character-image img[src*="mari"] {
 
-    filter:
+    max-width:90%;
 
-    contrast(1.05);
+    max-height:200px;
 
 }
