@@ -983,3 +983,59 @@ CHARACTERS
     z-index:-1;
 
 }
+
+
+/* =========================
+   Cute Button Upgrade
+========================= */
+
+
+.profile-button {
+
+    font-family:"Fredoka", sans-serif;
+
+    letter-spacing:1px !important;
+
+    font-weight:500;
+
+    border:2px solid rgba(255,255,255,.6);
+
+
+}
+
+
+
+/* ドット枠 強化 */
+
+.character-card {
+
+    border:
+
+    4px dashed #d9b8ff !important;
+
+}
+
+
+
+/* ボタンぷっくり感 */
+
+.profile-button {
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.profile-button:hover {
+
+    transform:
+
+    translateY(3px)
+
+    scale(1.05);
+
+
+}
