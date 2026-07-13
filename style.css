@@ -2998,3 +2998,33 @@ CONTRACT MARK
 <a href="characters.html" class="shiori-back">
     BACK
 </a>
+
+
+.shiori-decor {
+
+    text-align:center;
+
+    color:#ffb8ed;
+
+    font-size:30px;
+
+    letter-spacing:15px;
+
+}
+
+
+.shiori-warning {
+
+    margin-top:60px;
+
+    text-align:center;
+
+    color:#d9b36c;
+
+    letter-spacing:8px;
+
+    font-size:14px;
+
+    opacity:0.8;
+
+}
