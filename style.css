@@ -3051,3 +3051,57 @@ body.shiori-body {
     }
 
 }
+
+
+/* =========================
+   SHIORI FINAL FIX
+========================= */
+
+body.shiori-body {
+    background:#050307 !important;
+    color:#f7ecff !important;
+}
+
+
+body.shiori-body .shiori-background {
+    display:block !important;
+    position:fixed !important;
+    inset:0 !important;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #632070,
+        #1b0824 45%,
+        #030204
+    ) !important;
+
+    z-index:0 !important;
+}
+
+
+body.shiori-body .shiori-page {
+    position:relative !important;
+    z-index:2 !important;
+}
+
+
+body.shiori-body .shiori-card {
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(40,12,50,0.96),
+        rgba(3,2,6,0.98)
+    ) !important;
+
+    color:#f7ecff !important;
+
+}
+
+
+body.shiori-body .shiori-card p {
+
+    color:#f7eaff !important;
+
+}
