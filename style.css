@@ -1288,28 +1288,21 @@ CONTRACT MARK
 
 /* =========================
    花乃院 栞 SHIORI
-   Sweet Nightmare
+   Nightmare Incubus
 ========================= */
 
 
-/* 本体 */
-
 .shiori-body {
 
-    margin:0;
+    background:#ffffff;
 
-    min-height:100vh;
-
-    overflow-x:hidden;
+    color:#111;
 
     font-family:
     "Times New Roman",
     serif;
 
-    color:#4b294f;
-
 }
-
 
 
 /* 背景 */
@@ -1320,58 +1313,41 @@ CONTRACT MARK
 
     inset:0;
 
+
     background:
-
-    radial-gradient(
-        circle at top,
-        #ffdff4,
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at bottom,
-        #c9a6df,
-        transparent 45%
-    ),
 
     linear-gradient(
         135deg,
-        #fff3fa,
-        #ead7ff,
-        #f4cfe3
+        #ffffff,
+        #eeeeee,
+        #dcdcdc
     );
 
 
-    z-index:0;
+    z-index:-1;
 
 }
 
 
+/* 黒い影 */
+
 .shiori-background::before {
 
-    content:
+    content:"";
 
-    "♡　🥀　✦　☾　♡　✦　🥀　☾";
 
     position:absolute;
 
-    top:8%;
-
-    left:50%;
-
-    transform:translateX(-50%);
+    inset:0;
 
 
-    color:
+    background:
 
-    rgba(120,70,150,0.25);
-
-
-    font-size:30px;
-
-    letter-spacing:10px;
-
-    white-space:nowrap;
+    radial-gradient(
+        circle,
+        transparent 40%,
+        rgba(0,0,0,0.25)
+    );
 
 }
 
@@ -1381,51 +1357,40 @@ CONTRACT MARK
 
 .shiori-page {
 
-    position:relative;
-
-    z-index:1;
-
     width:90%;
 
-    max-width:700px;
+    max-width:720px;
 
-    margin:70px auto;
-
-    text-align:center;
+    margin:80px auto;
 
 }
 
 
 
-/* メインカード */
+/* カード */
 
 .shiori-card {
 
+
     background:
 
-    rgba(255,245,255,0.75);
+    rgba(255,255,255,0.92);
 
 
-    backdrop-filter:blur(15px);
-
-
-    padding:45px 35px;
-
-
-    border-radius:35px;
+    padding:50px 40px;
 
 
     border:
 
-    2px solid rgba(170,120,190,0.5);
+    1px solid #111;
+
+
+    border-radius:0;
 
 
     box-shadow:
 
-
-    0 0 35px rgba(120,70,150,0.3),
-
-    inset 0 0 30px rgba(255,255,255,0.8);
+    0 20px 50px rgba(0,0,0,0.25);
 
 
     position:relative;
@@ -1437,43 +1402,31 @@ CONTRACT MARK
 
 
 
-/* 影の演出 */
+/* ひび割れっぽい影 */
 
 .shiori-card::before {
 
-    content:"🥀";
+
+    content:"";
 
 
     position:absolute;
 
-    top:15px;
 
-    left:20px;
-
-
-    font-size:35px;
+    inset:0;
 
 
-}
+    background:
+
+    linear-gradient(
+        120deg,
+        transparent 45%,
+        rgba(0,0,0,0.05),
+        transparent 55%
+    );
 
 
-
-.shiori-card::after {
-
-    content:"☾";
-
-
-    position:absolute;
-
-    bottom:15px;
-
-    right:25px;
-
-
-    font-size:45px;
-
-
-    color:#9c6bb5;
+    pointer-events:none;
 
 }
 
@@ -1483,21 +1436,20 @@ CONTRACT MARK
 
 .shiori-card h1 {
 
-    margin:0;
+
+    font-size:55px;
 
 
-    font-size:45px;
+    letter-spacing:15px;
 
 
-    letter-spacing:12px;
+    color:#050505;
 
 
-    color:#704078;
+    text-align:center;
 
 
-    text-shadow:
-
-    0 0 15px #e8b7ff;
+    font-weight:normal;
 
 
 }
@@ -1507,13 +1459,13 @@ CONTRACT MARK
 .english {
 
 
-    margin-top:10px;
+    text-align:center;
 
 
     letter-spacing:8px;
 
 
-    color:#b07ac0;
+    color:#555;
 
 
 }
@@ -1525,29 +1477,57 @@ CONTRACT MARK
 .quote {
 
 
-    margin:35px auto;
+    margin-top:50px;
 
 
     padding:25px;
 
 
-    background:
-
-    rgba(255,225,245,0.75);
+    background:#111;
 
 
-    border-left:
-
-    5px solid #9d68b5;
+    color:white;
 
 
-    border-radius:20px;
+    border-radius:0;
 
 
-    line-height:2;
+    line-height:2.3;
 
 
-    color:#57315e;
+    letter-spacing:2px;
+
+
+    position:relative;
+
+
+}
+
+
+
+/* 赤い線 */
+
+.quote::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:0;
+
+    top:0;
+
+
+    width:4px;
+
+
+    height:100%;
+
+
+    background:#800000;
 
 
 }
@@ -1559,43 +1539,21 @@ CONTRACT MARK
 .shiori-card h2 {
 
 
-    margin-top:45px;
-
-
-    padding-bottom:10px;
-
-
-    border-bottom:
-
-    1px solid rgba(120,80,150,0.3);
+    color:#111;
 
 
     font-size:22px;
 
 
-    letter-spacing:6px;
+    letter-spacing:8px;
 
 
-    color:#80508a;
+    border-bottom:
+
+    1px solid #111;
 
 
-}
-
-
-
-/* プロフィール */
-
-.profile p {
-
-
-    line-height:2;
-
-
-    margin:12px;
-
-
-    color:#57315e;
-
+    padding-bottom:15px;
 
 }
 
@@ -1603,64 +1561,96 @@ CONTRACT MARK
 
 /* 本文 */
 
+.profile p,
 .character p,
-
 .memory p {
 
 
-    line-height:2.3;
+    color:#222;
 
 
-    margin:25px 0;
+    line-height:2.5;
 
 
-    color:#57315e;
+    text-align:center;
 
 
-}
-
-
-
-/* 栞専用 闇演出 */
-
-.character p:last-child {
-
-
-    color:#71385f;
-
-
-    font-weight:bold;
+    letter-spacing:2px;
 
 
 }
 
 
 
-/* スマホ対応 */
+/* 一部だけ赤文字にできる用 */
+
+.shiori-danger {
+
+
+    color:#800000;
+
+}
+
+
+
+/* 装飾 */
+
+.shiori-card::after {
+
+
+    content:"†";
+
+
+    position:absolute;
+
+
+    right:25px;
+
+
+    bottom:15px;
+
+
+    font-size:70px;
+
+
+    color:#111;
+
+
+    opacity:0.15;
+
+}
+
+
+
+/* ホラーっぽい揺れ */
+
+.shiori-card:hover {
+
+
+    box-shadow:
+
+    0 0 60px rgba(0,0,0,0.4);
+
+
+}
+
+
+
+/* スマホ */
 
 @media(max-width:600px){
 
-
-    .shiori-card {
-
+    .shiori-card{
 
         padding:35px 20px;
 
-
     }
 
 
+    .shiori-card h1{
 
-    .shiori-card h1 {
-
-
-        font-size:32px;
-
-
-        letter-spacing:7px;
-
+        font-size:40px;
 
     }
-
 
 }
