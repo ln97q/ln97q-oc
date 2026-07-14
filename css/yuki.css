@@ -1,617 +1,176 @@
-/* =========================
-   伊ノ上 ゆき 専用ページ
-   Flower of the Lost Spring
-========================= */
+/* =========================================================
+   YUKI THEME
+   伊ノ上 ゆき：色・背景・装飾のみ
+   レイアウトは layout.css で共通管理
+========================================================= */
 
-
-/* =========================
-   基本
-========================= */
-
-
-.yuki-body {
-
-    background:#faf8ef;
-
+:root {
+    --yuki-cream-01: #fbfaf2;
+    --yuki-cream-02: #f2f1e2;
+    --yuki-cream-03: #e7ead5;
+    --yuki-green-dark: #60704f;
+    --yuki-green-main: #82966b;
+    --yuki-green-light: #b7c99a;
+    --yuki-yellow-main: #d7bd69;
+    --yuki-yellow-light: #eee0a5;
+    --yuki-text: #4f5b46;
+    --yuki-muted: #7f8b71;
+    --yuki-line: rgba(96, 112, 79, 0.28);
+    --yuki-line-strong: rgba(130, 150, 107, 0.48);
+    --yuki-panel: rgba(255, 255, 249, 0.84);
 }
 
-
-
-
-
-.yuki-background {
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:0;
-
-
+body.character-theme--yuki {
+    color: var(--yuki-text);
     background:
-
-    radial-gradient(
-        circle at top,
-        #ffffff,
-        #f3f4df 45%,
-        #dce8d0 100%
-    );
-
+        radial-gradient(circle at 15% 9%, rgba(255, 255, 255, 0.92), transparent 28%),
+        radial-gradient(circle at 84% 17%, rgba(215, 189, 105, 0.15), transparent 26%),
+        radial-gradient(circle at 50% 78%, rgba(183, 201, 154, 0.28), transparent 36%),
+        linear-gradient(180deg, var(--yuki-cream-01) 0%, var(--yuki-cream-02) 48%, var(--yuki-cream-03) 100%);
 }
 
-
-
-
-
-.yuki-background::before {
-
-    content:"🌼　🌿　✦　♡　✦　🌿　🌼";
-
-
-    position:absolute;
-
-    top:12%;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-
-    color:rgba(150,170,120,0.35);
-
-    font-size:30px;
-
-    letter-spacing:10px;
-
-    white-space:nowrap;
-
+.character-theme--yuki .character-page {
+    background:
+        radial-gradient(circle, rgba(130, 150, 107, 0.09) 0 1px, transparent 1.7px),
+        linear-gradient(90deg, transparent 49.8%, rgba(130, 150, 107, 0.05) 50%, transparent 50.2%);
+    background-size: 34px 34px, 100% 100%;
 }
 
-
-
-
-
-.yuki-background::after {
-
-    content:"✦　🌼　♡　🌿　♡　🌼　✦";
-
-
-    position:absolute;
-
-    bottom:10%;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-
-    color:rgba(170,190,130,0.35);
-
-    font-size:25px;
-
-    letter-spacing:12px;
-
+.character-theme--yuki .character-hero__eyebrow,
+.character-theme--yuki .character-hero__subtitle,
+.character-theme--yuki .section-heading__subtitle,
+.character-theme--yuki .archive-item__caption {
+    color: var(--yuki-muted);
 }
 
-
-
-
-
-/* =========================
-   ページ
-========================= */
-
-
-.yuki-page {
-
-
-    position:relative;
-
-    z-index:1;
-
-
-    min-height:100vh;
-
-
-    padding:60px 20px;
-
-
-    text-align:center;
-
-
-    color:#5f6950;
-
-}
-
-
-
-
-
-/* =========================
-   タイトル
-========================= */
-
-
-.yuki-decor {
-
-
-    font-size:28px;
-
-
-    letter-spacing:10px;
-
-
-    color:#b8c98d;
-
-}
-
-
-
-
-
-.yuki-page h1 {
-
-
-    font-size:58px;
-
-
-    letter-spacing:15px;
-
-
-    color:#74855c;
-
-
+.character-theme--yuki .character-hero__title {
+    color: var(--yuki-green-dark);
     text-shadow:
-
-    0 0 10px white,
-
-    0 0 20px #d8e5bd;
-
-
+        0 0 20px rgba(255, 255, 255, 0.9),
+        0 2px 14px rgba(130, 150, 107, 0.2);
 }
 
-
-
-
-
-.yuki-english {
-
-
-    margin-top:-15px;
-
-
-    letter-spacing:10px;
-
-
-    color:#9aa981;
-
+.character-theme--yuki .character-hero__divider-line {
+    background: linear-gradient(90deg, transparent, var(--yuki-green-main), transparent);
 }
 
+.character-theme--yuki .character-hero__divider-mark {
+    color: var(--yuki-yellow-main);
+    text-shadow: 0 0 10px rgba(215, 189, 105, 0.45);
+}
 
-
-
-
-/* =========================
-   カード
-========================= */
-
-
-.yuki-card {
-
-
-    width:480px;
-
-
-    max-width:90%;
-
-
-    margin:35px auto;
-
-
-    padding:35px;
-
-
-
+.character-theme--yuki .character-panel,
+.character-theme--yuki .character-portrait {
+    border-color: var(--yuki-line);
     background:
-
-
-    rgba(255,255,250,0.9);
-
-
-
-    border:
-
-
-    2px solid #cbd9aa;
-
-
-
-    border-radius:30px;
-
-
-
+        linear-gradient(135deg, rgba(183, 201, 154, 0.13), transparent 40%),
+        var(--yuki-panel);
     box-shadow:
-
-
-    0 10px 30px rgba(140,160,110,0.25);
-
-
-
-    position:relative;
-
+        inset 0 0 0 1px rgba(255, 255, 255, 0.62),
+        0 18px 42px rgba(96, 112, 79, 0.12);
 }
 
-
-
-
-
-.yuki-card::before {
-
-
-    content:"🌼";
-
-
-    position:absolute;
-
-
-    top:15px;
-
-
-    left:20px;
-
-
-    font-size:20px;
-
-
+.character-theme--yuki .character-portrait {
+    background-color: var(--yuki-cream-03);
 }
 
-
-
-
-
-.yuki-card::after {
-
-
-    content:"♡";
-
-
-    position:absolute;
-
-
-    bottom:15px;
-
-
-    right:20px;
-
-
-    color:#c4d69d;
-
-
-    font-size:20px;
-
-
+.character-theme--yuki .character-portrait__image {
+    filter: saturate(0.88) contrast(0.98) brightness(1.03);
 }
 
+.character-theme--yuki .section-heading__number,
+.character-theme--yuki .section-heading__title,
+.character-theme--yuki .profile-list__label {
+    color: var(--yuki-green-dark);
+}
 
+.character-theme--yuki .section-heading__number {
+    text-shadow: 0 0 9px rgba(130, 150, 107, 0.22);
+}
 
+.character-theme--yuki .profile-list__row {
+    border-color: rgba(96, 112, 79, 0.16);
+}
 
+.character-theme--yuki .profile-list__value,
+.character-theme--yuki .character-copy {
+    color: var(--yuki-text);
+}
 
-
-
-/* =========================
-   画像
-========================= */
-
-
-.yuki-image {
-
-
-    height:300px;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    overflow:hidden;
-
-
-
-    border-radius:25px;
-
-
-
+.character-theme--yuki .character-voice {
+    border-color: rgba(215, 189, 105, 0.42);
     background:
-
-
-    linear-gradient(
-
-        135deg,
-
-        #ffffff,
-
-        #eef3df
-
-    );
-
-
-
-    border:
-
-
-    1px solid #cbd9aa;
-
-
+        linear-gradient(90deg, rgba(238, 224, 165, 0.24), transparent 34%, transparent 66%, rgba(183, 201, 154, 0.2)),
+        var(--yuki-panel);
 }
 
-
-
-
-
-.yuki-image img {
-
-
-    max-width:90%;
-
-
-    max-height:280px;
-
-
-    object-fit:contain;
-
-
+.character-theme--yuki .character-special {
+    border-color: var(--yuki-line-strong);
+    background:
+        radial-gradient(circle at 50% 120%, rgba(215, 189, 105, 0.2), transparent 46%),
+        linear-gradient(135deg, rgba(183, 201, 154, 0.18), transparent 44%),
+        var(--yuki-panel);
+    box-shadow:
+        inset 0 0 32px rgba(183, 201, 154, 0.14),
+        0 18px 42px rgba(96, 112, 79, 0.12);
 }
 
-
-
-
-
-
-
-/* =========================
-   見出し
-========================= */
-
-
-.yuki-card h2 {
-
-
-    color:#7c8e60;
-
-
-    font-size:30px;
-
-
-    letter-spacing:8px;
-
-
-    margin-bottom:25px;
-
-
+.character-theme--yuki .character-special .section-heading__title {
+    color: var(--yuki-green-main);
 }
 
-
-
-
-
-
-
-/* =========================
-   本文
-========================= */
-
-
-.yuki-card p {
-
-
-    text-align:left;
-
-
-    color:#59634c;
-
-
-    font-size:17px;
-
-
-    line-height:2.2;
-
-
-    letter-spacing:2px;
-
-
+.character-theme--yuki .archive-track {
+    scrollbar-color: var(--yuki-green-light) rgba(96, 112, 79, 0.08);
 }
 
-
-
-
-
-
-
-/* =========================
-   セリフ
-========================= */
-
-
-.yuki-quote {
-
-
-    color:#687655;
-
-
-    font-size:18px;
-
-
-    line-height:2.4;
-
-
-    letter-spacing:2px;
-
-
-    font-style:italic;
-
-
+.character-theme--yuki .archive-item {
+    border-color: var(--yuki-line);
+    background: rgba(251, 250, 242, 0.88);
 }
 
-
-
-
-
-
-
-/* =========================
-   WARNING
-========================= */
-
-
-.yuki-warning {
-
-
-    text-align:center !important;
-
-
-    color:#88966b !important;
-
-
-    letter-spacing:6px;
-
-
-    font-size:16px !important;
-
-
+.character-theme--yuki .archive-item__image-frame {
+    background: var(--yuki-cream-03);
 }
 
-
-
-
-
-
-
-/* =========================
-   戻る
-========================= */
-
-
-.yuki-back {
-
-
-    display:inline-block;
-
-
-    margin-top:60px;
-
-
-    color:#8fa06c;
-
-
-    text-decoration:none;
-
-
-    letter-spacing:8px;
-
-
+.character-theme--yuki .archive-item__image {
+    filter: saturate(0.86) contrast(0.98) brightness(1.03);
+    transition: filter 180ms ease;
 }
 
-
-
-
-
-
-
-/* =========================
-   スマホ対応
-========================= */
-
-
-@media(max-width:600px){
-
-
-
-    .yuki-page {
-
-
-        padding:40px 15px;
-
-
-    }
-
-
-
-
-    .yuki-page h1 {
-
-
-        font-size:40px;
-
-
-        letter-spacing:8px;
-
-
-    }
-
-
-
-
-
-    .yuki-decor {
-
-
-        font-size:20px;
-
-
-    }
-
-
-
-
-
-    .yuki-card {
-
-
-        padding:25px;
-
-
-    }
-
-
-
-
-
-    .yuki-card h2 {
-
-
-        font-size:24px;
-
-
-    }
-
-
-
-
-
-    .yuki-card p {
-
-
-        font-size:15px;
-
-
-    }
-
-
-
-
-
-    .yuki-image {
-
-
-        height:250px;
-
-
-    }
-
-
+.character-theme--yuki .archive-item:hover .archive-item__image {
+    filter: saturate(1) contrast(1) brightness(1.05);
+}
+
+.character-theme--yuki .character-navigation__link {
+    color: var(--yuki-text);
+    border-color: var(--yuki-line);
+    background:
+        linear-gradient(135deg, rgba(183, 201, 154, 0.14), transparent 48%),
+        rgba(251, 250, 242, 0.88);
+    transition:
+        color 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.character-theme--yuki .character-navigation__arrow {
+    color: var(--yuki-green-main);
+}
+
+.character-theme--yuki .character-navigation__link:hover,
+.character-theme--yuki .character-navigation__link:focus-visible {
+    color: var(--yuki-green-dark);
+    border-color: var(--yuki-line-strong);
+    background-color: rgba(183, 201, 154, 0.16);
+    box-shadow: inset 0 0 22px rgba(130, 150, 107, 0.12);
+}
+
+.character-theme--yuki .character-navigation__link:focus-visible {
+    outline-color: var(--yuki-green-main);
+}
+
+.character-theme--yuki ::selection {
+    color: var(--yuki-text);
+    background: var(--yuki-yellow-light);
 }
