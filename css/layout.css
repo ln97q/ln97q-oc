@@ -347,7 +347,7 @@ figure {
 
 .archive-item__image-frame {
     position: relative;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
     border: 1px solid;
 }
@@ -355,7 +355,8 @@ figure {
 .archive-item__image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
 }
 
 .archive-item__caption {
