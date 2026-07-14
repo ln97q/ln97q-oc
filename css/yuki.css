@@ -174,3 +174,9 @@ body.character-theme--yuki {
     color: var(--yuki-text);
     background: var(--yuki-yellow-light);
 }
+
+.archive-item__image-frame {
+    background: url("../images/archive/yuki_back.jpeg")
+        center / cover
+        no-repeat;
+}
