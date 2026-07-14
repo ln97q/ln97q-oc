@@ -1872,14 +1872,6 @@ a {
         font-size: 35px;
         letter-spacing: 5px;
     }
-   
-.archive-grid {
-    gap: 16px;
-}
-
-    .archive-placeholder {
-        aspect-ratio: 4 / 4.5;
-    }
 
 
     /* 警告 */
