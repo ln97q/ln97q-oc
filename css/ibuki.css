@@ -1415,6 +1415,10 @@ a {
 
 .archive-grid{
 
+   flex:0 0 340px;
+
+scroll-snap-align:start;
+
     display:flex;
 
     gap:22px;
@@ -2183,10 +2187,11 @@ a {
         gap: 16px;
     }
 
-    .archive-card {
-        width: min(100%, 430px);
-        margin-inline: auto;
-    }
+   .archive-card{
+
+    flex:0 0 82%;
+
+}
 
     .archive-placeholder {
         aspect-ratio: 4 / 4.5;
@@ -2298,4 +2303,30 @@ a {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+.archive-grid::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.archive-grid::-webkit-scrollbar-track{
+
+    background:#141414;
+
+    border-radius:999px;
+
+}
+
+.archive-grid::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        90deg,
+        #4d0d13,
+        #bfa163
+    );
+
+    border-radius:999px;
+
 }
