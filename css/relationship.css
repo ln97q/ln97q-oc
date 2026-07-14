@@ -1,779 +1,370 @@
-/* =========================
-   RELATION PAGE
-========================= */
+/* ==================================================
+   RELATIONSHIP PAGE
+   Sweet Gothic × Doll Room
+================================================== */
 
-.relations{
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:
+    linear-gradient(135deg,#fff7fd,#f7efff,#efe7ff);
+
+    overflow-x:hidden;
+
+    font-family:"Times New Roman",serif;
+}
+
+
+/*=========================
+BACKGROUND
+=========================*/
+
+.relationship-page{
 
     position:relative;
-    z-index:1;
 
     min-height:100vh;
 
-    padding:60px 20px;
-
-    text-align:center;
+    padding:80px 0;
 
     overflow:hidden;
 
 }
 
+/* 大きいリボン */
 
-/* =========================
-   TITLE
-========================= */
+.relationship-page::before{
 
-.relations h1{
+    content:"";
 
-    position:relative;
+    position:absolute;
 
-    display:inline-block;
+    top:20px;
 
-    margin:0;
+    left:30px;
+
+    width:140px;
+
+    height:140px;
+
+    background:url("images/assets/素材/dot-ribon.png") center/contain no-repeat;
+
+    opacity:.25;
+
+    pointer-events:none;
+
+}
+
+/* キラキラ */
+
+.relationship-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:50px;
+
+    top:120px;
+
+    width:150px;
+
+    height:150px;
+
+    background:url("images/assets/素材/kirakira.png") center/contain no-repeat;
+
+    opacity:.22;
+
+    pointer-events:none;
+
+}
+
+
+/*=========================
+TITLE
+=========================*/
+
+.relationship-title{
+
+    text-align:center;
 
     font-size:58px;
 
     letter-spacing:10px;
 
-    color:#fff5ff;
+    color:#b882df;
 
     text-shadow:
 
-    0 0 12px #ffd8ff,
+    0 0 10px white,
 
-    0 0 35px #d7a7ff;
-
-}
-
-.relations h1::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:90px;
-    height:90px;
-
-    top:-55px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    background:
-    url("../images/assets/miniribon-pink.jpeg")
-    center/contain
-    no-repeat;
+    0 0 20px #efccff;
 
 }
 
-.relations h1::after{
+.relationship-sub{
 
-    content:"";
+    margin-top:12px;
 
-    position:absolute;
+    text-align:center;
 
-    width:70px;
-    height:70px;
+    color:#9f8ab8;
 
-    right:-80px;
-    top:0;
-
-    background:
-    url("../images/assets/kirakira.jpeg")
-    center/contain
-    no-repeat;
-
-}
-
-
-.relation-sub{
-
-    margin-top:18px;
-
-    color:#d7b8ef;
-
-    letter-spacing:5px;
+    letter-spacing:8px;
 
     font-size:14px;
 
 }
 
 
-/* =========================
-   BACKGROUND
-========================= */
+/*=========================
+SCROLL AREA
+=========================*/
 
-.relations::before{
+.relationship-scroll{
 
-content:"";
+    margin-top:70px;
 
-position:fixed;
+    display:flex;
 
-inset:0;
+    gap:40px;
 
-background:
+    overflow-x:auto;
 
-url("../images/assets/kirakira.jpeg");
+    padding:30px 60px 50px;
 
-background-size:220px;
+    scroll-snap-type:x mandatory;
 
-opacity:.05;
-
-pointer-events:none;
-
-z-index:-2;
+    scroll-behavior:smooth;
 
 }
 
-.relations::after{
+.relationship-scroll::-webkit-scrollbar{
 
-content:"";
+    height:10px;
 
-position:fixed;
+}
 
-inset:0;
+.relationship-scroll::-webkit-scrollbar-thumb{
 
-background:
+    background:#d8b6ff;
 
-radial-gradient(
-
-circle,
-
-rgba(255,220,255,.25),
-
-transparent 70%
-
-);
-
-z-index:-3;
+    border-radius:999px;
 
 }
 
 
-/* =========================
-   SCROLL
-========================= */
-
-.relation-list{
-
-display:flex;
-
-gap:45px;
-
-overflow-x:auto;
-
-padding:
-
-70px 30px 50px;
-
-scroll-snap-type:x mandatory;
-
-}
-
-.relation-list::-webkit-scrollbar{
-
-height:10px;
-
-}
-
-.relation-list::-webkit-scrollbar-thumb{
-
-background:#d6a9ff;
-
-border-radius:20px;
-
-}
-
-
-/* =========================
-   CARD
-========================= */
-
-.relation-card{
-
-flex:0 0 360px;
-
-scroll-snap-align:center;
-
-text-decoration:none;
-
-position:relative;
-
-padding:28px;
-
-border-radius:45px;
-
-background:
-
-linear-gradient(
-
-145deg,
-
-rgba(255,255,255,.96),
-
-rgba(249,238,255,.9)
-
-);
-
-border:4px dashed #ddbfff;
-
-box-shadow:
-
-0 20px 40px rgba(195,155,255,.25),
-
-inset 0 0 20px white;
-
-transition:.35s;
-
-overflow:hidden;
-
-}
-
-
-/* 左上リボン */
-
-.relation-card::before{
-
-content:"";
-
-position:absolute;
-
-top:-8px;
-left:-8px;
-
-width:85px;
-height:85px;
-
-background:
-
-url("../images/assets/miniribon-pink.jpeg")
-
-center/contain
-
-no-repeat;
-
-}
-
-
-/* 右下キラキラ */
-
-.relation-card::after{
-
-content:"";
-
-position:absolute;
-
-right:15px;
-bottom:15px;
-
-width:50px;
-height:50px;
-
-background:
-
-url("../images/assets/kirakira.jpeg")
-
-center/contain
-
-no-repeat;
-
-opacity:.9;
-
-}
-
-
-.relation-card:hover{
-
-transform:
-
-translateY(-10px)
-
-scale(1.03);
-
-box-shadow:
-
-0 30px 55px rgba(210,170,255,.45);
-
-}
-
-
-/* =========================
-   IMAGE
-========================= */
-
-.pair-image{
-
-height:260px;
-
-border-radius:35px;
-
-overflow:hidden;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:
-
-linear-gradient(
-
-135deg,
-
-#fffaff,
-
-#eadcff
-
-);
-
-border:2px solid #f2ddff;
-
-}
-
-.pair-image img{
-
-width:90%;
-
-height:240px;
-
-object-fit:contain;
-
-}
-
-
-/* =========================
-   TEXT
-========================= */
-
-.relation-card h2{
-
-margin-top:25px;
-
-font-size:25px;
-
-line-height:1.5;
-
-color:#9269c8;
-
-letter-spacing:2px;
-
-}
-
-.pair-type{
-
-margin-top:10px;
-
-font-size:14px;
-
-letter-spacing:5px;
-
-color:#ff8fc8;
-
-text-align:center;
-
-}
-
-.pair-text{
-
-margin-top:18px;
-
-font-size:15px;
-
-line-height:2;
-
-color:#777;
-
-text-align:left;
-
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.view-button{
-
-display:inline-block;
-
-margin-top:25px;
-
-padding:13px 35px;
-
-border-radius:50px;
-
-background:
-
-linear-gradient(
-
-135deg,
-
-#f0ddff,
-
-#c697ff
-
-);
-
-color:white;
-
-font-family:"Fredoka",sans-serif;
-
-letter-spacing:1px;
-
-box-shadow:
-
-0 6px 0 #9b73d0,
-
-0 12px 25px rgba(180,150,255,.35);
-
-transition:.25s;
-
-}
-
-.relation-card:hover .view-button{
-
-transform:
-
-translateY(3px);
-
-}
-
-
-/* =========================
-   BACK
-========================= */
-
-.back{
-
-display:inline-block;
-
-margin:60px auto;
-
-text-decoration:none;
-
-color:#b68ae8;
-
-letter-spacing:8px;
-
-font-size:16px;
-
-}
-
-.back::before{
-
-content:"♡ ";
-
-}
-
-.back::after{
-
-content:" ♡";
-
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
-
-.relation-card{
-
-flex:0 0 85%;
-
-}
-
-.relations h1{
-
-font-size:42px;
-
-}
-
-.pair-image{
-
-height:220px;
-
-}
-
-}
-
-/*==========================
-RELATIONSHIP LIST
-==========================*/
-
-.relationship-section{
-
-margin-top:140px;
-
-text-align:center;
-
-position:relative;
-
-}
-
-.relationship-section h2{
-
-font-size:48px;
-
-letter-spacing:10px;
-
-color:#a67de8;
-
-text-shadow:0 0 15px white;
-
-}
-
-.relationship-sub{
-
-margin-top:10px;
-
-color:#d59cff;
-
-letter-spacing:6px;
-
-}
-
-
-/*背景*/
-
-.relationship-section::before{
-
-content:"";
-
-position:absolute;
-
-top:-40px;
-
-left:0;
-
-right:0;
-
-bottom:-40px;
-
-background-image:url("../images/assets/dot-ribon.jpeg");
-
-background-size:260px;
-
-opacity:.08;
-
-pointer-events:none;
-
-}
-
-
-/*==========================
-横スクロール
-==========================*/
-
-.relationship-slider{
-
-display:flex;
-
-gap:35px;
-
-overflow-x:auto;
-
-padding:50px 30px;
-
-scroll-snap-type:x mandatory;
-
-}
-
-.relationship-slider::-webkit-scrollbar{
-
-height:8px;
-
-}
-
-.relationship-slider::-webkit-scrollbar-thumb{
-
-background:#d7b8ff;
-
-border-radius:30px;
-
-}
-
-
-/*==========================
+/*=========================
 CARD
-==========================*/
+=========================*/
 
 .relationship-card{
 
-position:relative;
+    flex:0 0 340px;
 
-flex:0 0 340px;
+    scroll-snap-align:center;
 
-padding:35px;
+    position:relative;
 
-border-radius:40px;
+    padding:30px;
 
-text-decoration:none;
+    border-radius:38px;
 
-background:linear-gradient(
+    text-decoration:none;
 
-180deg,
+    background:
 
-#fffefe,
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.95),
+    rgba(250,242,255,.85)
+    );
 
-#fff6fd
+    border:3px dashed #e2c4ff;
 
-);
+    box-shadow:
 
-border:4px dashed #dab7ff;
+    0 15px 40px rgba(184,140,232,.25),
 
-box-shadow:
+    inset 0 0 20px white;
 
-0 15px 35px rgba(180,150,255,.25);
-
-transition:.35s;
-
-scroll-snap-align:center;
-
-overflow:hidden;
+    transition:.35s;
 
 }
 
 .relationship-card:hover{
 
-transform:
+    transform:
 
-translateY(-12px)
+    translateY(-10px)
 
-rotate(-1deg);
+    rotate(.8deg)
 
-}
-
-
-/*リボン*/
-
-.corner-ribbon{
-
-position:absolute;
-
-top:12px;
-
-right:12px;
-
-width:55px;
+    scale(1.03);
 
 }
 
 
-/*キラキラ*/
+/* 四隅の素材 */
 
-.star{
+.relationship-card::before{
 
-position:absolute;
+    content:"";
 
-left:18px;
+    position:absolute;
 
-bottom:18px;
+    left:12px;
 
-width:40px;
+    top:12px;
 
-opacity:.9;
+    width:42px;
+
+    height:42px;
+
+    background:url("images/assets/素材/miniribon-pink.png") center/contain no-repeat;
+
+}
+
+.relationship-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:15px;
+
+    bottom:15px;
+
+    width:36px;
+
+    height:36px;
+
+    background:url("images/assets/素材/star-pink.png") center/contain no-repeat;
 
 }
 
 
-/*ペア*/
+/*=========================
+IMAGE
+=========================*/
 
-.pair{
+.relationship-image{
 
-display:flex;
+    width:100%;
 
-justify-content:center;
+    height:200px;
 
-align-items:center;
+    border-radius:28px;
 
-gap:15px;
+    overflow:hidden;
 
-margin-bottom:25px;
+    background:
 
-}
+    linear-gradient(135deg,#fff9ff,#eddcff);
 
-.pair img{
+    display:flex;
 
-width:110px;
+    justify-content:center;
 
-height:110px;
-
-object-fit:cover;
-
-border-radius:25px;
-
-border:3px solid #efd8ff;
-
-background:white;
+    align-items:center;
 
 }
 
-.pair span{
+.relationship-image img{
 
-font-size:36px;
+    width:90%;
 
-color:#b98cff;
+    height:90%;
+
+    object-fit:contain;
 
 }
 
 
-/*タイトル*/
+/*=========================
+TEXT
+=========================*/
+
+.relationship-card h2{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#9b67cf;
+
+    font-size:26px;
+
+    letter-spacing:5px;
+
+}
 
 .relationship-card h3{
 
-color:#8d63d5;
+    margin-top:10px;
 
-font-size:24px;
+    text-align:center;
 
-margin-bottom:15px;
+    color:#ff92c8;
 
-letter-spacing:2px;
+    font-size:16px;
+
+    letter-spacing:3px;
 
 }
 
 .relationship-card p{
 
-color:#777;
+    margin-top:18px;
 
-line-height:1.8;
+    color:#777;
 
-margin-bottom:30px;
+    line-height:1.8;
 
-}
-
-
-/*ボタン*/
-
-.view-button{
-
-display:inline-block;
-
-padding:12px 35px;
-
-border-radius:50px;
-
-background:linear-gradient(
-
-135deg,
-
-#eddbff,
-
-#b68deb
-
-);
-
-color:white;
-
-font-weight:bold;
-
-box-shadow:0 6px #9e73d6;
+    text-align:center;
 
 }
 
-.view-button:hover{
 
-transform:translateY(2px);
+/*=========================
+BUTTON
+=========================*/
+
+.relationship-button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:13px 32px;
+
+    border-radius:999px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:"Fredoka",sans-serif;
+
+    background:
+
+    linear-gradient(135deg,#f3dfff,#b58de8);
+
+    box-shadow:
+
+    0 6px 0 #9b70d2,
+
+    0 12px 20px rgba(180,140,230,.3);
+
+}
+
+.relationship-button:hover{
+
+    transform:translateY(3px);
 
 }
