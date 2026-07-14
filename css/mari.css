@@ -2967,3 +2967,245 @@ a {
         max-height: 42px !important;
     }
 }
+
+/* ==================================================
+   MARI MOBILE TOP — 2 COLUMN FIX
+   スマホでも「画像｜プロフィール」
+================================================== */
+
+@media (max-width: 660px) {
+
+    .mari-body .main-record {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 0.92fr)
+            minmax(0, 1.08fr) !important;
+
+        gap: 10px !important;
+        align-items: stretch;
+    }
+
+
+    /* 左：トップ画像 */
+
+    .mari-body .portrait-panel {
+        width: auto !important;
+        min-width: 0 !important;
+        min-height: 540px !important;
+
+        margin: 0 !important;
+        padding: 8px !important;
+    }
+
+    .mari-body .portrait-image {
+        min-height: 524px !important;
+    }
+
+    .mari-body .portrait-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center 35%;
+    }
+
+
+    /* 右：プロフィール */
+
+    .mari-body .profile-panel {
+        width: auto !important;
+        min-width: 0 !important;
+        min-height: 540px;
+
+        margin: 0 !important;
+        padding:
+            22px
+            13px
+            17px !important;
+    }
+
+
+    /* 見出し */
+
+    .mari-body .profile-heading {
+        gap: 8px;
+
+        margin-bottom: 16px;
+        padding-bottom: 13px;
+    }
+
+    .mari-body .section-number {
+        font-size: 37px;
+    }
+
+    .mari-body .profile-heading p {
+        font-size: 6px;
+        letter-spacing: 1.5px;
+    }
+
+    .mari-body .profile-heading h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+
+    /* PROTECTEDバッジ */
+
+    .mari-body .security-badge {
+        position: static;
+
+        width: fit-content;
+
+        margin:
+            -6px
+            0
+            12px
+            auto;
+
+        padding: 6px 8px;
+    }
+
+    .mari-body .security-badge span {
+        font-size: 5px;
+    }
+
+    .mari-body .security-badge strong {
+        font-size: 8px;
+    }
+
+
+    /* プロフィール項目 */
+
+    .mari-body .profile-list > div {
+        display: block;
+
+        padding: 8px 0;
+    }
+
+    .mari-body .profile-list dt {
+        margin-bottom: 5px;
+
+        font-size: 6px;
+        letter-spacing: 1.3px;
+    }
+
+    .mari-body .profile-list dt::before {
+        margin-right: 4px;
+    }
+
+    .mari-body .profile-list dd {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+
+    /* 下部ステータス */
+
+    .mari-body .profile-footer {
+        grid-template-columns:
+            auto
+            1fr;
+
+        gap: 5px 8px;
+
+        margin-top: 14px;
+        padding: 9px;
+    }
+
+    .mari-body .profile-footer-divider {
+        display: none;
+    }
+
+
+    /* 写真内文字・装飾 */
+
+    .mari-body .panel-top-data {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+
+    .mari-body .portrait-bottom-data {
+        left: 15px;
+        right: 15px;
+        bottom: 14px;
+
+        gap: 6px;
+
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+
+    .mari-body .portrait-panel::after {
+        right: 11px;
+        bottom: 13px;
+
+        font-size: 5px;
+        letter-spacing: 1.5px;
+    }
+
+    .mari-body .portrait-ribbon {
+        top: 17px;
+        left: 17px;
+
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .mari-body .portrait-heart {
+        right: 13px;
+        bottom: 13px;
+
+        width: 29px !important;
+        height: 29px !important;
+    }
+
+    .mari-body .frame-corner {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+
+/* 小さいスマホ */
+
+@media (max-width: 390px) {
+
+    .mari-body .main-record {
+        gap: 7px !important;
+    }
+
+    .mari-body .portrait-panel {
+        min-height: 490px !important;
+        padding: 7px !important;
+    }
+
+    .mari-body .portrait-image {
+        min-height: 476px !important;
+    }
+
+    .mari-body .profile-panel {
+        min-height: 490px;
+
+        padding:
+            19px
+            10px
+            14px !important;
+    }
+
+    .mari-body .profile-heading h2 {
+        font-size: 17px;
+    }
+
+    .mari-body .section-number {
+        font-size: 32px;
+    }
+
+    .mari-body .profile-list dd {
+        font-size: 8.5px;
+    }
+}
