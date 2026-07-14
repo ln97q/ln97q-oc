@@ -2181,11 +2181,10 @@ scroll-snap-align:start;
         font-size: 35px;
         letter-spacing: 5px;
     }
-
-    .archive-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
+   
+.archive-grid {
+    gap: 16px;
+}
 
    .archive-card{
 
