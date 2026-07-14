@@ -3288,242 +3288,106 @@ a {
     }
 }
 
-
 /* ==================================================
-   SHIORI MOBILE TOP — 2 COLUMN FIX
-   スマホでも「画像｜プロフィール」
+   MOBILE TOP LAYOUT
+   スマホ：トップ画像 ｜ プロフィール
 ================================================== */
 
 @media (max-width: 660px) {
 
     .shiori-body .main-observation {
         display: grid !important;
-
-        grid-template-columns:
-            minmax(0, 0.92fr)
-            minmax(0, 1.08fr) !important;
-
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
         gap: 10px !important;
         align-items: stretch;
     }
-
-
-    /*
-       profile-column の箱をレイアウト上だけ解除。
-       中の PROFILE と MENTAL CONDITION を
-       main-observation の子として配置する。
-    */
 
     .shiori-body .profile-column {
         display: contents !important;
     }
 
-
-    /* 左：トップ画像 */
-
     .shiori-body .portrait-panel {
         grid-column: 1;
         grid-row: 1;
-
         width: auto !important;
         min-width: 0 !important;
         min-height: 520px !important;
-
         margin: 0 !important;
         padding: 8px !important;
     }
 
-    .shiori-body .portrait-image {
-        min-height: 504px !important;
-    }
-
-    .shiori-body .portrait-image img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-        object-position: center 36%;
-    }
-
-
-    /* 右：プロフィール */
+    .shiori-body .portrait-image { min-height: 504px !important; }
 
     .shiori-body .profile-panel {
         grid-column: 2;
         grid-row: 1;
-
         width: auto !important;
         min-width: 0 !important;
         min-height: 520px;
-
         margin: 0 !important;
-        padding:
-            22px
-            13px
-            17px !important;
+        padding: 22px 13px 17px !important;
     }
 
-
-    /* PROFILE見出しを小さめに */
+    .shiori-body .mental-panel {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100% !important;
+        min-width: 0;
+        min-height: 0;
+        margin: 0 !important;
+    }
 
     .shiori-body .profile-heading {
         gap: 8px;
-
         margin-bottom: 16px;
         padding-bottom: 13px;
     }
 
-    .shiori-body .section-number {
-        font-size: 37px;
-    }
-
-    .shiori-body .profile-heading p {
-        font-size: 6px;
-        letter-spacing: 1.5px;
-    }
-
-    .shiori-body .profile-heading h2 {
-        font-size: 19px;
-        letter-spacing: 2px;
-    }
-
-
-    /* プロフィール項目 */
+    .shiori-body .section-number { font-size: 37px; }
+    .shiori-body .profile-heading p { font-size: 6px; letter-spacing: 1.5px; }
+    .shiori-body .profile-heading h2 { font-size: 19px; letter-spacing: 2px; }
 
     .shiori-body .profile-list > div {
         display: block;
-
         padding: 9px 0;
     }
 
     .shiori-body .profile-list dt {
         margin-bottom: 5px;
-
         font-size: 6px;
         letter-spacing: 1.5px;
     }
 
-    .shiori-body .profile-list dd {
-        font-size: 10px;
-        line-height: 1.55;
-    }
-
-
-    /* PROFILE下部 */
+    .shiori-body .profile-list dd { font-size: 10px; line-height: 1.55; }
 
     .shiori-body .profile-footer {
-        grid-template-columns:
-            auto
-            1fr;
-
+        grid-template-columns: auto 1fr;
         gap: 5px 8px;
-
         margin-top: 15px;
         padding: 9px;
     }
 
-    .shiori-body .profile-footer-divider {
-        display: none;
-    }
+    .shiori-body .profile-footer-divider { display: none; }
 
-
-    /*
-       精神状態カードは、
-       画像＋プロフィールの下に横幅いっぱいで表示
-    */
-
-    .shiori-body .mental-panel {
-        grid-column: 1 / -1;
-        grid-row: 2;
-
-        width: 100% !important;
-        min-width: 0;
-        min-height: 0;
-
-        margin: 0 !important;
-    }
-
-
-    /* 写真内の小文字 */
-
-    .shiori-body .panel-top-data {
-        top: 15px;
-        left: 15px;
-        right: 15px;
-
-        font-size: 5px;
-        letter-spacing: 1px;
-    }
-
+    .shiori-body .panel-top-data,
     .shiori-body .portrait-bottom-data {
-        left: 15px;
-        right: 15px;
-        bottom: 14px;
-
-        gap: 6px;
-
         font-size: 5px;
         letter-spacing: 1px;
     }
 
-    .shiori-body .portrait-side-code {
-        left: 12px;
-        bottom: 68px;
-
-        font-size: 5px;
-        letter-spacing: 1px;
-    }
-
-    .shiori-body .portrait-panel::after {
-        right: 11px;
-        bottom: 13px;
-
-        font-size: 5px;
-        letter-spacing: 1.5px;
-    }
-
-    .shiori-body .frame-corner {
-        width: 26px;
-        height: 26px;
-    }
+    .shiori-body .panel-top-data { top: 15px; left: 15px; right: 15px; }
+    .shiori-body .portrait-bottom-data { left: 15px; right: 15px; bottom: 14px; gap: 6px; }
+    .shiori-body .portrait-side-code { left: 12px; bottom: 68px; font-size: 5px; letter-spacing: 1px; }
+    .shiori-body .portrait-panel::after { right: 11px; bottom: 13px; font-size: 5px; letter-spacing: 1.5px; }
+    .shiori-body .frame-corner { width: 26px; height: 26px; }
 }
 
-
-/* 小さいスマホ */
-
 @media (max-width: 390px) {
-
-    .shiori-body .main-observation {
-        gap: 7px !important;
-    }
-
-    .shiori-body .portrait-panel {
-        min-height: 470px !important;
-        padding: 7px !important;
-    }
-
-    .shiori-body .portrait-image {
-        min-height: 456px !important;
-    }
-
-    .shiori-body .profile-panel {
-        min-height: 470px;
-
-        padding:
-            19px
-            10px
-            14px !important;
-    }
-
-    .shiori-body .profile-heading h2 {
-        font-size: 17px;
-    }
-
-    .shiori-body .section-number {
-        font-size: 32px;
-    }
-
-    .shiori-body .profile-list dd {
-        font-size: 9px;
-    }
+    .shiori-body .main-observation { gap: 7px !important; }
+    .shiori-body .portrait-panel { min-height: 470px !important; padding: 7px !important; }
+    .shiori-body .portrait-image { min-height: 456px !important; }
+    .shiori-body .profile-panel { min-height: 470px; padding: 19px 10px 14px !important; }
+    .shiori-body .profile-heading h2 { font-size: 17px; }
+    .shiori-body .section-number { font-size: 32px; }
+    .shiori-body .profile-list dd { font-size: 9px; }
 }
