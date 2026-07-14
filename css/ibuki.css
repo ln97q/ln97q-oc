@@ -176,3 +176,9 @@ body.character-theme--ibuki {
     color: var(--ibuki-ivory);
     background: var(--ibuki-red-main);
 }
+
+.archive-item__image-frame {
+    background: url("../images/archive/ibuki_back.jpeg")
+        center / cover
+        no-repeat;
+}
