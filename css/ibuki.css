@@ -2330,3 +2330,115 @@ scroll-snap-align:start;
     border-radius:999px;
 
 }
+
+
+/* ==================================================
+   ARCHIVE HORIZONTAL SCROLL
+   最終上書き
+================================================== */
+
+.archive-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 100%;
+
+    gap: 22px;
+    padding: 8px 4px 18px;
+
+    overflow-x: auto !important;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        #9c7b3e
+        #15100f;
+}
+
+.archive-card {
+    flex: 0 0 360px !important;
+    width: 360px !important;
+    min-width: 360px !important;
+
+    margin: 0 !important;
+
+    scroll-snap-align: start;
+}
+
+
+/* Chrome・Safariのスクロールバー */
+
+.archive-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.archive-grid::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: #15100f;
+}
+
+.archive-grid::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5d0d13,
+            #c0a060
+        );
+}
+
+
+/* タブレット */
+
+@media (max-width: 940px) {
+
+    .archive-grid {
+        margin-inline: -14px;
+        width: calc(100% + 28px);
+
+        padding-right: 28px;
+        padding-left: 28px;
+    }
+
+    .archive-card {
+        flex-basis: 72vw !important;
+        width: 72vw !important;
+        min-width: 72vw !important;
+        max-width: 520px;
+    }
+}
+
+
+/* スマホ */
+
+@media (max-width: 660px) {
+
+    .archive-grid {
+        margin-inline: -13px;
+        width: calc(100% + 26px);
+
+        gap: 15px;
+        padding:
+            8px
+            8vw
+            18px;
+
+        scroll-padding-inline: 8vw;
+    }
+
+    .archive-card {
+        flex: 0 0 82vw !important;
+        width: 82vw !important;
+        min-width: 82vw !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+    }
+}
