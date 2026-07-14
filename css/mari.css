@@ -2316,35 +2316,36 @@ a {
         );
 }
 
-
 /* ==================================================
-   TABLET
+   RESPONSIVE
+   PC表示を保ちつつ、スマホ100%でも
+   「トップ画像｜プロフィール」を維持
 ================================================== */
+
+/* ---------- TABLET ---------- */
 
 @media (max-width: 940px) {
 
     .mari-page {
-        width: min(840px, calc(100% - 28px));
+        width: min(860px, calc(100% - 28px));
         padding-top: 52px;
     }
 
+    /*
+       ここでは1列にしない。
+       画像とプロフィールは横並びを維持。
+    */
     .main-record {
-        grid-template-columns: 1fr;
-        gap: 22px;
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(0, 1.05fr);
+
+        gap: 18px;
     }
 
     .portrait-panel,
     .profile-panel {
-        width: min(100%, 680px);
-        margin-inline: auto;
-    }
-
-    .portrait-panel {
-        min-height: 610px;
-    }
-
-    .portrait-image {
-        min-height: 578px;
+        min-width: 0;
     }
 
     .detail-section,
@@ -2355,13 +2356,12 @@ a {
     .detail-card,
     .contract-panel,
     .account-panel {
-        width: min(100%, 680px);
+        width: min(100%, 720px);
         margin-inline: auto;
     }
 
     .archive-grid {
-        grid-auto-columns:
-            min(72vw, 520px);
+        grid-auto-columns: min(72vw, 520px);
 
         margin-inline: -14px;
         width: calc(100% + 28px);
@@ -2384,9 +2384,7 @@ a {
 }
 
 
-/* ==================================================
-   SMARTPHONE
-================================================== */
+/* ---------- SMARTPHONE ---------- */
 
 @media (max-width: 660px) {
 
@@ -2460,12 +2458,36 @@ a {
     }
 
 
-    /* メイン画像 */
+    /* =============================================
+       メイン：画像｜プロフィール
+    ============================================= */
+
+    .main-record {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(0, 1.05fr);
+
+        gap: 9px;
+        align-items: stretch;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* 左：トップ画像 */
 
     .portrait-panel {
-        width: 100%;
-        min-height: 440px;
-        padding: 11px;
+        width: auto;
+        min-width: 0;
+
+        height: 540px;
+        min-height: 540px;
+
+        margin: 0;
+        padding: 8px;
     }
 
     .portrait-panel::before {
@@ -2473,93 +2495,125 @@ a {
     }
 
     .portrait-image {
-        min-height: 418px;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+
+        display: block;
+        overflow: hidden;
     }
 
     .portrait-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
         object-position: center 35%;
+
+        transform: none;
+    }
+
+    .portrait-panel:hover
+    .portrait-image img {
+        transform: none;
     }
 
     .panel-top-data {
-        top: 20px;
-        left: 21px;
-        right: 21px;
+        top: 15px;
+        left: 15px;
+        right: 15px;
 
-        font-size: 7px;
-        letter-spacing: 2px;
+        font-size: 5px;
+        letter-spacing: 1px;
     }
 
     .portrait-bottom-data {
-        left: 21px;
-        right: 21px;
-        bottom: 18px;
+        left: 15px;
+        right: 15px;
+        bottom: 14px;
 
-        font-size: 7px;
-        letter-spacing: 2.5px;
+        gap: 5px;
+
+        font-size: 5px;
+        letter-spacing: 1px;
     }
 
     .portrait-panel::after {
-        right: 16px;
-        bottom: 17px;
+        right: 11px;
+        bottom: 13px;
 
-        font-size: 7px;
-        letter-spacing: 3px;
+        font-size: 5px;
+        letter-spacing: 1.5px;
     }
 
     .frame-corner {
-        width: 34px;
-        height: 34px;
+        width: 26px;
+        height: 26px;
     }
 
     .portrait-ribbon {
-        top: 22px;
-        left: 22px;
+        top: 17px;
+        left: 17px;
 
-        width: 34px;
+        width: 22px;
+        height: 22px;
     }
 
     .portrait-heart {
-        right: 18px;
-        bottom: 18px;
+        right: 13px;
+        bottom: 13px;
 
-        width: 42px;
+        width: 28px;
+        height: 28px;
     }
 
 
-    /* プロフィール */
+    /* 右：プロフィール */
 
     .profile-panel {
-        width: 100%;
+        width: auto;
+        min-width: 0;
+
+        height: 540px;
+        min-height: 540px;
+
+        margin: 0;
 
         padding:
-            27px
-            19px
-            22px;
+            21px
+            12px
+            15px;
+
+        overflow: hidden;
     }
 
     .profile-panel::before {
-        inset: 8px;
+        inset: 7px;
     }
 
     .profile-heading {
-        gap: 12px;
+        gap: 7px;
 
-        margin-bottom: 22px;
-        padding-bottom: 17px;
+        margin-bottom: 12px;
+        padding-bottom: 11px;
     }
 
     .section-number {
-        font-size: 47px;
+        font-size: 34px;
     }
 
     .profile-heading p {
-        font-size: 7px;
-        letter-spacing: 3px;
+        margin-bottom: 3px;
+
+        font-size: 5px;
+        letter-spacing: 1.3px;
     }
 
     .profile-heading h2 {
-        font-size: 23px;
-        letter-spacing: 3px;
+        font-size: 18px;
+        letter-spacing: 1.7px;
     }
 
     .security-badge {
@@ -2568,35 +2622,70 @@ a {
         width: fit-content;
 
         margin:
-            -8px
+            -3px
             0
-            17px
+            8px
             auto;
 
-        padding: 8px 10px;
+        padding: 5px 7px;
+    }
+
+    .security-badge span {
+        font-size: 4px;
+        letter-spacing: 1px;
+    }
+
+    .security-badge strong {
+        margin-top: 3px;
+
+        font-size: 7px;
+        letter-spacing: 1px;
     }
 
     .profile-list > div {
-        grid-template-columns: 98px 1fr;
-        gap: 10px;
+        display: block;
 
-        padding: 12px 0;
+        padding: 6px 0;
     }
 
     .profile-list dt {
-        font-size: 7px;
-        letter-spacing: 1.5px;
+        margin-bottom: 3px;
+
+        font-size: 5px;
+        line-height: 1.2;
+        letter-spacing: 1.1px;
+    }
+
+    .profile-list dt::before {
+        margin-right: 3px;
     }
 
     .profile-list dd {
-        font-size: 12px;
+        font-size: 8.5px;
+        line-height: 1.35;
+        letter-spacing: 0;
     }
 
     .profile-footer {
-        grid-template-columns: auto auto;
-        gap: 7px 13px;
+        grid-template-columns:
+            auto
+            1fr;
 
-        padding: 12px;
+        gap: 4px 7px;
+
+        margin-top: 9px;
+        padding: 7px;
+    }
+
+    .profile-footer span {
+        font-size: 4px;
+        letter-spacing: 1px;
+    }
+
+    .profile-footer strong {
+        font-size: 6px;
+        letter-spacing: 1px;
+        text-align: right;
     }
 
     .profile-footer-divider {
@@ -2811,9 +2900,7 @@ a {
 }
 
 
-/* ==================================================
-   SMALL SMARTPHONE
-================================================== */
+/* ---------- SMALL SMARTPHONE ---------- */
 
 @media (max-width: 390px) {
 
@@ -2831,25 +2918,37 @@ a {
         letter-spacing: 3px;
     }
 
-    .portrait-panel {
-        min-height: 400px;
+    .main-record {
+        gap: 7px;
     }
 
-    .portrait-image {
-        min-height: 378px;
+    .portrait-panel,
+    .profile-panel {
+        height: 510px;
+        min-height: 510px;
     }
 
     .profile-panel {
-        padding-right: 16px;
-        padding-left: 16px;
+        padding:
+            18px
+            9px
+            12px;
+    }
+
+    .section-number {
+        font-size: 30px;
+    }
+
+    .profile-heading h2 {
+        font-size: 16px;
     }
 
     .profile-list > div {
-        grid-template-columns: 87px 1fr;
+        padding: 5px 0;
     }
 
     .profile-list dd {
-        font-size: 11px;
+        font-size: 7.5px;
     }
 
     .detail-card,
@@ -2874,325 +2973,5 @@ a {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-/* ==================================================
-   MARI MOBILE MAIN LAYOUT
-   一颯と同じ高さ・画像の見え方に統一
-================================================== */
-
-@media (max-width: 660px) {
-
-    /* 画像とプロフィールを横並びに固定 */
-
-    .mari-body .main-record {
-        display: grid !important;
-
-        grid-template-columns:
-            minmax(0, 0.95fr)
-            minmax(0, 1.05fr) !important;
-
-        gap: 10px !important;
-        align-items: stretch !important;
-    }
-
-
-    /* =============================================
-       左：トップ画像
-    ============================================= */
-
-    .mari-body .portrait-panel {
-        width: auto !important;
-        min-width: 0 !important;
-
-        /*
-           一颯のスマホ版に近い高さ。
-           PROFILEの内容で勝手に縦長にならない。
-        */
-        height: 560px !important;
-        min-height: 560px !important;
-
-        margin: 0 !important;
-        padding: 8px !important;
-    }
-
-    .mari-body .portrait-image {
-        position: relative;
-
-        width: 100%;
-        height: 100% !important;
-        min-height: 0 !important;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        overflow: hidden;
-
-        background:
-            radial-gradient(
-                circle at 50% 45%,
-                rgba(181, 108, 183, 0.2),
-                transparent 52%
-            ),
-            linear-gradient(
-                180deg,
-                rgba(69, 43, 78, 0.5),
-                rgba(10, 7, 13, 0.96)
-            );
-    }
-
-    /*
-       coverをやめて、画像の横幅を基準に表示。
-       細い縦枠でも顔が巨大化しない。
-    */
-
-    .mari-body .portrait-image img {
-        display: block;
-
-        width: 100% !important;
-        height: auto !important;
-        max-width: none !important;
-        max-height: none !important;
-
-        object-fit: initial !important;
-        object-position: initial !important;
-
-        transform: none !important;
-    }
-
-    .mari-body .portrait-panel:hover
-    .portrait-image img {
-        transform: none !important;
-    }
-
-
-    /* 写真上の文字 */
-
-    .mari-body .panel-top-data {
-        top: 15px;
-        left: 15px;
-        right: 15px;
-
-        font-size: 5px;
-        letter-spacing: 1px;
-    }
-
-    .mari-body .portrait-bottom-data {
-        left: 15px;
-        right: 15px;
-        bottom: 14px;
-
-        gap: 5px;
-
-        font-size: 5px;
-        letter-spacing: 1px;
-    }
-
-    .mari-body .portrait-panel::after {
-        right: 11px;
-        bottom: 13px;
-
-        font-size: 5px;
-        letter-spacing: 1.5px;
-    }
-
-    .mari-body .frame-corner {
-        width: 26px;
-        height: 26px;
-    }
-
-    .mari-body .portrait-ribbon {
-        top: 17px;
-        left: 17px;
-
-        width: 22px !important;
-        height: 22px !important;
-    }
-
-    .mari-body .portrait-heart {
-        right: 13px;
-        bottom: 13px;
-
-        width: 28px !important;
-        height: 28px !important;
-    }
-
-
-    /* =============================================
-       右：プロフィール
-    ============================================= */
-
-    .mari-body .profile-panel {
-        width: auto !important;
-        min-width: 0 !important;
-
-        height: 560px !important;
-        min-height: 560px !important;
-
-        margin: 0 !important;
-        padding:
-            21px
-            12px
-            15px !important;
-
-        overflow: hidden !important;
-    }
-
-    .mari-body .profile-panel::before {
-        inset: 7px;
-    }
-
-
-    /* 見出し */
-
-    .mari-body .profile-heading {
-        gap: 7px;
-
-        margin-bottom: 12px;
-        padding-bottom: 11px;
-    }
-
-    .mari-body .section-number {
-        font-size: 34px;
-    }
-
-    .mari-body .profile-heading p {
-        margin-bottom: 3px;
-
-        font-size: 5px;
-        letter-spacing: 1.3px;
-    }
-
-    .mari-body .profile-heading h2 {
-        font-size: 18px;
-        letter-spacing: 1.7px;
-    }
-
-
-    /* PROTECTEDバッジ */
-
-    .mari-body .security-badge {
-        position: static;
-
-        width: fit-content;
-
-        margin:
-            -3px
-            0
-            8px
-            auto;
-
-        padding: 5px 7px;
-    }
-
-    .mari-body .security-badge span {
-        font-size: 4px;
-        letter-spacing: 1px;
-    }
-
-    .mari-body .security-badge strong {
-        margin-top: 3px;
-
-        font-size: 7px;
-        letter-spacing: 1px;
-    }
-
-
-    /* プロフィール7項目 */
-
-    .mari-body .profile-list > div {
-        display: block !important;
-
-        padding: 6px 0 !important;
-    }
-
-    .mari-body .profile-list dt {
-        margin-bottom: 3px;
-
-        font-size: 5px;
-        line-height: 1.2;
-        letter-spacing: 1.1px;
-    }
-
-    .mari-body .profile-list dt::before {
-        margin-right: 3px;
-    }
-
-    .mari-body .profile-list dd {
-        font-size: 8.5px;
-        line-height: 1.35;
-        letter-spacing: 0;
-    }
-
-
-    /* 最下部ステータス */
-
-    .mari-body .profile-footer {
-        grid-template-columns:
-            auto
-            1fr;
-
-        gap: 4px 7px;
-
-        margin-top: 9px;
-        padding: 7px;
-    }
-
-    .mari-body .profile-footer span {
-        font-size: 4px;
-        letter-spacing: 1px;
-    }
-
-    .mari-body .profile-footer strong {
-        font-size: 6px;
-        letter-spacing: 1px;
-        text-align: right;
-    }
-
-    .mari-body .profile-footer-divider {
-        display: none;
-    }
-}
-
-
-/* ==================================================
-   SMALL SMARTPHONE
-================================================== */
-
-@media (max-width: 390px) {
-
-    .mari-body .main-record {
-        gap: 7px !important;
-    }
-
-    .mari-body .portrait-panel,
-    .mari-body .profile-panel {
-        height: 520px !important;
-        min-height: 520px !important;
-    }
-
-    .mari-body .profile-panel {
-        padding:
-            18px
-            9px
-            12px !important;
-    }
-
-    .mari-body .section-number {
-        font-size: 30px;
-    }
-
-    .mari-body .profile-heading h2 {
-        font-size: 16px;
-    }
-
-    .mari-body .profile-list > div {
-        padding: 5px 0 !important;
-    }
-
-    .mari-body .profile-list dd {
-        font-size: 7.5px;
     }
 }
