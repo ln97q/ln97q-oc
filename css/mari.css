@@ -177,3 +177,9 @@ body.character-theme--mari {
     color: var(--mari-white);
     background: var(--mari-pink-dark);
 }
+
+.archive-item__image-frame {
+    background: url("../images/archive/mari_back.jpeg")
+        center / cover
+        no-repeat;
+}
