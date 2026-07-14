@@ -177,3 +177,9 @@ body.character-theme--shiori {
     color: var(--shiori-white);
     background: var(--shiori-red-dark);
 }
+
+.archive-item__image-frame {
+    background: url("../images/archive/shiori_back.jpeg")
+        center / cover
+        no-repeat;
+}
