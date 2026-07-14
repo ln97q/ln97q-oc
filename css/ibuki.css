@@ -318,11 +318,10 @@ a {
 .ibuki-main-profile {
     display: grid;
     grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(320px, 0.92fr);
+        minmax(320px, 0.85fr)
+        minmax(360px, 1.15fr);
 
     gap: 32px;
-
     align-items: stretch;
 }
 
@@ -467,11 +466,17 @@ a {
 .ibuki-portrait img {
     display: block;
 
-    width: 100%;
-    height: 100%;
+    width: 82%;
+    height: 82%;
 
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center;
+
+    filter:
+        saturate(0.86)
+        contrast(1.02)
+        brightness(0.96)
+        drop-shadow(0 18px 24px rgba(0, 0, 0, 0.42));
 
     filter:
         saturate(0.78)
