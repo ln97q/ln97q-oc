@@ -1375,269 +1375,6 @@ a {
 
 
 /* ==================================================
-   ARCHIVE
-================================================== */
-
-.archive-section {
-    margin-top: 64px;
-}
-
-.archive-heading {
-    margin-bottom: 27px;
-
-    text-align: center;
-}
-
-.archive-heading p {
-    margin: 0 0 7px;
-
-    color: var(--gold-dark);
-
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 5px;
-}
-
-.archive-heading h2 {
-    margin: 0;
-
-    color: var(--ivory);
-
-    font-family: Georgia, serif;
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: 7px;
-}
-
-
-/* 写真一覧 */
-
-.archive-grid{
-
-   flex:0 0 340px;
-
-scroll-snap-align:start;
-
-    display:flex;
-
-    gap:22px;
-
-    overflow-x:auto;
-    overflow-y:hidden;
-
-    padding-bottom:14px;
-
-    scroll-snap-type:x mandatory;
-
-    scrollbar-width:thin;
-
-}
-
-
-/* 写真カード */
-
-.archive-card {
-    position: relative;
-
-    margin: 0;
-    padding: 12px;
-
-    overflow: hidden;
-
-    border:
-        1px solid
-        rgba(192, 160, 96, 0.35);
-
-    background:
-        linear-gradient(
-            155deg,
-            rgba(17, 15, 14, 0.98),
-            rgba(6, 6, 6, 0.99)
-        );
-
-    box-shadow:
-        0 17px 40px rgba(0, 0, 0, 0.34);
-
-    transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-.archive-card:hover {
-    transform: translateY(-7px);
-
-    border-color:
-        rgba(192, 160, 96, 0.67);
-
-    box-shadow:
-        0 24px 50px rgba(0, 0, 0, 0.43),
-        0 0 20px rgba(93, 13, 19, 0.12);
-}
-
-
-/* 写真を入れる前の仮エリア */
-
-.archive-placeholder {
-    position: relative;
-
-    aspect-ratio: 4 / 5;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    border:
-        1px solid
-        rgba(192, 160, 96, 0.13);
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(93, 13, 19, 0.14),
-            transparent 42%
-        ),
-        linear-gradient(
-            145deg,
-            #100d0d,
-            #060606
-        );
-}
-
-
-/* 仮エリアの照準 */
-
-.archive-placeholder::before {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 64%;
-    height: 64%;
-
-    transform:
-        translate(-50%, -50%);
-
-    border:
-        1px solid
-        rgba(192, 160, 96, 0.09);
-
-    border-radius: 50%;
-}
-
-
-/* 仮エリアの十字線 */
-
-.archive-placeholder::after {
-    content: "";
-
-    position: absolute;
-    inset: 12%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 49.8%,
-            rgba(192, 160, 96, 0.08) 50%,
-            transparent 50.2%
-        ),
-        linear-gradient(
-            transparent 49.8%,
-            rgba(192, 160, 96, 0.08) 50%,
-            transparent 50.2%
-        );
-
-    pointer-events: none;
-}
-
-.archive-placeholder span,
-.archive-placeholder p {
-    position: relative;
-    z-index: 2;
-}
-
-.archive-placeholder span {
-    color: var(--gold-main);
-
-    font-family: Georgia, serif;
-    font-size: 14px;
-    letter-spacing: 4px;
-}
-
-.archive-placeholder p {
-    margin: 12px 0 0;
-
-    color: #746a59;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-}
-
-
-/* 写真説明 */
-
-.archive-card figcaption {
-    padding: 14px 7px 6px;
-
-    color: #918673;
-
-    font-size: 11px;
-    line-height: 1.75;
-    letter-spacing: 0.8px;
-}
-
-
-/* 後から実際の写真を入れる場合 */
-
-.archive-image {
-    position: relative;
-
-    aspect-ratio: 4 / 5;
-
-    overflow: hidden;
-
-    background: #070707;
-}
-
-.archive-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    filter:
-        saturate(0.76)
-        contrast(1.06)
-        brightness(0.88)
-        sepia(0.08);
-
-    transition:
-        transform 0.55s ease,
-        filter 0.55s ease;
-}
-
-.archive-card:hover
-.archive-image img {
-    transform: scale(1.04);
-
-    filter:
-        saturate(0.88)
-        contrast(1.08)
-        brightness(0.94)
-        sepia(0.03);
-}
-
-
-/* ==================================================
    WARNING PANEL
 ================================================== */
 
@@ -2186,12 +1923,6 @@ scroll-snap-align:start;
     gap: 16px;
 }
 
-   .archive-card{
-
-    flex:0 0 82%;
-
-}
-
     .archive-placeholder {
         aspect-ratio: 4 / 4.5;
     }
@@ -2330,27 +2061,80 @@ scroll-snap-align:start;
 
 }
 
-
 /* ==================================================
-   ARCHIVE HORIZONTAL SCROLL
-   最終上書き
+   ARCHIVE
+   横スクロール完成版
 ================================================== */
 
+.archive-section {
+    width: 100%;
+    min-width: 0;
+    margin-top: 64px;
+    overflow: visible;
+}
+
+.archive-heading {
+    margin-bottom: 27px;
+    text-align: center;
+}
+
+.archive-heading p {
+    margin: 0 0 7px;
+
+    color: var(--gold-dark);
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.archive-heading h2 {
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 7px;
+}
+
+
+/* 横スクロール本体 */
+
 .archive-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
+    display: grid !important;
+
+    /* カードを横方向へ並べる */
+    grid-auto-flow: column !important;
+
+    /* PCでのカード幅 */
+    grid-auto-columns: 360px;
+
+    /* 縦方向の1列化を無効にする */
+    grid-template-columns: none !important;
+    grid-template-rows: 1fr;
+
     align-items: stretch;
 
     width: 100%;
     max-width: 100%;
+    min-width: 0;
 
     gap: 22px;
-    padding: 8px 4px 18px;
+
+    padding:
+        8px
+        4px
+        20px;
 
     overflow-x: auto !important;
-    overflow-y: hidden;
+    overflow-y: hidden !important;
 
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: 4px;
+
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
 
@@ -2360,18 +2144,135 @@ scroll-snap-align:start;
         #15100f;
 }
 
-.archive-card {
-    flex: 0 0 360px !important;
-    width: 360px !important;
-    min-width: 360px !important;
 
-    margin: 0 !important;
+/* 写真カード */
+
+.archive-card {
+    position: relative;
+
+    width: 360px;
+    min-width: 360px;
+    max-width: 360px;
+
+    margin: 0;
+    padding: 12px;
+
+    overflow: hidden;
 
     scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    border:
+        1px solid
+        rgba(192, 160, 96, 0.35);
+
+    background:
+        linear-gradient(
+            155deg,
+            rgba(17, 15, 14, 0.98),
+            rgba(6, 6, 6, 0.99)
+        );
+
+    box-shadow:
+        0 17px 40px rgba(0, 0, 0, 0.34);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.archive-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(192, 160, 96, 0.67);
+
+    box-shadow:
+        0 24px 50px rgba(0, 0, 0, 0.43),
+        0 0 20px rgba(93, 13, 19, 0.12);
 }
 
 
-/* Chrome・Safariのスクロールバー */
+/* 実際の画像 */
+
+.archive-image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(192, 160, 96, 0.13);
+
+    background: #070707;
+}
+
+.archive-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.32),
+            transparent 42%
+        );
+}
+
+.archive-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        saturate(0.76)
+        contrast(1.06)
+        brightness(0.88)
+        sepia(0.08);
+
+    transition:
+        transform 0.55s ease,
+        filter 0.55s ease;
+}
+
+.archive-card:hover .archive-image img {
+    transform: scale(1.04);
+
+    filter:
+        saturate(0.88)
+        contrast(1.08)
+        brightness(0.94)
+        sepia(0.03);
+}
+
+
+/* 写真説明 */
+
+.archive-card figcaption {
+    min-height: 3.8em;
+    padding: 14px 7px 6px;
+
+    color: #918673;
+
+    font-size: 11px;
+    line-height: 1.75;
+    letter-spacing: 0.8px;
+}
+
+
+/* スクロールバー */
 
 .archive-grid::-webkit-scrollbar {
     height: 8px;
@@ -2394,50 +2295,80 @@ scroll-snap-align:start;
 }
 
 
-/* タブレット */
+/* ==================================================
+   ARCHIVE：TABLET
+================================================== */
 
 @media (max-width: 940px) {
 
     .archive-grid {
+        grid-auto-columns:
+            min(72vw, 520px);
+
         margin-inline: -14px;
         width: calc(100% + 28px);
 
-        padding-right: 28px;
-        padding-left: 28px;
+        gap: 18px;
+
+        padding:
+            8px
+            28px
+            20px;
+
+        scroll-padding-inline: 28px;
     }
 
     .archive-card {
-        flex-basis: 72vw !important;
-        width: 72vw !important;
-        min-width: 72vw !important;
-        max-width: 520px;
+        width: min(72vw, 520px);
+        min-width: min(72vw, 520px);
+        max-width: min(72vw, 520px);
     }
 }
 
 
-/* スマホ */
+/* ==================================================
+   ARCHIVE：SMARTPHONE
+================================================== */
 
 @media (max-width: 660px) {
 
+    .archive-section {
+        margin-top: 48px;
+    }
+
+    .archive-heading p {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .archive-heading h2 {
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+
     .archive-grid {
+        grid-auto-columns: 82vw;
+
         margin-inline: -13px;
         width: calc(100% + 26px);
 
         gap: 15px;
+
         padding:
             8px
             8vw
-            18px;
+            20px;
 
         scroll-padding-inline: 8vw;
     }
 
     .archive-card {
-        flex: 0 0 82vw !important;
-        width: 82vw !important;
-        min-width: 82vw !important;
-        max-width: none !important;
+        width: 82vw;
+        min-width: 82vw;
+        max-width: 82vw;
+    }
 
-        margin: 0 !important;
+    .archive-image {
+        aspect-ratio: 4 / 4.6;
     }
 }
