@@ -1413,12 +1413,21 @@ a {
 
 /* 写真一覧 */
 
-.archive-grid {
-    display: grid;
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+.archive-grid{
 
-    gap: 21px;
+    display:flex;
+
+    gap:22px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    padding-bottom:14px;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:thin;
+
 }
 
 
