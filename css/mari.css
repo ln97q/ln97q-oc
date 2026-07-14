@@ -2876,3 +2876,94 @@ a {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* ==================================================
+   FINAL DISPLAY FIX
+================================================== */
+
+.main-record {
+    display: grid !important;
+    grid-template-columns:
+        minmax(0, 0.94fr)
+        minmax(390px, 1.06fr) !important;
+
+    gap: 28px !important;
+    align-items: stretch;
+}
+
+.portrait-panel {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.portrait-ribbon {
+    position: absolute !important;
+
+    top: 30px !important;
+    left: 31px !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 42px !important;
+    height: 42px !important;
+    max-width: 42px !important;
+    max-height: 42px !important;
+
+    object-fit: contain !important;
+}
+
+.portrait-heart {
+    position: absolute !important;
+
+    right: 25px !important;
+    bottom: 25px !important;
+    top: auto !important;
+    left: auto !important;
+
+    width: 51px !important;
+    height: 51px !important;
+    max-width: 51px !important;
+    max-height: 51px !important;
+
+    object-fit: contain !important;
+}
+
+.profile-panel {
+    position: relative !important;
+    display: block !important;
+
+    min-width: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 940px) {
+
+    .main-record {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .portrait-ribbon {
+        top: 22px !important;
+        left: 22px !important;
+
+        width: 34px !important;
+        height: 34px !important;
+        max-width: 34px !important;
+        max-height: 34px !important;
+    }
+
+    .portrait-heart {
+        right: 18px !important;
+        bottom: 18px !important;
+
+        width: 42px !important;
+        height: 42px !important;
+        max-width: 42px !important;
+        max-height: 42px !important;
+    }
+}
