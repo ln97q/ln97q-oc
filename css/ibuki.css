@@ -1366,18 +1366,20 @@ a {
 
     /* メイン画像 */
 
-    .ibuki-portrait-card {
-        min-height: 470px;
-        padding: 11px;
-    }
+.ibuki-portrait-card {
+    min-height: 390px;
+    padding: 11px;
+}
 
-    .ibuki-portrait-card::before {
-        inset: 8px;
-    }
+.ibuki-portrait {
+    height: 390px;
+    min-height: 0;
+}
 
-    .ibuki-portrait {
-        min-height: 446px;
-    }
+.ibuki-portrait img {
+    width: 78%;
+    height: 78%;
+}
 
     .ibuki-portrait-card::after {
         right: 16px;
