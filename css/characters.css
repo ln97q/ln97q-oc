@@ -242,3 +242,169 @@
         height:230px;
     }
 }
+
+
+/* =========================
+   RELATIONSHIP
+========================= */
+
+.relationship-section{
+
+    margin-top:120px;
+
+}
+
+.relationship-title{
+
+    font-size:45px;
+
+    color:#b58de8;
+
+    letter-spacing:8px;
+
+    margin-bottom:10px;
+
+}
+
+.relationship-sub{
+
+    color:#999;
+
+    margin-bottom:35px;
+
+    letter-spacing:3px;
+
+}
+
+.relationship-slider{
+
+    display:flex;
+
+    gap:35px;
+
+    overflow-x:auto;
+
+    padding:15px 20px 40px;
+
+    scroll-snap-type:x mandatory;
+
+}
+
+.relationship-slider::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.relationship-slider::-webkit-scrollbar-thumb{
+
+    background:#d8b9ff;
+
+    border-radius:30px;
+
+}
+
+.relationship-card{
+
+    position:relative;
+
+    flex:0 0 320px;
+
+    padding:35px;
+
+    border-radius:35px;
+
+    text-decoration:none;
+
+    color:#7f62b8;
+
+    scroll-snap-align:center;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.97),
+        rgba(248,240,255,.95)
+    );
+
+    border:4px dashed #e3c8ff;
+
+    box-shadow:
+    0 10px 30px rgba(180,140,230,.25);
+
+    transition:.3s;
+
+}
+
+.relationship-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+}
+
+.relationship-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:12px;
+
+    right:15px;
+
+    width:28px;
+
+    height:28px;
+
+    background:url("images/material/miniribon-pink.jpeg");
+
+    background-size:contain;
+
+    background-repeat:no-repeat;
+
+}
+
+.relationship-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:15px;
+
+    left:18px;
+
+    width:26px;
+
+    height:26px;
+
+    background:url("images/material/kirakira.jpeg");
+
+    background-size:contain;
+
+    background-repeat:no-repeat;
+
+}
+
+.pair-name{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+    line-height:1.5;
+
+}
+
+.relationship-card p{
+
+    text-align:center;
+
+    color:#666;
+
+    line-height:2;
+
+}
