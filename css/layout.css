@@ -1,1 +1,698 @@
+/* =========================================================
+   CHARACTER PAGE — SHARED LAYOUT
+   全キャラクター共通：配置・寸法・余白・文字組み・レスポンシブ
 
+   キャラクター別CSSに記述するもの：
+   色 / 背景 / 枠線色 / 影 / 装飾 / モチーフ
+========================================================= */
+
+/* =========================================================
+   RESET / BASE
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    overflow-x: hidden;
+    font-family:
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+    margin: 0;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.character-page {
+    position: relative;
+    isolation: isolate;
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+    padding-block: 56px 80px;
+}
+
+.character-page__content {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.character-hero {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    padding: 12px 24px 30px;
+    text-align: center;
+}
+
+.character-hero__eyebrow {
+    margin-bottom: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.character-hero__title {
+    font-size: clamp(2rem, 5vw, 4.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.12em;
+}
+
+.character-hero__subtitle {
+    margin-top: 10px;
+    font-size: clamp(0.78rem, 1.4vw, 1rem);
+    letter-spacing: 0.16em;
+}
+
+.character-hero__divider {
+    display: grid;
+    grid-template-columns: minmax(56px, 180px) auto minmax(56px, 180px);
+    align-items: center;
+    gap: 12px;
+    width: min(100%, 440px);
+    margin-top: 18px;
+}
+
+.character-hero__divider-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+}
+
+.character-hero__divider-mark {
+    display: grid;
+    place-items: center;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+.character-hero__divider-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================================
+   SHARED PANEL
+========================================================= */
+
+.character-panel {
+    position: relative;
+    min-width: 0;
+    border: 1px solid;
+}
+
+.character-panel__inner {
+    min-width: 0;
+    height: 100%;
+    padding: 22px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.section-heading__number {
+    flex: 0 0 auto;
+    min-width: 2.5rem;
+    padding-top: 2px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.section-heading__text {
+    min-width: 0;
+}
+
+.section-heading__title {
+    font-size: clamp(1rem, 1.6vw, 1.18rem);
+    line-height: 1.25;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.section-heading__subtitle {
+    margin-top: 2px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+}
+
+.character-copy {
+    font-size: 0.94rem;
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TOP IMAGE + PROFILE
+========================================================= */
+
+.character-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    gap: 16px;
+}
+
+.character-portrait {
+    position: relative;
+    min-width: 0;
+    min-height: 520px;
+    overflow: hidden;
+    border: 1px solid;
+}
+
+.character-portrait__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.character-profile {
+    min-width: 0;
+}
+
+.character-profile .character-panel__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-list {
+    display: grid;
+    gap: 0;
+    min-width: 0;
+}
+
+.profile-list__row {
+    display: grid;
+    grid-template-columns: minmax(92px, 28%) minmax(0, 1fr);
+    align-items: center;
+    min-width: 0;
+    min-height: 46px;
+    border-bottom: 1px solid;
+}
+
+.profile-list__row:first-child {
+    border-top: 1px solid;
+}
+
+.profile-list__label {
+    padding: 10px 14px 10px 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.profile-list__value {
+    min-width: 0;
+    padding: 10px 0 10px 16px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    border-left: 1px solid;
+}
+
+/* =========================================================
+   TWO-COLUMN SECTIONS
+========================================================= */
+
+.character-section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.character-section-grid .character-panel {
+    min-height: 280px;
+}
+
+.character-section-grid .character-panel__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-section-grid .character-copy {
+    flex: 1;
+}
+
+/* =========================================================
+   VOICE / SPECIAL
+========================================================= */
+
+.character-wide-section {
+    margin-top: 16px;
+}
+
+.character-wide-section .character-panel__inner {
+    padding-block: 24px;
+}
+
+.character-voice .character-copy {
+    min-height: 84px;
+}
+
+.character-special .character-copy {
+    min-height: 112px;
+}
+
+/* =========================================================
+   ARCHIVE — HORIZONTAL SCROLL / THREE IMAGES
+========================================================= */
+
+.character-archive {
+    margin-top: 16px;
+}
+
+.character-archive .character-panel__inner {
+    padding-inline: 22px;
+}
+
+.archive-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, calc((100% - 32px) / 3));
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 2px 12px;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.archive-item {
+    min-width: 0;
+    scroll-snap-align: start;
+}
+
+.archive-item__image-frame {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid;
+}
+
+.archive-item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.archive-item__caption {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.character-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.character-navigation__link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 72px;
+    padding: 14px 18px;
+    border: 1px solid;
+}
+
+.character-navigation__link--previous {
+    text-align: left;
+}
+
+.character-navigation__link--next {
+    text-align: right;
+}
+
+.character-navigation__arrow {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.character-navigation__label {
+    min-width: 0;
+    font-size: 0.74rem;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .character-page {
+        width: min(100% - 32px, 900px);
+        padding-block: 40px 64px;
+    }
+
+    .character-hero {
+        padding-inline: 16px;
+    }
+
+    .character-overview {
+        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+        gap: 14px;
+    }
+
+    .character-portrait {
+        min-height: 480px;
+    }
+
+    .character-panel__inner {
+        padding: 18px;
+    }
+
+    .profile-list__row {
+        grid-template-columns: minmax(76px, 30%) minmax(0, 1fr);
+        min-height: 43px;
+    }
+
+    .profile-list__label {
+        padding-right: 10px;
+        font-size: 0.63rem;
+        letter-spacing: 0.1em;
+    }
+
+    .profile-list__value {
+        padding-left: 12px;
+        font-size: 0.84rem;
+    }
+
+    .character-section-grid {
+        gap: 14px;
+        margin-top: 14px;
+    }
+
+    .character-wide-section,
+    .character-archive,
+    .character-navigation {
+        margin-top: 14px;
+    }
+
+    .archive-track {
+        grid-auto-columns: minmax(250px, calc((100% - 16px) / 2));
+        gap: 14px;
+    }
+
+    .character-navigation {
+        gap: 14px;
+    }
+}
+
+/* =========================================================
+   SMARTPHONE
+   「画像｜プロフィール」の2列を維持
+========================================================= */
+
+@media (max-width: 600px) {
+    .character-page {
+        width: calc(100% - 16px);
+        padding-block: 22px 40px;
+    }
+
+    .character-hero {
+        padding: 8px 8px 22px;
+    }
+
+    .character-hero__eyebrow {
+        margin-bottom: 5px;
+        font-size: 0.56rem;
+        letter-spacing: 0.2em;
+    }
+
+    .character-hero__title {
+        font-size: clamp(1.65rem, 9vw, 2.4rem);
+        letter-spacing: 0.08em;
+    }
+
+    .character-hero__subtitle {
+        margin-top: 6px;
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+    }
+
+    .character-hero__divider {
+        grid-template-columns: minmax(36px, 1fr) auto minmax(36px, 1fr);
+        gap: 8px;
+        width: min(82%, 300px);
+        margin-top: 12px;
+    }
+
+    .character-overview {
+        grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+        gap: 6px;
+    }
+
+    .character-portrait {
+        min-height: 390px;
+    }
+
+    .character-panel__inner {
+        padding: 12px;
+    }
+
+    .section-heading {
+        gap: 7px;
+        margin-bottom: 10px;
+    }
+
+    .section-heading__number {
+        display: none;
+    }
+
+    .section-heading__title {
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+    }
+
+    .section-heading__subtitle {
+        font-size: 0.62rem;
+        line-height: 1.35;
+    }
+
+    .profile-list__row {
+        grid-template-columns: minmax(54px, 38%) minmax(0, 1fr);
+        min-height: 37px;
+    }
+
+    .profile-list__label {
+        padding: 7px 5px 7px 0;
+        font-size: 0.48rem;
+        line-height: 1.25;
+        letter-spacing: 0.05em;
+    }
+
+    .profile-list__value {
+        padding: 7px 0 7px 7px;
+        font-size: 0.62rem;
+        line-height: 1.35;
+    }
+
+    .character-section-grid {
+        gap: 6px;
+        margin-top: 6px;
+    }
+
+    .character-section-grid .character-panel {
+        min-height: 210px;
+    }
+
+    .character-copy {
+        font-size: 0.72rem;
+        line-height: 1.8;
+    }
+
+    .character-wide-section,
+    .character-archive,
+    .character-navigation {
+        margin-top: 6px;
+    }
+
+    .character-wide-section .character-panel__inner {
+        padding-block: 14px;
+    }
+
+    .character-voice .character-copy {
+        min-height: 66px;
+    }
+
+    .character-special .character-copy {
+        min-height: 84px;
+    }
+
+    .character-archive .character-panel__inner {
+        padding-inline: 12px;
+    }
+
+    .archive-track {
+        grid-auto-columns: minmax(220px, 86%);
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    .archive-item__caption {
+        margin-top: 7px;
+        font-size: 0.68rem;
+        line-height: 1.65;
+    }
+
+    .character-navigation {
+        gap: 6px;
+    }
+
+    .character-navigation__link {
+        gap: 6px;
+        min-height: 58px;
+        padding: 10px 9px;
+    }
+
+    .character-navigation__arrow {
+        font-size: 0.95rem;
+    }
+
+    .character-navigation__label {
+        font-size: 0.58rem;
+        letter-spacing: 0.08em;
+    }
+}
+
+/* =========================================================
+   VERY SMALL SCREENS
+   2列を維持しつつ最小幅を調整
+========================================================= */
+
+@media (max-width: 374px) {
+    .character-page {
+        width: calc(100% - 10px);
+    }
+
+    .character-overview {
+        grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+        gap: 4px;
+    }
+
+    .character-portrait {
+        min-height: 368px;
+    }
+
+    .character-panel__inner {
+        padding: 9px;
+    }
+
+    .profile-list__row {
+        grid-template-columns: minmax(48px, 39%) minmax(0, 1fr);
+    }
+
+    .profile-list__label {
+        font-size: 0.43rem;
+    }
+
+    .profile-list__value {
+        padding-left: 5px;
+        font-size: 0.56rem;
+    }
+
+    .character-section-grid {
+        gap: 4px;
+    }
+
+    .character-copy {
+        font-size: 0.66rem;
+    }
+
+    .character-navigation {
+        gap: 4px;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
