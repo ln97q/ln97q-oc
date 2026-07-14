@@ -2454,3 +2454,269 @@ a {
         height: 26px;
     }
 }
+
+
+/* ==================================================
+   IBUKI MOBILE MAIN FIX
+   100%表示でも「画像｜プロフィール」
+================================================== */
+
+@media (max-width: 660px) {
+
+    .ibuki-body .main-dossier {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(0, 1.05fr) !important;
+
+        gap: 9px !important;
+        align-items: stretch !important;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =============================================
+       左：トップ画像
+    ============================================= */
+
+    .ibuki-body .portrait-panel {
+        width: auto !important;
+        min-width: 0 !important;
+
+        height: 540px !important;
+        min-height: 540px !important;
+
+        margin: 0 !important;
+        padding: 8px !important;
+    }
+
+    .ibuki-body .portrait-image {
+        width: 100%;
+        height: 100% !important;
+        min-height: 0 !important;
+    }
+
+    .ibuki-body .portrait-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center 35% !important;
+    }
+
+
+    /* 写真内の文字 */
+
+    .ibuki-body .panel-top-data {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+
+    .ibuki-body .portrait-bottom-data {
+        left: 15px;
+        right: 15px;
+        bottom: 14px;
+
+        gap: 5px;
+
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+
+    .ibuki-body .portrait-panel::after {
+        right: 11px;
+        bottom: 13px;
+
+        font-size: 5px;
+        letter-spacing: 1.5px;
+    }
+
+    .ibuki-body .frame-corner {
+        width: 26px;
+        height: 26px;
+    }
+
+    .ibuki-body .portrait-scan-line {
+        inset-inline: 8px;
+    }
+
+
+    /* =============================================
+       右：プロフィール
+    ============================================= */
+
+    .ibuki-body .profile-panel {
+        width: auto !important;
+        min-width: 0 !important;
+
+        height: 540px !important;
+        min-height: 540px !important;
+
+        margin: 0 !important;
+        padding:
+            21px
+            12px
+            15px !important;
+
+        overflow: hidden !important;
+    }
+
+    .ibuki-body .profile-panel::before {
+        inset: 7px;
+    }
+
+
+    /* 見出し */
+
+    .ibuki-body .profile-heading {
+        gap: 7px;
+
+        margin-bottom: 12px;
+        padding-bottom: 11px;
+    }
+
+    .ibuki-body .section-number {
+        font-size: 34px;
+    }
+
+    .ibuki-body .profile-heading p {
+        margin-bottom: 3px;
+
+        font-size: 5px;
+        letter-spacing: 1.3px;
+    }
+
+    .ibuki-body .profile-heading h2 {
+        font-size: 18px;
+        letter-spacing: 1.7px;
+    }
+
+
+    /* RESTRICTEDバッジ */
+
+    .ibuki-body .security-badge {
+        position: static;
+
+        width: fit-content;
+
+        margin:
+            -3px
+            0
+            8px
+            auto;
+
+        padding: 5px 7px;
+    }
+
+    .ibuki-body .security-badge span {
+        font-size: 4px;
+        letter-spacing: 1px;
+    }
+
+    .ibuki-body .security-badge strong {
+        margin-top: 3px;
+
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+
+    /* プロフィール項目 */
+
+    .ibuki-body .profile-list > div {
+        display: block !important;
+
+        padding: 7px 0 !important;
+    }
+
+    .ibuki-body .profile-list dt {
+        margin-bottom: 3px;
+
+        font-size: 5px;
+        line-height: 1.2;
+        letter-spacing: 1.1px;
+    }
+
+    .ibuki-body .profile-list dd {
+        font-size: 8.5px;
+        line-height: 1.35;
+        letter-spacing: 0;
+    }
+
+
+    /* 下部ステータス */
+
+    .ibuki-body .profile-footer {
+        grid-template-columns:
+            auto
+            1fr;
+
+        gap: 4px 7px;
+
+        margin-top: 9px;
+        padding: 7px;
+    }
+
+    .ibuki-body .profile-footer span {
+        font-size: 4px;
+        letter-spacing: 1px;
+    }
+
+    .ibuki-body .profile-footer strong {
+        font-size: 6px;
+        letter-spacing: 1px;
+        text-align: right;
+    }
+
+    .ibuki-body .profile-footer-divider {
+        display: none;
+    }
+}
+
+
+/* ==================================================
+   SMALL SMARTPHONE
+================================================== */
+
+@media (max-width: 390px) {
+
+    .ibuki-body .main-dossier {
+        gap: 7px !important;
+    }
+
+    .ibuki-body .portrait-panel,
+    .ibuki-body .profile-panel {
+        height: 510px !important;
+        min-height: 510px !important;
+    }
+
+    .ibuki-body .profile-panel {
+        padding:
+            18px
+            9px
+            12px !important;
+    }
+
+    .ibuki-body .section-number {
+        font-size: 30px;
+    }
+
+    .ibuki-body .profile-heading h2 {
+        font-size: 16px;
+    }
+
+    .ibuki-body .profile-list > div {
+        padding: 6px 0 !important;
+    }
+
+    .ibuki-body .profile-list dd {
+        font-size: 7.5px;
+    }
+}
