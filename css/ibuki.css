@@ -1564,52 +1564,6 @@ a {
 
 
 /* ==================================================
-   TABLET
-================================================== */
-
-@media (max-width: 940px) {
-
-    .ibuki-page {
-        width: min(840px, calc(100% - 28px));
-        padding-top: 52px;
-    }
-
-    .main-dossier {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .portrait-panel,
-    .profile-panel {
-        width: min(100%, 680px);
-        margin-inline: auto;
-    }
-
-    .portrait-panel {
-        min-height: 600px;
-    }
-
-    .portrait-image {
-        min-height: 568px;
-    }
-
-    .detail-section {
-        grid-template-columns: 1fr;
-    }
-
-    .detail-card {
-        width: min(100%, 680px);
-        margin-inline: auto;
-    }
-
-    .archive-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* ==================================================
    SMARTPHONE
 ================================================== */
 
