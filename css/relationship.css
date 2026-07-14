@@ -1,1 +1,32 @@
+.relations h1{
+    position:relative;
+    display:inline-block;
+    margin-top:30px;
+    font-size:58px;
+    letter-spacing:10px;
+    color:#fff0fb;
+    text-shadow:
+        0 0 15px #f4c5ff,
+        0 0 35px #d69cff;
+}
 
+.relations h1::before{
+    content:"";
+    position:absolute;
+    width:85px;
+    height:85px;
+    background:url("images/assets/miniribon-pink.jpeg") center/contain no-repeat;
+    top:-55px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.relations h1::after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:35px;
+    background:url("images/assets/kirakira.jpeg") center/contain no-repeat;
+    right:-100px;
+    top:12px;
+}
