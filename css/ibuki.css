@@ -2318,3 +2318,139 @@ a {
         aspect-ratio: 4 / 4.6;
     }
 }
+
+
+/* ==================================================
+   IBUKI MOBILE TOP
+   100%表示でも「画像｜プロフィール」を維持
+================================================== */
+
+@media (max-width: 920px) {
+
+    .ibuki-main-profile {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(0, 1.05fr) !important;
+
+        gap: 10px !important;
+        align-items: stretch;
+    }
+
+    .ibuki-portrait-card,
+    .ibuki-profile-card {
+        width: auto !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    /* 左：トップ画像 */
+
+    .ibuki-portrait-card {
+        min-height: 520px !important;
+        padding: 8px !important;
+    }
+
+    .ibuki-portrait {
+        min-height: 504px !important;
+    }
+
+    .ibuki-portrait img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+
+    /* 右：プロフィール */
+
+    .ibuki-profile-card {
+        min-height: 520px;
+
+        padding:
+            22px
+            13px
+            17px !important;
+    }
+
+    .ibuki-card-heading {
+        gap: 8px;
+
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+
+    .ibuki-card-heading > span {
+        font-size: 37px;
+    }
+
+    .ibuki-card-heading p {
+        font-size: 6px;
+        letter-spacing: 1.5px;
+    }
+
+    .ibuki-card-heading h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+
+    /* プロフィール項目を縦型にして幅を節約 */
+
+    .ibuki-profile-list > div {
+        display: block;
+
+        padding: 9px 0;
+    }
+
+    .ibuki-profile-list dt {
+        margin-bottom: 5px;
+
+        font-size: 6px;
+        letter-spacing: 1.3px;
+    }
+
+    .ibuki-profile-list dd {
+        font-size: 10px;
+        line-height: 1.55;
+    }
+
+    .ibuki-profile-code {
+        margin-top: 14px;
+        padding: 8px;
+
+        font-size: 6px;
+        letter-spacing: 1.3px;
+    }
+
+
+    /* 写真内の小さい文字 */
+
+    .ibuki-portrait-label {
+        left: 15px;
+        bottom: 14px;
+
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+
+    .ibuki-portrait-card::after {
+        right: 11px;
+        bottom: 13px;
+
+        font-size: 5px;
+        letter-spacing: 1.5px;
+    }
+
+    .ibuki-corner {
+        width: 26px;
+        height: 26px;
+    }
+}
