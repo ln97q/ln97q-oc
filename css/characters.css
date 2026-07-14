@@ -408,3 +408,389 @@
     line-height:2;
 
 }
+
+/* =========================================
+   FEATURED PAIR CARD
+   御堂羽 一颯 × 花乃院 毬
+========================================= */
+
+.relationship-card--featured {
+    flex: 0 0 620px;
+    min-height: 300px;
+    padding: 0;
+    border: 3px solid rgba(255, 184, 242, 0.95);
+    border-radius: 28px;
+    overflow: hidden;
+    isolation: isolate;
+    color: #fff;
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(255, 141, 226, 0.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(141, 78, 190, 0.45),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #1d1324 0%,
+            #35203e 40%,
+            #6b356d 72%,
+            #d16eb5 100%
+        );
+    box-shadow:
+        0 0 0 5px rgba(70, 31, 79, 0.85),
+        0 0 0 8px rgba(255, 198, 244, 0.45),
+        0 18px 40px rgba(93, 42, 111, 0.45),
+        inset 0 0 40px rgba(255, 161, 231, 0.18);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.relationship-card--featured:hover {
+    transform: translateY(-10px) scale(1.025);
+    box-shadow:
+        0 0 0 5px rgba(70, 31, 79, 0.9),
+        0 0 0 8px rgba(255, 205, 247, 0.65),
+        0 0 35px rgba(255, 119, 222, 0.7),
+        0 24px 55px rgba(91, 36, 108, 0.5),
+        inset 0 0 55px rgba(255, 165, 232, 0.26);
+}
+
+/* 元のカード装飾を無効化 */
+.relationship-card--featured::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    z-index: 6;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            115deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.32) 46%,
+            transparent 61%
+        );
+    background-size: 220% 100%;
+    background-position: 160% 0;
+    opacity: 0;
+    transition:
+        opacity 0.35s ease,
+        background-position 0.8s ease;
+}
+
+.relationship-card--featured:hover::before {
+    opacity: 1;
+    background-position: -70% 0;
+}
+
+.relationship-card--featured::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    width: auto;
+    height: auto;
+    border: 1px solid rgba(255, 228, 251, 0.65);
+    border-radius: 20px;
+    background: none;
+    pointer-events: none;
+    z-index: 8;
+}
+
+/* 背景模様 */
+.featured-pair-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.8;
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255, 198, 239, 0.17) 0 5px,
+            transparent 6px
+        ),
+        linear-gradient(
+            135deg,
+            transparent 45%,
+            rgba(255, 186, 235, 0.08) 46% 48%,
+            transparent 49%
+        );
+    background-size:
+        45px 45px,
+        90px 90px;
+    mask-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.15) 50%,
+            rgba(0, 0, 0, 0.9)
+        );
+}
+
+/* 左右のキャラクター配置 */
+.featured-character {
+    position: absolute;
+    bottom: 0;
+    width: 42%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.featured-character--left {
+    left: 0;
+    background:
+        radial-gradient(
+            ellipse at 35% 65%,
+            rgba(77, 31, 87, 0.85),
+            transparent 65%
+        );
+}
+
+.featured-character--right {
+    right: 0;
+    background:
+        radial-gradient(
+            ellipse at 65% 65%,
+            rgba(255, 119, 213, 0.45),
+            transparent 65%
+        );
+}
+
+.featured-character img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    filter:
+        drop-shadow(0 0 12px rgba(255, 182, 239, 0.45))
+        saturate(0.95);
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.relationship-card--featured:hover .featured-character img {
+    transform: scale(1.04);
+    filter:
+        drop-shadow(0 0 20px rgba(255, 162, 230, 0.75))
+        saturate(1.08);
+}
+
+/* 画像を入れるまでの仮表示 */
+.featured-placeholder {
+    margin-bottom: 20px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: rgba(255, 224, 249, 0.14);
+    writing-mode: vertical-rl;
+}
+
+.featured-character--left .featured-placeholder {
+    transform: rotate(180deg);
+}
+
+/* 関係性ラベル */
+.featured-category {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
+    padding: 6px 28px;
+    border: 1px solid rgba(255, 228, 250, 0.85);
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #5a315f;
+    background:
+        linear-gradient(
+            135deg,
+            #ffd4f1,
+            #f29ddd
+        );
+    box-shadow:
+        0 4px 15px rgba(255, 132, 219, 0.35);
+}
+
+/* 中央テキスト */
+.featured-pair-content {
+    position: relative;
+    z-index: 4;
+    width: 56%;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 58px 18px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow:
+        0 2px 3px rgba(25, 9, 31, 0.8),
+        0 0 10px rgba(255, 186, 239, 0.35);
+}
+
+.featured-pair-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-family: serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.35;
+    letter-spacing: 3px;
+    color: #fff8ff;
+}
+
+.featured-cross {
+    font-size: 19px;
+    color: #ffd1ee;
+}
+
+.featured-relation {
+    position: relative;
+    margin-top: 18px;
+    padding: 10px 25px;
+    border: 1px solid rgba(255, 233, 251, 0.75);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #5d2f61;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 210, 243, 0.96),
+            rgba(237, 141, 211, 0.96)
+        );
+    box-shadow:
+        0 5px 18px rgba(41, 15, 49, 0.4),
+        inset 0 1px 5px rgba(255, 255, 255, 0.65);
+}
+
+.featured-relation::before,
+.featured-relation::after {
+    content: "♡";
+    margin: 0 8px;
+    color: #9a4a8f;
+}
+
+.relationship-card--featured .featured-quote {
+    margin: 14px 0 0;
+    color: #ffe9fa;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+/* 四隅のハート装飾 */
+.featured-corner {
+    position: absolute;
+    z-index: 9;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #ffd1ef;
+    border-radius: 50% 50% 50% 12px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    background:
+        linear-gradient(
+            135deg,
+            #4c2457,
+            #e276bf
+        );
+    box-shadow:
+        0 0 12px rgba(255, 153, 226, 0.65),
+        inset 0 0 8px rgba(255, 255, 255, 0.35);
+}
+
+.featured-corner--top-left {
+    top: 7px;
+    left: 7px;
+    transform: rotate(-45deg);
+}
+
+.featured-corner--top-left::first-letter {
+    transform: rotate(45deg);
+}
+
+.featured-corner--top-right {
+    top: 7px;
+    right: 7px;
+    transform: rotate(45deg);
+}
+
+.featured-corner--bottom-left {
+    bottom: 7px;
+    left: 7px;
+    transform: rotate(-135deg);
+}
+
+.featured-corner--bottom-right {
+    right: 7px;
+    bottom: 7px;
+    transform: rotate(135deg);
+}
+
+/* =========================================
+   FEATURED PAIR CARD : MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+    .relationship-card--featured {
+        flex-basis: 88vw;
+        min-height: 290px;
+    }
+
+    .featured-pair-content {
+        width: 68%;
+        min-height: 290px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .featured-pair-name {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .featured-relation {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+
+    .relationship-card--featured .featured-quote {
+        font-size: 11px;
+    }
+
+    .featured-character {
+        width: 40%;
+        opacity: 0.75;
+    }
+
+    .featured-placeholder {
+        font-size: 34px;
+    }
+
+    .featured-corner {
+        width: 34px;
+        height: 34px;
+        font-size: 19px;
+    }
+}
