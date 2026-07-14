@@ -839,3 +839,44 @@
     }
 
 }
+
+
+.relationship-link{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:16px 40px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-family:"Fredoka",sans-serif;
+
+font-size:15px;
+
+letter-spacing:2px;
+
+color:white;
+
+background:linear-gradient(135deg,#f4deff,#b88ce9);
+
+box-shadow:
+0 7px 0 #9b70d2,
+0 15px 30px rgba(180,140,230,.35);
+
+transition:.3s;
+
+}
+
+.relationship-link:hover{
+
+transform:translateY(4px) scale(1.05);
+
+box-shadow:
+0 3px 0 #9b70d2,
+0 8px 18px rgba(180,140,230,.3);
+
+}
