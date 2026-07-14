@@ -334,7 +334,7 @@ a {
 .ibuki-portrait-card {
     position: relative;
 
-    min-height: 650px;
+    min-height: 520px;
     padding: 18px;
 
     overflow: hidden;
