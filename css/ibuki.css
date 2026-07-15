@@ -100,9 +100,15 @@ body.character-theme--ibuki {
 }
 
 .character-theme--ibuki .character-voice {
-    border-color: var(--ibuki-red-line);
+    border-color: var(--ibuki-line);
     background:
-        linear-gradient(90deg, rgba(93, 13, 19, 0.2), transparent 32%, transparent 68%, rgba(93, 13, 19, 0.12)),
+        linear-gradient(
+            90deg,
+            rgba(175, 142, 79, 0.06),
+            transparent 32%,
+            transparent 68%,
+            rgba(175, 142, 79, 0.035)
+        ),
         var(--ibuki-panel);
 }
 
