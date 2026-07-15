@@ -100,15 +100,9 @@ body.character-theme--ibuki {
 }
 
 .character-theme--ibuki .character-voice {
-    border-color: var(--ibuki-line);
+    border-color: var(--ibuki-red-line);
     background:
-        linear-gradient(
-            90deg,
-            rgba(175, 142, 79, 0.06),
-            transparent 32%,
-            transparent 68%,
-            rgba(175, 142, 79, 0.035)
-        ),
+        linear-gradient(90deg, rgba(93, 13, 19, 0.2), transparent 32%, transparent 68%, rgba(93, 13, 19, 0.12)),
         var(--ibuki-panel);
 }
 
@@ -428,5 +422,264 @@ body.character-theme--ibuki {
 
     .character-theme--ibuki .section-heading__number {
         font-size: 1.2rem;
+    }
+}
+
+
+/* =========================================================
+   DOSSIER V2 — ORIGINAL DESIGN CLOSER MATCH
+   レイアウト・カード比率・共通寸法は変更しない
+========================================================= */
+
+/* HERO：旧デザインの文言と情報量へ寄せる */
+.character-theme--ibuki .character-hero__eyebrow {
+    font-size: 0;
+}
+
+.character-theme--ibuki .character-hero__eyebrow::before {
+    content: "ORGANIZATION PERSONNEL DOSSIER";
+    font-size: 0.72rem;
+    color: var(--ibuki-gold-main);
+    letter-spacing: 0.32em;
+}
+
+.character-theme--ibuki .character-hero__eyebrow::after {
+    content: "FILE NO. IBK-002";
+    display: block;
+    margin-top: 5px;
+    font-size: 0.5rem;
+    color: var(--ibuki-muted);
+    letter-spacing: 0.28em;
+}
+
+.character-theme--ibuki .character-hero::before,
+.character-theme--ibuki .character-hero::after {
+    top: 3px;
+}
+
+/* 見出し：番号を大きく、タイトルと一体化 */
+.character-theme--ibuki .section-heading {
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.character-theme--ibuki .section-heading__number {
+    display: block;
+    min-width: auto;
+    padding-top: 0;
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+    color: rgba(154, 32, 43, 0.72);
+    letter-spacing: 0.02em;
+}
+
+.character-theme--ibuki .section-heading__title {
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+}
+
+/* 各カードに旧版風の分類ラベルを追加 */
+.character-theme--ibuki .character-section-grid:first-of-type
+.character-panel:nth-child(1) .section-heading__text::before {
+    content: "PERSONAL RECORD";
+}
+
+.character-theme--ibuki .character-section-grid:first-of-type
+.character-panel:nth-child(2) .section-heading__text::before {
+    content: "CLASSIFIED HISTORY";
+}
+
+.character-theme--ibuki .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(1) .section-heading__text::before {
+    content: "ASSOCIATED PERSONS";
+}
+
+.character-theme--ibuki .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(2) .section-heading__text::before {
+    content: "IDENTIFICATION DATA";
+}
+
+.character-theme--ibuki .character-voice .section-heading__text::before {
+    content: "RECORDED STATEMENT";
+}
+
+.character-theme--ibuki .character-special .section-heading__text::before {
+    content: "CLASSIFIED BODY RECORD";
+}
+
+.character-theme--ibuki .character-archive .section-heading__text::before {
+    content: "VISUAL ARCHIVE";
+}
+
+.character-theme--ibuki .character-section-grid .section-heading__text::before,
+.character-theme--ibuki .character-voice .section-heading__text::before,
+.character-theme--ibuki .character-special .section-heading__text::before,
+.character-theme--ibuki .character-archive .section-heading__text::before {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ibuki-gold-dark);
+    font-size: 0.46rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+}
+
+/* 赤い短線＋金の細線 */
+.character-theme--ibuki .section-heading::after {
+    bottom: -5px;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--ibuki-red-light) 0 42px,
+            rgba(175, 142, 79, 0.26) 42px 70%,
+            transparent 100%
+        );
+}
+
+/* パネルの内枠を旧版の細い多重線へ */
+.character-theme--ibuki .character-panel,
+.character-theme--ibuki .character-portrait {
+    box-shadow:
+        inset 0 0 0 1px rgba(223, 201, 143, 0.05),
+        inset 0 0 0 7px rgba(0, 0, 0, 0.22),
+        inset 0 0 0 8px rgba(175, 142, 79, 0.18),
+        inset 0 0 0 13px rgba(0, 0, 0, 0.13),
+        inset 0 0 0 14px rgba(175, 142, 79, 0.08),
+        0 18px 46px rgba(0, 0, 0, 0.34);
+}
+
+.character-theme--ibuki .character-panel::before {
+    inset: 11px;
+    border-color: rgba(175, 142, 79, 0.19);
+}
+
+/* targetを旧版の見え方に近づける */
+.character-theme--ibuki .character-panel::after {
+    top: 18px;
+    right: 16px;
+    width: 124px;
+    height: 124px;
+    opacity: 0.13;
+}
+
+/* PROFILE専用 */
+.character-theme--ibuki .character-profile .section-heading {
+    padding-right: 44px;
+}
+
+.character-theme--ibuki .character-profile .section-heading__text::after {
+    top: 4px;
+    right: 2px;
+    padding: 3px 5px;
+    border: 1px solid rgba(154, 32, 43, 0.34);
+    background: rgba(101, 16, 24, 0.08);
+}
+
+/* 写真フレーム四隅の情報を見やすく */
+.character-theme--ibuki .character-portrait::before {
+    content: "SUBJECT / IBK                                      02";
+    top: 17px;
+    left: 18px;
+    right: 18px;
+    color: var(--ibuki-gold-light);
+}
+
+.character-theme--ibuki .character-portrait::after {
+    content: "YOUNG HEAD                         CONFIDENTIAL";
+    left: 18px;
+    right: 18px;
+    bottom: 17px;
+}
+
+/* VOICEだけ赤枠にならないよう統一 */
+.character-theme--ibuki .character-voice {
+    border-color: var(--ibuki-line);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(175, 142, 79, 0.055),
+            transparent 32%,
+            transparent 68%,
+            rgba(175, 142, 79, 0.03)
+        ),
+        var(--ibuki-panel);
+}
+
+/* SPECIALは赤ではなく金を主役に */
+.character-theme--ibuki .character-special {
+    border-color: var(--ibuki-line-strong);
+    background:
+        radial-gradient(
+            circle at 50% 120%,
+            rgba(101, 16, 24, 0.16),
+            transparent 46%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(175, 142, 79, 0.075),
+            transparent 42%
+        ),
+        var(--ibuki-panel);
+}
+
+/* ナビにも管理ファイル風の上部ラベル */
+.character-theme--ibuki .character-navigation__link--previous::before {
+    content: "RETURN TO INDEX";
+}
+
+.character-theme--ibuki .character-navigation__link--next::before {
+    content: "ASSOCIATED FILE";
+}
+
+.character-theme--ibuki .character-navigation__link::before {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    color: var(--ibuki-gold-dark);
+    font-size: 0.4rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+/* スマホでも番号を表示 */
+@media (max-width: 600px) {
+    .character-theme--ibuki .section-heading__number {
+        display: block;
+        font-size: 1.28rem;
+    }
+
+    .character-theme--ibuki .section-heading {
+        gap: 8px;
+    }
+
+    .character-theme--ibuki .character-hero__eyebrow::before {
+        font-size: 0.56rem;
+        letter-spacing: 0.2em;
+    }
+
+    .character-theme--ibuki .character-hero__eyebrow::after {
+        display: block;
+        font-size: 0.4rem;
+        letter-spacing: 0.18em;
+    }
+
+    .character-theme--ibuki .character-panel::after {
+        width: 88px;
+        height: 88px;
+        opacity: 0.11;
+    }
+
+    .character-theme--ibuki .character-profile .section-heading__text::after {
+        display: none;
+    }
+
+    .character-theme--ibuki .character-section-grid .section-heading__text::before,
+    .character-theme--ibuki .character-voice .section-heading__text::before,
+    .character-theme--ibuki .character-special .section-heading__text::before,
+    .character-theme--ibuki .character-archive .section-heading__text::before {
+        font-size: 0.36rem;
+        letter-spacing: 0.16em;
+    }
+
+    .character-theme--ibuki .character-navigation__link::before {
+        display: none;
     }
 }
