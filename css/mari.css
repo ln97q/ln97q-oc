@@ -1,185 +1,348 @@
 /* =========================================================
-   MARI THEME
-   花乃院 毬：色・背景・装飾のみ
-   レイアウトは layout.css で共通管理
+   MARI — DARK POP DOSSIER
+   花乃院 毬：黒紫 / ラベンダー / ネオンピンク
+   共通レイアウト・寸法・レスポンシブは layout.css
 ========================================================= */
 
 :root {
-    --mari-black-01: #09070d;
-    --mari-black-02: #100b15;
-    --mari-black-03: #18101f;
-    --mari-lavender-dark: #60466f;
-    --mari-lavender-main: #a47abb;
-    --mari-lavender-light: #d6b8e3;
-    --mari-pink-dark: #8d3f75;
-    --mari-pink-main: #dd82ba;
-    --mari-pink-light: #f3c6e4;
+    --mari-black-01: #07060a;
+    --mari-black-02: #0d0911;
+    --mari-black-03: #15101b;
+    --mari-purple-dark: #56335f;
+    --mari-purple: #9a65ad;
+    --mari-lavender: #d8b5e4;
+    --mari-pink-dark: #8d316d;
+    --mari-pink: #e05cac;
+    --mari-pink-light: #ffc5e8;
     --mari-white: #fff7fc;
-    --mari-muted: #a991a6;
-    --mari-line: rgba(214, 184, 227, 0.34);
-    --mari-line-strong: rgba(243, 198, 228, 0.58);
-    --mari-pink-line: rgba(221, 130, 186, 0.48);
-    --mari-panel: rgba(24, 15, 30, 0.92);
+    --mari-muted: #b09aae;
+    --mari-line: rgba(224, 92, 172, 0.44);
+    --mari-line-soft: rgba(216, 181, 228, 0.28);
+    --mari-line-strong: rgba(255, 197, 232, 0.68);
+    --mari-panel: rgba(12, 8, 16, 0.965);
 }
 
 body.character-theme--mari {
     color: var(--mari-white);
     background:
-        radial-gradient(circle at 16% 10%, rgba(164, 122, 187, 0.28), transparent 29%),
-        radial-gradient(circle at 84% 18%, rgba(221, 130, 186, 0.16), transparent 28%),
-        radial-gradient(circle at 50% 75%, rgba(96, 70, 111, 0.17), transparent 34%),
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 5px),
-        linear-gradient(180deg, var(--mari-black-01) 0%, #120b17 45%, #08060b 100%);
+        radial-gradient(circle at 14% 8%, rgba(224,92,172,.22), transparent 28rem),
+        radial-gradient(circle at 86% 18%, rgba(154,101,173,.22), transparent 25rem),
+        radial-gradient(circle at 50% 78%, rgba(86,51,95,.18), transparent 30rem),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.012) 0 1px, transparent 1px 5px),
+        #050407;
 }
 
 .character-theme--mari .character-page {
     background:
-        linear-gradient(90deg, transparent 49.8%, rgba(214, 184, 227, 0.03) 50%, transparent 50.2%),
-        radial-gradient(circle, rgba(243, 198, 228, 0.045) 0 1px, transparent 1.7px);
-    background-size: 100% 100%, 33px 33px;
+        radial-gradient(circle, rgba(255,197,232,.045) 0 1px, transparent 1.6px),
+        linear-gradient(90deg, transparent 49.85%, rgba(224,92,172,.025) 50%, transparent 50.15%);
+    background-size: 32px 32px, 100% 100%;
 }
 
-.character-theme--mari .character-hero__eyebrow,
-.character-theme--mari .character-hero__subtitle,
-.character-theme--mari .section-heading__subtitle,
-.character-theme--mari .archive-item__caption {
-    color: var(--mari-muted);
+.character-theme--mari .character-page::before {
+    content:"";
+    position:absolute;
+    inset:14px 0;
+    z-index:0;
+    pointer-events:none;
+    border:1px solid rgba(224,92,172,.28);
+    border-radius:2px;
+    box-shadow: inset 0 0 0 1px rgba(216,181,228,.055);
+    background:
+        url("../images/assets/miniribon-pink.png") left 12px top 10px / 28px auto no-repeat,
+        url("../images/assets/star-pink.png") right 18px top 16px / 24px auto no-repeat,
+        url("../images/assets/dot-moon.png") left 16px bottom 18px / 28px auto no-repeat,
+        url("../images/assets/kirakira.png") right 16px bottom 14px / 30px auto no-repeat;
+    opacity:.72;
 }
 
+/* HERO */
+.character-theme--mari .character-hero { position:relative; }
+.character-theme--mari .character-hero::before,
+.character-theme--mari .character-hero::after {
+    position:absolute;
+    top:0;
+    font-size:.5rem;
+    font-weight:700;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--mari-pink);
+}
+.character-theme--mari .character-hero::before { left:0; content:"RESTRICTED ACCESS"; }
+.character-theme--mari .character-hero::after { right:0; content:"ACTIVE"; }
+.character-theme--mari .character-hero__eyebrow { font-size:0; }
+.character-theme--mari .character-hero__eyebrow::before {
+    content:"ORGANIZATION PERSONNEL DOSSIER";
+    font-size:.72rem;
+    color:var(--mari-pink-light);
+    letter-spacing:.34em;
+}
+.character-theme--mari .character-hero__eyebrow::after {
+    content:"FILE NO. MRM-001";
+    display:block;
+    margin-top:5px;
+    font-size:.48rem;
+    color:var(--mari-muted);
+    letter-spacing:.28em;
+}
 .character-theme--mari .character-hero__title {
-    color: var(--mari-white);
-    text-shadow:
-        0 0 24px rgba(221, 130, 186, 0.28),
-        0 1px 0 rgba(214, 184, 227, 0.18);
+    color:var(--mari-white);
+    font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+    font-weight:600;
+    text-shadow:0 0 12px rgba(255,197,232,.62), 0 0 28px rgba(224,92,172,.38);
 }
+.character-theme--mari .character-hero__subtitle { color:var(--mari-pink-light); }
+.character-theme--mari .character-hero__divider-line { background:linear-gradient(90deg,transparent,var(--mari-pink),transparent); }
+.character-theme--mari .character-hero__divider-mark { color:var(--mari-pink-light); text-shadow:0 0 12px rgba(224,92,172,.75); }
+.character-theme--mari .character-hero__divider-mark::before { content:"♥"; font-size:.72rem; }
+.character-theme--mari .character-hero__divider-mark { font-size:0; }
 
-.character-theme--mari .character-hero__divider-line {
-    background: linear-gradient(90deg, transparent, var(--mari-pink-main), transparent);
-}
-
-.character-theme--mari .character-hero__divider-mark {
-    color: var(--mari-pink-light);
-    text-shadow: 0 0 11px rgba(221, 130, 186, 0.5);
-}
-
+/* PANELS */
 .character-theme--mari .character-panel,
 .character-theme--mari .character-portrait {
-    border-color: var(--mari-line);
+    border-color:var(--mari-line);
     background:
-        linear-gradient(135deg, rgba(164, 122, 187, 0.1), transparent 38%),
+        linear-gradient(135deg,rgba(224,92,172,.07),transparent 38%),
+        linear-gradient(315deg,rgba(154,101,173,.08),transparent 32%),
         var(--mari-panel);
     box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.02),
-        0 18px 45px rgba(0, 0, 0, 0.3);
+        inset 0 0 0 1px rgba(255,255,255,.035),
+        inset 0 0 0 7px rgba(0,0,0,.22),
+        inset 0 0 0 8px rgba(224,92,172,.20),
+        inset 0 0 0 13px rgba(0,0,0,.18),
+        inset 0 0 0 14px rgba(216,181,228,.08),
+        0 18px 45px rgba(0,0,0,.34),
+        0 0 22px rgba(224,92,172,.035);
 }
-
-.character-theme--mari .character-portrait {
-    background-color: var(--mari-black-03);
+.character-theme--mari .character-panel {
+    border-radius:12px 3px 12px 3px;
+    background-image:
+        url("../images/assets/miniribon-pink.png"),
+        url("../images/assets/star-pink.png"),
+        linear-gradient(135deg,rgba(224,92,172,.07),transparent 38%),
+        linear-gradient(315deg,rgba(154,101,173,.08),transparent 32%);
+    background-size:24px auto,18px auto,100% 100%,100% 100%;
+    background-position:right 13px top 10px,left 13px bottom 11px,0 0,0 0;
+    background-repeat:no-repeat;
 }
-
-.character-theme--mari .character-portrait__image {
-    filter: saturate(0.9) contrast(1.02) brightness(0.94);
+.character-theme--mari .character-panel::before {
+    content:"";
+    position:absolute;
+    inset:10px;
+    pointer-events:none;
+    border:1px solid rgba(224,92,172,.17);
+    border-radius:9px 2px 9px 2px;
 }
-
-.character-theme--mari .section-heading__number,
-.character-theme--mari .section-heading__title,
-.character-theme--mari .profile-list__label {
-    color: var(--mari-lavender-light);
+.character-theme--mari .character-panel::after {
+    content:"";
+    position:absolute;
+    right:14px;
+    bottom:14px;
+    width:68px;
+    height:68px;
+    pointer-events:none;
+    background:url("../images/assets/heart-pink.png") center/contain no-repeat;
+    opacity:.075;
+    filter:saturate(.9);
 }
+.character-theme--mari .character-panel__inner,
+.character-theme--mari .character-panel__inner>* { position:relative; z-index:1; }
 
+/* HEADINGS */
+.character-theme--mari .section-heading { position:relative; align-items:center; padding-bottom:9px; }
+.character-theme--mari .section-heading::after {
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:-3px; height:1px;
+    background:linear-gradient(90deg,var(--mari-pink) 0 44px,rgba(216,181,228,.3) 44px 72%,transparent);
+}
 .character-theme--mari .section-heading__number {
-    text-shadow: 0 0 10px rgba(164, 122, 187, 0.32);
+    display:block;
+    min-width:auto;
+    padding-top:0;
+    color:var(--mari-pink);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(1.65rem,3.2vw,2.4rem);
+    font-weight:400;
+    line-height:1;
+    text-shadow:0 0 14px rgba(224,92,172,.5);
 }
-
-.character-theme--mari .profile-list__row {
-    border-color: rgba(214, 184, 227, 0.2);
+.character-theme--mari .section-heading__text::before {
+    content:attr(data-kicker);
+    display:block;
+    margin-bottom:2px;
+    color:var(--mari-pink-light);
+    font-size:.44rem;
+    font-weight:700;
+    letter-spacing:.25em;
+    text-transform:uppercase;
 }
-
-.character-theme--mari .profile-list__value,
-.character-theme--mari .character-copy {
-    color: var(--mari-white);
+.character-theme--mari .section-heading__title {
+    color:var(--mari-white);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(1rem,1.8vw,1.34rem);
+    letter-spacing:.14em;
+    text-shadow:0 0 10px rgba(224,92,172,.18);
 }
+.character-theme--mari .section-heading__subtitle,
+.character-theme--mari .archive-item__caption { color:var(--mari-muted); }
 
-.character-theme--mari .character-voice {
-    border-color: var(--mari-pink-line);
-    background:
-        linear-gradient(90deg, rgba(221, 130, 186, 0.15), transparent 32%, transparent 68%, rgba(164, 122, 187, 0.12)),
-        var(--mari-panel);
+/* PORTRAIT */
+.character-theme--mari .character-portrait {
+    background-color:var(--mari-black-03);
+    border-radius:13px 3px 13px 3px;
 }
+.character-theme--mari .character-portrait::before {
+    content:"SUBJECT / MRM                                      01";
+    position:absolute;
+    z-index:2;
+    top:17px; left:18px; right:18px;
+    color:var(--mari-pink-light);
+    font-size:.48rem;
+    font-weight:700;
+    letter-spacing:.22em;
+    white-space:pre;
+    pointer-events:none;
+    text-shadow:0 1px 5px #000;
+}
+.character-theme--mari .character-portrait::after {
+    content:"SWEET POISON                         CONFIDENTIAL";
+    position:absolute;
+    z-index:2;
+    left:18px; right:18px; bottom:17px;
+    color:var(--mari-pink-light);
+    font-size:.45rem;
+    font-weight:700;
+    letter-spacing:.2em;
+    white-space:pre;
+    pointer-events:none;
+    text-shadow:0 1px 5px #000;
+}
+.character-theme--mari .character-portrait__image { filter:saturate(.9) contrast(1.04) brightness(.91) hue-rotate(-2deg); }
 
+/* PROFILE */
+.character-theme--mari .character-profile::after {
+    width:96px;
+    height:96px;
+    background-image:url("../images/assets/heart-pink.png");
+    opacity:.12;
+}
+.character-theme--mari .character-profile .character-panel__inner::after {
+    content:"ACCESS LEVEL\A RESTRICTED";
+    position:absolute;
+    top:23px; right:21px;
+    padding:4px 7px;
+    border:1px solid rgba(224,92,172,.38);
+    background:rgba(141,49,109,.14);
+    color:var(--mari-pink-light);
+    font-size:.45rem;
+    font-weight:700;
+    line-height:1.55;
+    letter-spacing:.13em;
+    text-align:right;
+    white-space:pre;
+    transform:rotate(-5deg);
+}
+.character-theme--mari .character-profile .section-heading { padding-right:92px; }
+.character-theme--mari .profile-list__row { border-color:rgba(216,181,228,.22); }
+.character-theme--mari .profile-list__label { color:var(--mari-pink-light); }
+.character-theme--mari .profile-list__value { color:var(--mari-white); border-color:rgba(224,92,172,.46); }
+.character-theme--mari .character-copy { color:var(--mari-white); }
+
+/* INDIVIDUAL CARD STICKERS */
+.character-theme--mari .character-section-grid:first-of-type .character-panel:first-child::after {
+    background-image:url("../images/assets/emotion-kirakira.png"); opacity:.08;
+}
+.character-theme--mari .character-section-grid:first-of-type .character-panel:last-child::after {
+    background-image:url("../images/assets/dot-moon.png"); opacity:.13;
+}
+.character-theme--mari .character-section-grid:nth-of-type(2) .character-panel:first-child::after {
+    background-image:url("../images/assets/heart-pink.png"); opacity:.11;
+}
+.character-theme--mari .character-section-grid:nth-of-type(2) .character-panel:last-child::after {
+    background-image:url("../images/assets/dot-capsule_tablet.png"); opacity:.12;
+}
+.character-theme--mari .character-voice::after { background-image:url("../images/assets/kirakira.png"); opacity:.10; }
+.character-theme--mari .character-special::after { background-image:url("../images/assets/heart-pink.png"); opacity:.16; }
+
+.character-theme--mari .character-voice { border-color:var(--mari-line); }
 .character-theme--mari .character-special {
-    border-color: var(--mari-line-strong);
+    border-color:var(--mari-line-strong);
     background:
-        radial-gradient(circle at 50% 120%, rgba(221, 130, 186, 0.22), transparent 46%),
-        linear-gradient(135deg, rgba(214, 184, 227, 0.1), transparent 42%),
+        radial-gradient(circle at 75% 35%,rgba(224,92,172,.18),transparent 25%),
+        radial-gradient(circle at 30% 110%,rgba(154,101,173,.18),transparent 42%),
         var(--mari-panel);
-    box-shadow:
-        inset 0 0 32px rgba(164, 122, 187, 0.13),
-        0 18px 45px rgba(0, 0, 0, 0.3);
 }
+.character-theme--mari .character-special .section-heading__title { color:var(--mari-pink-light); }
 
-.character-theme--mari .character-special .section-heading__title {
-    color: var(--mari-pink-light);
-}
-
-.character-theme--mari .archive-track {
-    scrollbar-color: var(--mari-lavender-dark) rgba(255, 255, 255, 0.04);
-}
-
-.character-theme--mari .archive-item {
-    border-color: var(--mari-line);
-    background: rgba(15, 9, 19, 0.84);
-}
-
+/* ARCHIVE */
+.character-theme--mari .archive-track { scrollbar-color:var(--mari-purple-dark) rgba(255,255,255,.04); }
+.character-theme--mari .archive-item { background:rgba(7,5,10,.92); }
 .character-theme--mari .archive-item__image-frame {
-    background: var(--mari-black-03);
+    border-color:var(--mari-line);
+    background:url("../images/archive/mari_back.jpeg") center/cover no-repeat;
+    box-shadow:inset 0 0 0 1px rgba(255,197,232,.08),0 0 0 1px rgba(0,0,0,.52);
 }
+.character-theme--mari .archive-item__image { filter:saturate(.92) contrast(1.03) brightness(.93); transition:filter 180ms ease,transform 180ms ease; }
+.character-theme--mari .archive-item:hover .archive-item__image { filter:saturate(1.05) contrast(1.04) brightness(1); transform:scale(1.01); }
 
-.character-theme--mari .archive-item__image {
-    filter: saturate(0.9) contrast(1.02) brightness(0.93);
-    transition: filter 180ms ease;
-}
-
-.character-theme--mari .archive-item:hover .archive-item__image {
-    filter: saturate(1.03) contrast(1.03) brightness(1);
-}
-
+/* NAVIGATION */
 .character-theme--mari .character-navigation__link {
-    color: var(--mari-white);
-    border-color: var(--mari-line);
+    position:relative;
+    color:var(--mari-pink-light);
+    border-color:var(--mari-line);
+    border-radius:10px 2px 10px 2px;
     background:
-        linear-gradient(135deg, rgba(164, 122, 187, 0.1), transparent 48%),
-        rgba(16, 11, 21, 0.9);
-    transition:
-        color 180ms ease,
-        border-color 180ms ease,
-        background-color 180ms ease,
-        box-shadow 180ms ease;
+        url("../images/assets/miniribon-pink.png") center/28px auto no-repeat,
+        linear-gradient(135deg,rgba(224,92,172,.09),transparent 48%),
+        rgba(8,6,11,.96);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),inset 0 0 0 7px rgba(0,0,0,.15),inset 0 0 0 8px rgba(224,92,172,.12);
 }
-
-.character-theme--mari .character-navigation__arrow {
-    color: var(--mari-pink-main);
+.character-theme--mari .character-navigation__link::after {
+    content:"";
+    position:absolute;
+    inset:9px;
+    pointer-events:none;
+    border:1px solid rgba(224,92,172,.14);
+    border-radius:7px 1px 7px 1px;
 }
-
+.character-theme--mari .character-navigation__arrow { color:var(--mari-pink); }
 .character-theme--mari .character-navigation__link:hover,
 .character-theme--mari .character-navigation__link:focus-visible {
-    color: var(--mari-pink-light);
-    border-color: var(--mari-line-strong);
-    background-color: rgba(221, 130, 186, 0.1);
-    box-shadow: inset 0 0 22px rgba(164, 122, 187, 0.14);
+    color:var(--mari-white);
+    border-color:var(--mari-line-strong);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.04),inset 0 0 0 7px rgba(0,0,0,.15),inset 0 0 0 8px rgba(224,92,172,.18),inset 0 0 26px rgba(224,92,172,.12);
 }
 
-.character-theme--mari .character-navigation__link:focus-visible {
-    outline-color: var(--mari-pink-main);
+@media (max-width:600px) {
+    .character-theme--mari .character-page::before { inset-inline:-2px; }
+    .character-theme--mari .character-hero::before,
+    .character-theme--mari .character-hero::after { top:2px; font-size:.35rem; letter-spacing:.13em; }
+    .character-theme--mari .character-hero__eyebrow::before { font-size:.54rem; letter-spacing:.18em; }
+    .character-theme--mari .character-hero__eyebrow::after { font-size:.38rem; letter-spacing:.15em; }
+    .character-theme--mari .section-heading { gap:6px; padding-bottom:7px; }
+    .character-theme--mari .section-heading__number { display:block; font-size:1.12rem; }
+    .character-theme--mari .section-heading__text::before { font-size:.3rem; letter-spacing:.1em; }
+    .character-theme--mari .section-heading__title { font-size:.74rem; letter-spacing:.07em; white-space:nowrap; }
+    .character-theme--mari .section-heading__subtitle { font-size:.56rem; }
+    .character-theme--mari .character-profile .section-heading { padding-right:0; }
+    .character-theme--mari .character-profile .character-panel__inner::after { display:none; }
+    .character-theme--mari .character-panel::after { width:55px; height:55px; opacity:.065; }
+    .character-theme--mari .character-portrait::before,
+    .character-theme--mari .character-portrait::after { left:13px; right:13px; font-size:.31rem; letter-spacing:.09em; }
+    .character-theme--mari .character-portrait::before { content:"SUBJECT / MRM"; }
+    .character-theme--mari .character-portrait::after { content:"SWEET POISON       CONFIDENTIAL"; }
+    .character-theme--mari .character-panel,
+    .character-theme--mari .character-portrait {
+        box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),inset 0 0 0 5px rgba(0,0,0,.2),inset 0 0 0 6px rgba(224,92,172,.17),inset 0 0 0 9px rgba(0,0,0,.16),inset 0 0 0 10px rgba(216,181,228,.07);
+    }
+    .character-theme--mari .character-panel::before { inset:8px; }
 }
 
-.character-theme--mari ::selection {
-    color: var(--mari-white);
-    background: var(--mari-pink-dark);
+@media (max-width:374px) {
+    .character-theme--mari .section-heading__number { font-size:1rem; }
+    .character-theme--mari .section-heading__title { font-size:.66rem; }
+    .character-theme--mari .section-heading__text::before { display:none; }
 }
 
-.archive-item__image-frame {
-    background: url("../images/archive/mari_back.jpeg")
-        center / cover
-        no-repeat;
-}
+.character-theme--mari ::selection { color:var(--mari-white); background:var(--mari-pink-dark); }
