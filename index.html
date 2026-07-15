@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ln97q_・OC</title>
-
-<link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Pair Archive</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <header class="site-header">
+        <a class="site-brand" href="index.html" aria-label="Pair Archive トップへ">
+            <span class="site-brand__title">Pair Archive</span>
+            <span class="site-brand__tagline">TWO HEARTS, ONE STORY.</span>
+        </a>
 
-<div class="background"></div>
+        <nav class="site-nav" aria-label="メインナビゲーション">
+            <a class="is-current" href="index.html" aria-current="page">HOME</a>
+            <a href="characters.html">CHARACTERS</a>
+            <a href="relationship.html">PAIR ARCHIVE</a>
+        </nav>
+    </header>
 
-<main class="top">
+    <main class="home-page">
+        <section class="hero" aria-labelledby="home-title">
+            <p class="hero__eyebrow">ORIGINAL CHARACTERS WEBSITE</p>
+            <h1 id="home-title">Pair Archive</h1>
 
-<div class="logo">
-    ln97q_
-</div>
+            <div class="hero__divider" aria-hidden="true">
+                <span></span><span>♥</span><span></span>
+            </div>
 
-<div class="subtitle">
-    Original Character Collection
-</div>
+            <p class="hero__catch">ふたりの物語を、ここに。</p>
+            <p class="hero__description">
+                Pair Archiveは、オリジナルキャラクターたちの<br class="desktop-only">
+                関係性や物語、日常の記録をまとめたアーカイブサイトです。<br class="desktop-only">
+                プロフィールやペアの関係性、イラストなどを公開しています。
+            </p>
 
+            <a class="hero__button" href="characters.html">
+                <span>CHARACTERS へ</span>
+                <span aria-hidden="true">→</span>
+            </a>
+        </section>
 
-<a href="characters.html" class="enter">
-    Enter
-</a>
+        <section class="quick-links" aria-labelledby="quick-links-title">
+            <header class="section-heading">
+                <h2 id="quick-links-title">QUICK LINKS</h2>
+                <span aria-hidden="true"></span>
+            </header>
 
+            <div class="quick-links__grid">
+                <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="link-card__icon" aria-hidden="true">𝕏</span>
+                    <h3>Twitter</h3>
+                    <span class="link-card__line" aria-hidden="true"></span>
+                    <p>日常や進捗などを<br>ゆるっと更新しています。</p>
+                    <span class="link-card__arrow" aria-hidden="true">→</span>
+                </a>
 
-<div class="decor ribbon">♡</div>
-<div class="decor wing">✧</div>
+                <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="link-card__icon" aria-hidden="true">♡</span>
+                    <h3>Skeb</h3>
+                    <span class="link-card__line" aria-hidden="true"></span>
+                    <p>ご依頼・リクエストは<br>こちらからどうぞ。</p>
+                    <span class="link-card__arrow" aria-hidden="true">→</span>
+                </a>
 
-</main>
+                <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="link-card__icon" aria-hidden="true">✉</span>
+                    <h3>お題箱</h3>
+                    <span class="link-card__line" aria-hidden="true"></span>
+                    <p>感想・質問・リクエストなど<br>お気軽にどうぞ。</p>
+                    <span class="link-card__arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
 
+        <section class="latest-update" aria-labelledby="latest-update-title">
+            <header class="section-heading">
+                <h2 id="latest-update-title">LATEST UPDATE</h2>
+                <span aria-hidden="true"></span>
+            </header>
 
-<script src="script.js"></script>
+            <a class="update-card" href="characters.html">
+                <time datetime="2026-07-15">2026.07.15</time>
+                <span class="update-card__divider" aria-hidden="true"></span>
+                <p>Characters Page を公開しました！</p>
+                <span class="update-card__arrow" aria-hidden="true">→</span>
+            </a>
+        </section>
+    </main>
 
+    <footer class="site-footer">
+        <p>♡&nbsp;&nbsp; TWO HEARTS, ONE STORY. &nbsp;&nbsp;♡</p>
+        <small>© Pair Archive</small>
+    </footer>
 </body>
 </html>
