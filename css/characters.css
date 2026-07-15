@@ -216,13 +216,13 @@ a {
 .character-card:hover,
 .character-card:focus-within {
     z-index: 5;
-    transform: translateY(-13px) rotate(var(--hover-rotation, -2.1deg)) scale(1.018);
-    filter: drop-shadow(0 27px 24px rgba(113, 79, 132, 0.22));
+    transform: translateY(-14px) rotate(var(--hover-rotation, -2.4deg)) scale(1.018);
+    filter: drop-shadow(0 28px 25px rgba(113, 79, 132, 0.22));
 }
 
 .character-card:nth-child(even):hover,
 .character-card:nth-child(even):focus-within {
-    --hover-rotation: 2.1deg;
+    --hover-rotation: 2.4deg;
 }
 
 .character-card__back-paper {
@@ -450,7 +450,40 @@ a {
 .character-decoration--heart-badge {
     top: -17px;
     right: 7px;
-    width: 58px;
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border: 3px solid rgba(255, 255, 255, 0.92);
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle at 34% 28%,
+            rgba(255, 255, 255, 0.82) 0 8%,
+            transparent 9%
+        ),
+        linear-gradient(
+            145deg,
+            color-mix(in srgb, var(--accent-soft) 45%, white),
+            var(--accent)
+        );
+    box-shadow:
+        0 7px 13px rgba(103, 67, 124, 0.2),
+        inset 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.character-decoration--heart-badge::before {
+    content: "♥";
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    text-shadow: 0 2px 3px rgba(99, 62, 117, 0.16);
+}
+
+.character-card:hover .character-decoration--heart-badge,
+.character-card:focus-within .character-decoration--heart-badge {
+    transform: rotate(8deg) translateY(-3px) scale(1.05);
 }
 
 .character-decoration--tape {
