@@ -45,10 +45,10 @@
             </a>
         </section>
 
-        <section class="home-news">
+<section class="home-news" aria-labelledby="home-news-title">
 
     <header class="section-heading">
-        <h2>WHAT'S NEW</h2>
+        <h2 id="home-news-title">WHAT'S NEW</h2>
         <span aria-hidden="true"></span>
     </header>
 
@@ -56,12 +56,32 @@
         class="home-news__banner"
         href="https://store.line.me/stickershop/product/34719782"
         target="_blank"
-        rel="noopener noreferrer">
-
+        rel="noopener noreferrer"
+        aria-label="LINEスタンプをLINE STOREで見る"
+    >
         <img
             src="images/home/home-line-banner.png"
-            alt="LINEスタンプ販売中">
+            alt=""
+            class="home-news__image"
+        >
 
+        <div class="home-news__content">
+            <p class="home-news__label">NEW RELEASE</p>
+
+            <h3 class="home-news__title">
+                LINE STICKERS
+            </h3>
+
+            <p class="home-news__text">
+                オリジナルキャラクターの<br>
+                LINEスタンプができました！
+            </p>
+
+            <span class="home-news__button">
+                CHECK NOW
+                <span aria-hidden="true">→</span>
+            </span>
+        </div>
     </a>
 
 </section>
