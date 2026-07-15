@@ -1,185 +1,615 @@
 /* =========================================================
-   SHIORI THEME
-   久遠 栞：色・背景・装飾のみ
-   レイアウトは layout.css で共通管理
+   SHIORI — BROKEN GOTHIC / PSYCHOLOGICAL DOSSIER
+   色・背景・装飾のみ。配置・寸法・比率は layout.css で共通管理
 ========================================================= */
 
 :root {
-    --shiori-black-01: #050407;
-    --shiori-black-02: #09060c;
-    --shiori-black-03: #100a14;
-    --shiori-purple-dark: #4e355d;
-    --shiori-purple-main: #8b5ca0;
-    --shiori-purple-light: #c7a4d2;
-    --shiori-red-dark: #5d1024;
-    --shiori-red-main: #a91d42;
-    --shiori-red-light: #d84b70;
-    --shiori-white: #f7edf5;
-    --shiori-muted: #a18d9d;
-    --shiori-line: rgba(199, 164, 210, 0.34);
-    --shiori-line-strong: rgba(216, 75, 112, 0.58);
-    --shiori-red-line: rgba(169, 29, 66, 0.5);
-    --shiori-panel: rgba(13, 8, 16, 0.94);
+    --shiori-void: #020203;
+    --shiori-black: #060508;
+    --shiori-panel: rgba(8, 6, 11, 0.965);
+    --shiori-panel-soft: rgba(13, 8, 17, 0.95);
+    --shiori-purple-dark: #3f1d58;
+    --shiori-purple: #7e3eb0;
+    --shiori-purple-light: #b776dd;
+    --shiori-violet: #d7a6ef;
+    --shiori-magenta: #d2318e;
+    --shiori-white: #f4ecf7;
+    --shiori-muted: #9b86a4;
+    --shiori-line: rgba(183, 118, 221, 0.42);
+    --shiori-line-strong: rgba(215, 166, 239, 0.72);
 }
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
 
 body.character-theme--shiori {
     color: var(--shiori-white);
     background:
-        radial-gradient(circle at 16% 8%, rgba(107, 61, 126, 0.23), transparent 28%),
-        radial-gradient(circle at 84% 18%, rgba(169, 29, 66, 0.15), transparent 26%),
-        radial-gradient(circle at 50% 78%, rgba(76, 38, 91, 0.16), transparent 35%),
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 5px),
-        linear-gradient(180deg, var(--shiori-black-01) 0%, #0b0710 48%, #040305 100%);
+        radial-gradient(circle at 14% 8%, rgba(126, 62, 176, 0.25), transparent 28rem),
+        radial-gradient(circle at 84% 20%, rgba(210, 49, 142, 0.12), transparent 25rem),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.012) 0 1px,
+            transparent 1px 5px
+        ),
+        linear-gradient(180deg, #020203 0%, #09050d 50%, #020203 100%);
 }
 
 .character-theme--shiori .character-page {
     background:
-        linear-gradient(90deg, transparent 49.8%, rgba(199, 164, 210, 0.03) 50%, transparent 50.2%),
-        radial-gradient(circle, rgba(216, 75, 112, 0.045) 0 1px, transparent 1.8px);
+        linear-gradient(90deg, transparent 49.8%, rgba(183,118,221,0.028) 50%, transparent 50.2%),
+        radial-gradient(circle, rgba(215,166,239,0.035) 0 1px, transparent 1.7px);
     background-size: 100% 100%, 32px 32px;
 }
 
-.character-theme--shiori .character-hero__eyebrow,
+.character-theme--shiori .character-page::before {
+    content: "";
+    position: absolute;
+    inset: 14px 0;
+    z-index: 0;
+    pointer-events: none;
+    border: 1px solid rgba(183,118,221,0.3);
+    background:
+        url("../images/assets/thorn-chain.png") left top / 260px auto no-repeat,
+        url("../images/assets/thorn-chain.png") right bottom / 260px auto no-repeat;
+    opacity: 0.34;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.character-theme--shiori .character-hero {
+    position: relative;
+}
+
+.character-theme--shiori .character-hero::before,
+.character-theme--shiori .character-hero::after {
+    position: absolute;
+    top: 0;
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.character-theme--shiori .character-hero::before {
+    left: 0;
+    content: "RESTRICTED ACCESS";
+    color: var(--shiori-purple-light);
+}
+
+.character-theme--shiori .character-hero::after {
+    right: 0;
+    content: "ACTIVE";
+    color: var(--shiori-magenta);
+}
+
+.character-theme--shiori .character-hero__eyebrow {
+    color: var(--shiori-purple-light);
+    letter-spacing: 0.34em;
+}
+
+.character-theme--shiori .character-hero__eyebrow::after {
+    content: "  /  FILE NO. SKM-001";
+    color: var(--shiori-muted);
+}
+
+.character-theme--shiori .character-hero__title {
+    color: var(--shiori-white);
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    text-shadow:
+        0 0 16px rgba(183,118,221,0.62),
+        0 0 30px rgba(126,62,176,0.25);
+}
+
 .character-theme--shiori .character-hero__subtitle,
 .character-theme--shiori .section-heading__subtitle,
 .character-theme--shiori .archive-item__caption {
     color: var(--shiori-muted);
 }
 
-.character-theme--shiori .character-hero__title {
-    color: var(--shiori-white);
-    text-shadow:
-        0 0 24px rgba(169, 29, 66, 0.3),
-        0 1px 0 rgba(199, 164, 210, 0.18);
-}
-
 .character-theme--shiori .character-hero__divider-line {
-    background: linear-gradient(90deg, transparent, var(--shiori-red-main), transparent);
+    background: linear-gradient(90deg, transparent, var(--shiori-purple-light), transparent);
 }
 
 .character-theme--shiori .character-hero__divider-mark {
-    color: var(--shiori-red-light);
-    text-shadow: 0 0 11px rgba(216, 75, 112, 0.48);
+    color: var(--shiori-purple-light);
+    text-shadow: 0 0 12px rgba(183,118,221,0.7);
 }
+
+/* =========================================================
+   GOTHIC PANELS
+========================================================= */
 
 .character-theme--shiori .character-panel,
 .character-theme--shiori .character-portrait {
     border-color: var(--shiori-line);
     background:
-        linear-gradient(135deg, rgba(139, 92, 160, 0.1), transparent 38%),
+        linear-gradient(135deg, rgba(126,62,176,0.08), transparent 38%),
+        linear-gradient(315deg, rgba(210,49,142,0.04), transparent 30%),
         var(--shiori-panel);
     box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.018),
-        0 18px 45px rgba(0, 0, 0, 0.32);
+        inset 0 0 0 1px rgba(215,166,239,0.04),
+        inset 0 0 0 7px rgba(0,0,0,0.22),
+        inset 0 0 0 8px rgba(183,118,221,0.2),
+        inset 0 0 0 13px rgba(0,0,0,0.18),
+        inset 0 0 0 14px rgba(183,118,221,0.07),
+        0 18px 44px rgba(0,0,0,0.36);
 }
 
+.character-theme--shiori .character-panel {
+    background-image:
+        linear-gradient(var(--shiori-purple-light), var(--shiori-purple-light)),
+        linear-gradient(var(--shiori-purple-light), var(--shiori-purple-light)),
+        linear-gradient(var(--shiori-purple-light), var(--shiori-purple-light)),
+        linear-gradient(var(--shiori-purple-light), var(--shiori-purple-light)),
+        linear-gradient(135deg, rgba(126,62,176,0.08), transparent 38%),
+        linear-gradient(315deg, rgba(210,49,142,0.04), transparent 30%);
+    background-size:
+        15px 1px, 1px 15px, 15px 1px, 1px 15px,
+        100% 100%, 100% 100%;
+    background-position:
+        left 12px top 12px,
+        left 12px top 12px,
+        right 12px bottom 12px,
+        right 12px bottom 12px,
+        0 0, 0 0;
+    background-repeat: no-repeat;
+}
+
+.character-theme--shiori .character-panel::before {
+    content: "";
+    position: absolute;
+    inset: 11px;
+    pointer-events: none;
+    border: 1px solid rgba(183,118,221,0.16);
+}
+
+.character-theme--shiori .character-panel::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 108px;
+    height: 108px;
+    pointer-events: none;
+    background: url("../images/assets/magic-circle.png") center / contain no-repeat;
+    opacity: 0.11;
+    filter: saturate(0.8) brightness(1.05);
+}
+
+.character-theme--shiori .character-panel__inner,
+.character-theme--shiori .character-panel__inner > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.character-theme--shiori .section-heading {
+    position: relative;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.character-theme--shiori .section-heading::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--shiori-magenta) 0 42px,
+            rgba(183,118,221,0.31) 42px 72%,
+            transparent
+        );
+}
+
+.character-theme--shiori .section-heading__number {
+    display: block;
+    min-width: auto;
+    padding-top: 0;
+    color: var(--shiori-purple-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.65rem, 3.2vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1;
+    text-shadow: 0 0 14px rgba(126,62,176,0.56);
+}
+
+.character-theme--shiori .section-heading__text::before {
+    content: attr(data-kicker);
+    display: block;
+    margin-bottom: 2px;
+    color: var(--shiori-purple-light);
+    font-size: 0.45rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+}
+
+.character-theme--shiori .section-heading__title {
+    color: var(--shiori-white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1rem, 1.8vw, 1.34rem);
+    letter-spacing: 0.14em;
+}
+
+/* =========================================================
+   PORTRAIT
+========================================================= */
+
 .character-theme--shiori .character-portrait {
-    background-color: var(--shiori-black-03);
+    background-color: var(--shiori-black);
+}
+
+.character-theme--shiori .character-portrait::before {
+    content: "SUBJECT / SKM                                      01";
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    right: 18px;
+    left: 18px;
+    color: var(--shiori-violet);
+    font-size: 0.48rem;
+    font-weight: 700;
+    letter-spacing: 0.23em;
+    white-space: pre;
+    pointer-events: none;
+    text-shadow: 0 1px 5px #000;
+}
+
+.character-theme--shiori .character-portrait::after {
+    content: "DISMAL PRINCE                         CONFIDENTIAL";
+    position: absolute;
+    z-index: 2;
+    right: 18px;
+    bottom: 17px;
+    left: 18px;
+    color: var(--shiori-violet);
+    font-size: 0.45rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    white-space: pre;
+    pointer-events: none;
+    text-shadow: 0 1px 5px #000;
 }
 
 .character-theme--shiori .character-portrait__image {
-    filter: saturate(0.76) contrast(1.06) brightness(0.88);
+    filter:
+        saturate(0.7)
+        contrast(1.1)
+        brightness(0.78)
+        hue-rotate(-4deg);
 }
 
-.character-theme--shiori .section-heading__number,
-.character-theme--shiori .section-heading__title,
+.character-theme--shiori .character-portrait {
+    background-image:
+        url("../images/assets/batwing.png"),
+        url("../images/assets/thorn-chain.png");
+    background-position:
+        right 8px top 8px,
+        left bottom;
+    background-size:
+        84px auto,
+        220px auto;
+    background-repeat: no-repeat;
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.character-theme--shiori .character-profile::after {
+    background-image: url("../images/assets/heart-lock.png");
+    width: 124px;
+    height: 124px;
+    opacity: 0.13;
+}
+
+.character-theme--shiori .character-profile .character-panel__inner::after {
+    content: "ACCESS LEVEL\A RESTRICTED";
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    right: 22px;
+    padding: 4px 6px;
+    color: var(--shiori-purple-light);
+    border: 1px solid rgba(183,118,221,0.28);
+    background: rgba(63,29,88,0.18);
+    font-size: 0.46rem;
+    font-weight: 700;
+    line-height: 1.55;
+    letter-spacing: 0.14em;
+    text-align: right;
+    white-space: pre;
+}
+
+.character-theme--shiori .character-profile .section-heading {
+    padding-right: 86px;
+}
+
+.character-theme--shiori .profile-list__row {
+    border-color: rgba(183,118,221,0.21);
+}
+
 .character-theme--shiori .profile-list__label {
     color: var(--shiori-purple-light);
 }
 
-.character-theme--shiori .section-heading__number {
-    text-shadow: 0 0 10px rgba(139, 92, 160, 0.34);
+.character-theme--shiori .profile-list__value {
+    color: var(--shiori-white);
+    border-color: rgba(183,118,221,0.42);
 }
 
-.character-theme--shiori .profile-list__row {
-    border-color: rgba(199, 164, 210, 0.2);
-}
-
-.character-theme--shiori .profile-list__value,
 .character-theme--shiori .character-copy {
     color: var(--shiori-white);
 }
 
+/* =========================================================
+   SECTION-SPECIFIC ASSETS
+========================================================= */
+
+.character-theme--shiori .character-section-grid:first-of-type
+.character-panel:nth-child(1)::after {
+    background-image: url("../images/assets/rose-dark.png");
+    opacity: 0.13;
+}
+
+.character-theme--shiori .character-section-grid:first-of-type
+.character-panel:nth-child(2)::after {
+    background-image: url("../images/assets/thorn-chain.png");
+    opacity: 0.16;
+}
+
+.character-theme--shiori .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(1)::after {
+    background-image: url("../images/assets/heart-lock.png");
+    opacity: 0.13;
+}
+
+.character-theme--shiori .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(2)::after {
+    background-image: url("../images/assets/dagger-purple.png");
+    opacity: 0.13;
+}
+
 .character-theme--shiori .character-voice {
-    border-color: var(--shiori-red-line);
-    background:
-        linear-gradient(90deg, rgba(169, 29, 66, 0.17), transparent 32%, transparent 68%, rgba(139, 92, 160, 0.12)),
-        var(--shiori-panel);
+    border-color: var(--shiori-line);
+    background-color: var(--shiori-panel);
+}
+
+.character-theme--shiori .character-voice::after {
+    background-image: url("../images/assets/syringe-purple.png");
+    opacity: 0.11;
 }
 
 .character-theme--shiori .character-special {
     border-color: var(--shiori-line-strong);
     background:
-        radial-gradient(circle at 50% 120%, rgba(169, 29, 66, 0.25), transparent 46%),
-        linear-gradient(135deg, rgba(139, 92, 160, 0.12), transparent 42%),
-        var(--shiori-panel);
+        radial-gradient(circle at 50% 110%, rgba(126,62,176,0.25), transparent 48%),
+        linear-gradient(135deg, rgba(210,49,142,0.08), transparent 38%),
+        var(--shiori-panel-soft);
     box-shadow:
-        inset 0 0 34px rgba(169, 29, 66, 0.13),
-        0 18px 45px rgba(0, 0, 0, 0.32);
+        inset 0 0 36px rgba(126,62,176,0.14),
+        inset 0 0 0 1px rgba(215,166,239,0.04),
+        inset 0 0 0 7px rgba(0,0,0,0.22),
+        inset 0 0 0 8px rgba(183,118,221,0.22),
+        inset 0 0 0 13px rgba(0,0,0,0.18),
+        inset 0 0 0 14px rgba(183,118,221,0.08),
+        0 18px 44px rgba(0,0,0,0.36);
 }
 
-.character-theme--shiori .character-special .section-heading__title {
-    color: var(--shiori-red-light);
+.character-theme--shiori .character-special::after {
+    background-image: url("../images/assets/magic-bottle.png");
+    opacity: 0.16;
 }
+
+/* =========================================================
+   ARCHIVE
+========================================================= */
 
 .character-theme--shiori .archive-track {
-    scrollbar-color: var(--shiori-purple-dark) rgba(255, 255, 255, 0.04);
+    scrollbar-color: var(--shiori-purple-dark) rgba(255,255,255,0.04);
 }
 
 .character-theme--shiori .archive-item {
-    border-color: var(--shiori-line);
-    background: rgba(10, 6, 13, 0.86);
+    background: rgba(5,4,7,0.9);
 }
 
 .character-theme--shiori .archive-item__image-frame {
-    background: var(--shiori-black-03);
+    border-color: var(--shiori-line);
+    background: url("../images/archive/shiori_back.jpeg") center / cover no-repeat;
+    box-shadow:
+        inset 0 0 0 1px rgba(215,166,239,0.08),
+        0 0 0 1px rgba(0,0,0,0.55);
 }
 
 .character-theme--shiori .archive-item__image {
-    filter: saturate(0.76) contrast(1.06) brightness(0.88);
-    transition: filter 180ms ease;
+    filter: saturate(0.74) contrast(1.08) brightness(0.82);
+    transition: filter 180ms ease, transform 180ms ease;
 }
 
 .character-theme--shiori .archive-item:hover .archive-item__image {
-    filter: saturate(0.92) contrast(1.07) brightness(0.96);
+    filter: saturate(0.95) contrast(1.08) brightness(0.94);
+    transform: scale(1.01);
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.character-theme--shiori .character-navigation {
+    position: relative;
+}
+
+.character-theme--shiori .character-navigation::before {
+    content: "";
+    position: absolute;
+    inset: -10px 0 auto 0;
+    height: 42px;
+    pointer-events: none;
+    background:
+        url("../images/assets/batwing.png") center / 74px auto no-repeat,
+        url("../images/assets/thorn-chain.png") left center / 260px auto no-repeat,
+        url("../images/assets/thorn-chain.png") right center / 260px auto no-repeat;
+    opacity: 0.32;
 }
 
 .character-theme--shiori .character-navigation__link {
-    color: var(--shiori-white);
+    position: relative;
+    color: var(--shiori-violet);
     border-color: var(--shiori-line);
     background:
-        linear-gradient(135deg, rgba(139, 92, 160, 0.1), transparent 48%),
-        rgba(9, 6, 12, 0.92);
-    transition:
-        color 180ms ease,
-        border-color 180ms ease,
-        background-color 180ms ease,
-        box-shadow 180ms ease;
+        linear-gradient(135deg, rgba(126,62,176,0.08), transparent 46%),
+        rgba(6,5,8,0.96);
+    box-shadow:
+        inset 0 0 0 1px rgba(215,166,239,0.035),
+        inset 0 0 0 7px rgba(0,0,0,0.16),
+        inset 0 0 0 8px rgba(183,118,221,0.12);
+}
+
+.character-theme--shiori .character-navigation__link::after {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    pointer-events: none;
+    border: 1px solid rgba(183,118,221,0.13);
 }
 
 .character-theme--shiori .character-navigation__arrow {
-    color: var(--shiori-red-main);
+    color: var(--shiori-purple-light);
 }
 
 .character-theme--shiori .character-navigation__link:hover,
 .character-theme--shiori .character-navigation__link:focus-visible {
-    color: var(--shiori-red-light);
+    color: var(--shiori-white);
     border-color: var(--shiori-line-strong);
-    background-color: rgba(169, 29, 66, 0.11);
-    box-shadow: inset 0 0 22px rgba(139, 92, 160, 0.14);
+    box-shadow:
+        inset 0 0 0 1px rgba(215,166,239,0.06),
+        inset 0 0 0 7px rgba(0,0,0,0.16),
+        inset 0 0 0 8px rgba(183,118,221,0.18),
+        inset 0 0 26px rgba(126,62,176,0.15);
 }
 
-.character-theme--shiori .character-navigation__link:focus-visible {
-    outline-color: var(--shiori-red-main);
+/* =========================================================
+   SMARTPHONE DECORATION
+========================================================= */
+
+@media (max-width: 600px) {
+    .character-theme--shiori .character-page::before {
+        inset-inline: -2px;
+        background-size: 160px auto, 160px auto;
+    }
+
+    .character-theme--shiori .character-hero::before,
+    .character-theme--shiori .character-hero::after {
+        top: 2px;
+        font-size: 0.35rem;
+        letter-spacing: 0.13em;
+    }
+
+    .character-theme--shiori .character-hero__eyebrow::after {
+        content: "";
+    }
+
+    .character-theme--shiori .character-panel::after {
+        width: 72px;
+        height: 72px;
+        opacity: 0.085;
+    }
+
+    .character-theme--shiori .section-heading {
+        gap: 6px;
+        padding-bottom: 7px;
+    }
+
+    .character-theme--shiori .section-heading__number {
+        display: block;
+        font-size: 1.1rem;
+    }
+
+    .character-theme--shiori .section-heading__text::before {
+        font-size: 0.3rem;
+        letter-spacing: 0.11em;
+    }
+
+    .character-theme--shiori .section-heading__title {
+        font-size: 0.74rem;
+        letter-spacing: 0.07em;
+        white-space: nowrap;
+    }
+
+    .character-theme--shiori .section-heading__subtitle {
+        font-size: 0.56rem;
+    }
+
+    .character-theme--shiori .character-profile .section-heading {
+        padding-right: 0;
+    }
+
+    .character-theme--shiori .character-profile .character-panel__inner::after {
+        display: none;
+    }
+
+    .character-theme--shiori .character-portrait::before,
+    .character-theme--shiori .character-portrait::after {
+        right: 13px;
+        left: 13px;
+        font-size: 0.31rem;
+        letter-spacing: 0.09em;
+    }
+
+    .character-theme--shiori .character-portrait::before {
+        content: "SUBJECT / SKM";
+    }
+
+    .character-theme--shiori .character-portrait::after {
+        content: "DISMAL PRINCE";
+    }
+
+    .character-theme--shiori .character-panel,
+    .character-theme--shiori .character-portrait {
+        box-shadow:
+            inset 0 0 0 1px rgba(215,166,239,0.04),
+            inset 0 0 0 5px rgba(0,0,0,0.2),
+            inset 0 0 0 6px rgba(183,118,221,0.18),
+            inset 0 0 0 9px rgba(0,0,0,0.16),
+            inset 0 0 0 10px rgba(183,118,221,0.07);
+    }
+
+    .character-theme--shiori .character-panel::before {
+        inset: 8px;
+    }
+
+    .character-theme--shiori .character-navigation::before {
+        background-size: 54px auto, 140px auto, 140px auto;
+    }
+}
+
+@media (max-width: 374px) {
+    .character-theme--shiori .section-heading__number {
+        font-size: 0.98rem;
+    }
+
+    .character-theme--shiori .section-heading__title {
+        font-size: 0.66rem;
+    }
+
+    .character-theme--shiori .section-heading__text::before {
+        display: none;
+    }
 }
 
 .character-theme--shiori ::selection {
     color: var(--shiori-white);
-    background: var(--shiori-red-dark);
-}
-
-.archive-item__image-frame {
-    background: url("../images/archive/shiori_back.jpeg")
-        center / cover
-        no-repeat;
+    background: var(--shiori-purple-dark);
 }
