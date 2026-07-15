@@ -475,3 +475,28 @@ p {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+.home-news{
+    margin:80px auto;
+    max-width:980px;
+}
+
+.home-news img{
+    width:100%;
+    display:block;
+
+    border-radius:24px;
+
+    transition:.35s;
+}
+
+.home-news a:hover img{
+
+    transform:
+        translateY(-6px)
+        scale(1.015);
+
+    filter:
+        drop-shadow(0 18px 30px rgba(0,0,0,.12));
+}
