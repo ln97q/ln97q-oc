@@ -510,3 +510,298 @@ body.character-theme--yuki {
     color: var(--yuki-ink);
     background: #eee0a5;
 }
+
+
+/* =========================================================
+   YUKI V2 — SOFT BOTANICAL BRUSH-UP
+   角丸・紙質感・押し花・木漏れ日を強化
+   配置・寸法・カード比率は変更しない
+========================================================= */
+
+/* 全体を少し温かく、木漏れ日を増やす */
+body.character-theme--yuki {
+    background:
+        radial-gradient(circle at 16% 5%, rgba(255,255,255,0.98), transparent 30%),
+        radial-gradient(circle at 82% 10%, rgba(255,235,166,0.28), transparent 24%),
+        radial-gradient(circle at 52% 46%, rgba(255,255,255,0.44), transparent 28%),
+        radial-gradient(circle at 48% 82%, rgba(184,197,161,0.28), transparent 38%),
+        repeating-linear-gradient(
+            0deg,
+            rgba(95,110,82,0.016) 0 1px,
+            transparent 1px 5px
+        ),
+        linear-gradient(180deg, #fffef9 0%, #faf6e9 48%, #eef1df 100%);
+}
+
+/* HEROの花を少し豊かに */
+.character-theme--yuki .character-page {
+    background:
+        url("../images/assets/flower_branch.png") left 6px top 72px / 205px auto no-repeat,
+        url("../images/assets/flower_corner.png") right 4px top 82px / 195px auto no-repeat,
+        url("../images/assets/clover.png") right 13% top 210px / 58px auto no-repeat,
+        radial-gradient(circle, rgba(130,147,110,0.07) 0 1px, transparent 1.6px),
+        linear-gradient(90deg, transparent 49.8%, rgba(130,147,110,0.04) 50%, transparent 50.2%);
+    background-size:
+        205px auto,
+        195px auto,
+        58px auto,
+        34px 34px,
+        100% 100%;
+}
+
+/* 柔らかい丸み */
+.character-theme--yuki .character-panel,
+.character-theme--yuki .character-portrait,
+.character-theme--yuki .archive-item__image-frame,
+.character-theme--yuki .character-navigation__link {
+    border-radius: 18px;
+}
+
+.character-theme--yuki .character-panel::before {
+    border-radius: 12px;
+}
+
+.character-theme--yuki .character-panel,
+.character-theme--yuki .character-portrait {
+    overflow: hidden;
+    border-color: rgba(95,110,82,0.28);
+    background:
+        radial-gradient(circle at 12% 10%, rgba(255,255,255,0.88), transparent 28%),
+        radial-gradient(circle at 88% 90%, rgba(184,197,161,0.16), transparent 30%),
+        repeating-linear-gradient(
+            0deg,
+            rgba(120,108,82,0.018) 0 1px,
+            transparent 1px 4px
+        ),
+        rgba(255,253,245,0.94);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.82),
+        inset 0 0 0 7px rgba(255,255,255,0.14),
+        inset 0 0 0 8px rgba(95,110,82,0.065),
+        0 12px 30px rgba(95,110,82,0.1);
+}
+
+/* 紙の端に淡い色を足す */
+.character-theme--yuki .character-panel::before {
+    border-color: rgba(95,110,82,0.12);
+    box-shadow:
+        inset 0 0 18px rgba(199,170,88,0.035);
+}
+
+/* 見出しを少し絵本寄りに */
+.character-theme--yuki .section-heading__title {
+    font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        "Hiragino Mincho Pro",
+        serif;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.character-theme--yuki .section-heading::after {
+    background:
+        linear-gradient(
+            90deg,
+            var(--yuki-gold) 0 42px,
+            rgba(95,110,82,0.18) 42px 76%,
+            transparent
+        );
+}
+
+/* PROFILE：押し花を少し見せる */
+.character-theme--yuki .character-profile::after {
+    right: 10px;
+    bottom: 8px;
+    width: 132px;
+    height: 132px;
+    opacity: 0.18;
+}
+
+/* 肖像をポラロイド／植物図鑑っぽく */
+.character-theme--yuki .character-portrait {
+    border-radius: 20px;
+    background:
+        url("../images/assets/paper_tag.png") left 5px top 10px / 54px auto no-repeat,
+        url("../images/assets/pressed_flower.png") right 4px bottom 4px / 106px auto no-repeat,
+        linear-gradient(180deg, rgba(255,255,255,0.18), rgba(238,231,210,0.14)),
+        var(--yuki-paper-deep);
+}
+
+.character-theme--yuki .character-portrait__image {
+    filter:
+        saturate(0.92)
+        contrast(0.98)
+        brightness(1.05);
+}
+
+.character-theme--yuki .character-portrait::after {
+    right: 22px;
+    bottom: 18px;
+    left: 22px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255,253,245,0.66);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+/* Personality：四つ葉 */
+.character-theme--yuki .character-section-grid:first-of-type
+.character-panel:nth-child(1)::after {
+    width: 96px;
+    height: 96px;
+    opacity: 0.17;
+}
+
+/* Past：花枝 */
+.character-theme--yuki .character-section-grid:first-of-type
+.character-panel:nth-child(2)::after {
+    right: 4px;
+    bottom: 0;
+    width: 132px;
+    height: 132px;
+    opacity: 0.15;
+}
+
+/* Relationship：栞タグを少しはっきり */
+.character-theme--yuki .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(1)::after {
+    right: 10px;
+    bottom: 12px;
+    width: 148px;
+    height: 68px;
+    opacity: 0.32;
+}
+
+/* Appearance：安全ピン */
+.character-theme--yuki .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(2)::after {
+    right: 8px;
+    bottom: 4px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.2;
+}
+
+/* VOICE：生活記録のメモを主役に */
+.character-theme--yuki .character-voice {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(238,231,210,0.44),
+            transparent 40%,
+            rgba(184,197,161,0.19)
+        ),
+        rgba(255,253,245,0.95);
+}
+
+.character-theme--yuki .character-voice::after {
+    right: 18px;
+    bottom: 10px;
+    width: 170px;
+    height: 126px;
+    opacity: 0.22;
+}
+
+/* SPECIAL：栞タグ＋穏やかな管理感 */
+.character-theme--yuki .character-special {
+    background:
+        radial-gradient(circle at 86% 18%, rgba(255,235,166,0.2), transparent 28%),
+        radial-gradient(circle at 12% 90%, rgba(184,197,161,0.19), transparent 30%),
+        rgba(255,253,245,0.95);
+}
+
+.character-theme--yuki .character-special::after {
+    right: 18px;
+    bottom: 10px;
+    width: 160px;
+    height: 74px;
+    opacity: 0.3;
+}
+
+/* Archive：カードも柔らかく */
+.character-theme--yuki .archive-item {
+    border-radius: 16px;
+    background: rgba(255,253,245,0.92);
+}
+
+.character-theme--yuki .archive-item__image-frame {
+    overflow: hidden;
+    border-color: rgba(95,110,82,0.3);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.7),
+        0 8px 18px rgba(95,110,82,0.08);
+}
+
+.character-theme--yuki .character-archive::after {
+    background-image: url("../images/assets/butterfly.png");
+    width: 92px;
+    height: 92px;
+    opacity: 0.14;
+}
+
+/* Navigationも紙タグ風 */
+.character-theme--yuki .character-navigation__link {
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(255,255,255,0.82), transparent 34%),
+        linear-gradient(135deg, rgba(184,197,161,0.14), transparent 48%),
+        rgba(255,253,245,0.94);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.68),
+        0 8px 20px rgba(95,110,82,0.08);
+}
+
+/* スマホでは丸みと装飾を少し抑える */
+@media (max-width: 600px) {
+    .character-theme--yuki .character-page {
+        background-size:
+            126px auto,
+            118px auto,
+            38px auto,
+            28px 28px,
+            100% 100%;
+    }
+
+    .character-theme--yuki .character-panel,
+    .character-theme--yuki .character-portrait {
+        border-radius: 13px;
+    }
+
+    .character-theme--yuki .character-panel::before {
+        border-radius: 8px;
+    }
+
+    .character-theme--yuki .archive-item__image-frame,
+    .character-theme--yuki .character-navigation__link {
+        border-radius: 12px;
+    }
+
+    .character-theme--yuki .character-profile::after,
+    .character-theme--yuki .character-section-grid:first-of-type
+    .character-panel:nth-child(1)::after,
+    .character-theme--yuki .character-section-grid:first-of-type
+    .character-panel:nth-child(2)::after,
+    .character-theme--yuki .character-section-grid:nth-of-type(2)
+    .character-panel:nth-child(1)::after,
+    .character-theme--yuki .character-section-grid:nth-of-type(2)
+    .character-panel:nth-child(2)::after {
+        opacity: 0.12;
+    }
+
+    .character-theme--yuki .character-voice::after,
+    .character-theme--yuki .character-special::after {
+        width: 92px;
+        height: 70px;
+        opacity: 0.14;
+    }
+
+    .character-theme--yuki .character-portrait::after {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        padding: 4px 6px;
+    }
+}
