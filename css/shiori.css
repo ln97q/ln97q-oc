@@ -877,3 +877,258 @@ body.character-theme--shiori {
         content: "MY ONLY LOVE";
     }
 }
+
+
+/* =========================================================
+   SHIORI V3 — BLOOD RED YANDERE OVERRIDES
+   紫ゴシックを維持しつつ、血赤・所有・執着を追加
+   レイアウト・寸法・比率は変更しない
+========================================================= */
+
+:root {
+    --shiori-blood-dark: #3a050b;
+    --shiori-blood: #8f0f20;
+    --shiori-blood-light: #d92d4f;
+    --shiori-blood-glow: rgba(217, 45, 79, 0.42);
+}
+
+body.character-theme--shiori {
+    background:
+        radial-gradient(circle at 10% 8%, rgba(126, 62, 176, 0.31), transparent 25rem),
+        radial-gradient(circle at 88% 13%, rgba(217, 45, 79, 0.19), transparent 23rem),
+        radial-gradient(circle at 48% 72%, rgba(143, 15, 32, 0.13), transparent 30rem),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.012) 0 1px,
+            transparent 1px 5px
+        ),
+        linear-gradient(180deg, #020203 0%, #0d050c 48%, #020203 100%);
+}
+
+.character-theme--shiori .character-hero::after {
+    content: "MENTAL RISK / UNSTABLE";
+    color: var(--shiori-blood-light);
+    text-shadow: 0 0 10px var(--shiori-blood-glow);
+}
+
+.character-theme--shiori .character-hero__eyebrow::after {
+    content: "  /  CHARM INCIDENT FILE";
+    color: rgba(217, 45, 79, 0.82);
+}
+
+.character-theme--shiori .character-hero__divider-mark {
+    color: var(--shiori-blood-light);
+    text-shadow:
+        0 0 10px rgba(217,45,79,0.9),
+        0 0 24px rgba(143,15,32,0.55);
+}
+
+.character-theme--shiori .character-hero__subtitle::after {
+    content: "  /  DO NOT RELEASE";
+    color: rgba(217, 45, 79, 0.74);
+}
+
+.character-theme--shiori .character-panel {
+    background-image:
+        radial-gradient(circle at 96% 4%, rgba(217,45,79,0.12), transparent 18%),
+        radial-gradient(circle at 3% 96%, rgba(143,15,32,0.1), transparent 17%),
+        linear-gradient(var(--shiori-purple-light), var(--shiori-purple-light)),
+        linear-gradient(var(--shiori-purple-light), var(--shiori-purple-light)),
+        linear-gradient(var(--shiori-blood-light), var(--shiori-blood-light)),
+        linear-gradient(var(--shiori-blood-light), var(--shiori-blood-light)),
+        linear-gradient(135deg, rgba(126,62,176,0.1), transparent 38%),
+        linear-gradient(315deg, rgba(217,45,79,0.06), transparent 30%);
+    background-size:
+        100% 100%, 100% 100%,
+        15px 1px, 1px 15px, 15px 1px, 1px 15px,
+        100% 100%, 100% 100%;
+    background-position:
+        0 0, 0 0,
+        left 12px top 12px,
+        left 12px top 12px,
+        right 12px bottom 12px,
+        right 12px bottom 12px,
+        0 0, 0 0;
+    background-repeat: no-repeat;
+}
+
+.character-theme--shiori .section-heading__number {
+    color: var(--shiori-blood-light);
+    text-shadow:
+        0 0 10px rgba(217,45,79,0.66),
+        0 0 20px rgba(143,15,32,0.34);
+}
+
+.character-theme--shiori .section-heading::after {
+    background:
+        linear-gradient(
+            90deg,
+            var(--shiori-blood-light) 0 50px,
+            rgba(183,118,221,0.34) 50px 74%,
+            transparent
+        );
+}
+
+.character-theme--shiori .character-profile .character-panel__inner::after {
+    content: "CHARM DAMAGE\A PROPERTY / MINE";
+    color: var(--shiori-blood-light);
+    border-color: rgba(217,45,79,0.46);
+    background: rgba(58,5,11,0.34);
+    text-shadow: 0 0 8px rgba(217,45,79,0.34);
+}
+
+.character-theme--shiori .character-profile::after {
+    filter:
+        saturate(1.45)
+        hue-rotate(300deg)
+        brightness(1.1);
+}
+
+.character-theme--shiori .character-portrait::before {
+    content: "SUBJECT / SKM                 CHARM INCIDENT";
+    color: #e9a6cf;
+}
+
+.character-theme--shiori .character-portrait::after {
+    content: "MY ONLY LOVE                 DO NOT LEAVE";
+    color: var(--shiori-blood-light);
+    text-shadow:
+        0 1px 5px #000,
+        0 0 8px rgba(217,45,79,0.34);
+}
+
+.character-theme--shiori .character-section-grid:first-of-type
+.character-panel:nth-child(1) .section-heading__text::after {
+    content: "MINE";
+}
+
+.character-theme--shiori .character-section-grid:first-of-type
+.character-panel:nth-child(2) .section-heading__text::after {
+    content: "CHARM FAILURE";
+}
+
+.character-theme--shiori .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(1) .section-heading__text::after {
+    content: "DO NOT TOUCH";
+}
+
+.character-theme--shiori .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(2) .section-heading__text::after {
+    content: "BLACK DYED";
+}
+
+.character-theme--shiori .character-voice .section-heading__text::after {
+    content: "I'M SORRY";
+}
+
+.character-theme--shiori .character-special .section-heading__text::after {
+    content: "DON'T LEAVE";
+}
+
+.character-theme--shiori .character-section-grid .section-heading__text::after,
+.character-theme--shiori .character-voice .section-heading__text::after,
+.character-theme--shiori .character-special .section-heading__text::after {
+    display: block;
+    margin-top: 3px;
+    color: rgba(217,45,79,0.72);
+    font-size: 0.38rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.character-theme--shiori .character-section-grid:first-of-type
+.character-panel:nth-child(1) {
+    border-color: rgba(217,45,79,0.45);
+}
+
+.character-theme--shiori .character-section-grid:first-of-type
+.character-panel:nth-child(2) {
+    background:
+        radial-gradient(circle at 88% 18%, rgba(143,15,32,0.18), transparent 24%),
+        linear-gradient(135deg, rgba(126,62,176,0.1), transparent 40%),
+        rgba(7,5,10,0.98);
+}
+
+.character-theme--shiori .character-section-grid:nth-of-type(2)
+.character-panel:nth-child(1) {
+    box-shadow:
+        inset 0 0 38px rgba(143,15,32,0.13),
+        inset 0 0 0 1px rgba(235,203,248,0.05),
+        inset 0 0 0 6px rgba(0,0,0,0.3),
+        inset 0 0 0 7px rgba(183,118,221,0.25),
+        inset 0 0 0 12px rgba(0,0,0,0.2),
+        inset 0 0 0 13px rgba(217,45,79,0.1),
+        0 18px 44px rgba(0,0,0,0.42);
+}
+
+.character-theme--shiori .character-voice {
+    border-color: rgba(217,45,79,0.52);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(143,15,32,0.2),
+            transparent 34%,
+            rgba(126,62,176,0.08)
+        ),
+        rgba(7,5,10,0.98);
+}
+
+.character-theme--shiori .character-special {
+    border-color: rgba(217,45,79,0.75);
+    background:
+        radial-gradient(circle at 84% 20%, rgba(217,45,79,0.28), transparent 27%),
+        radial-gradient(circle at 38% 118%, rgba(126,62,176,0.34), transparent 48%),
+        linear-gradient(135deg, rgba(143,15,32,0.2), transparent 36%),
+        rgba(10,4,11,0.99);
+    box-shadow:
+        inset 0 0 48px rgba(143,15,32,0.2),
+        inset 0 0 0 1px rgba(235,203,248,0.05),
+        inset 0 0 0 6px rgba(0,0,0,0.3),
+        inset 0 0 0 7px rgba(183,118,221,0.28),
+        inset 0 0 0 12px rgba(0,0,0,0.22),
+        inset 0 0 0 13px rgba(217,45,79,0.15),
+        0 18px 44px rgba(0,0,0,0.45),
+        0 0 30px rgba(217,45,79,0.15);
+}
+
+.character-theme--shiori .archive-item__image-frame {
+    border-color: rgba(217,45,79,0.44);
+    box-shadow:
+        inset 0 0 0 1px rgba(215,166,239,0.08),
+        0 0 12px rgba(217,45,79,0.1);
+}
+
+.character-theme--shiori .character-navigation__link {
+    border-color: rgba(217,45,79,0.34);
+}
+
+.character-theme--shiori .character-navigation__arrow {
+    color: var(--shiori-blood-light);
+}
+
+@media (max-width: 600px) {
+    .character-theme--shiori .character-hero::after {
+        content: "UNSTABLE";
+    }
+
+    .character-theme--shiori .character-hero__eyebrow::after,
+    .character-theme--shiori .character-hero__subtitle::after {
+        content: "";
+    }
+
+    .character-theme--shiori .character-portrait::before {
+        content: "SUBJECT / SKM";
+    }
+
+    .character-theme--shiori .character-portrait::after {
+        content: "DO NOT LEAVE";
+    }
+
+    .character-theme--shiori .character-section-grid .section-heading__text::after,
+    .character-theme--shiori .character-voice .section-heading__text::after,
+    .character-theme--shiori .character-special .section-heading__text::after {
+        font-size: 0.3rem;
+        letter-spacing: 0.1em;
+    }
+}
