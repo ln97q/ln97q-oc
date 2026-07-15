@@ -1,192 +1,71 @@
 /* =========================================================
-   IBUKI THEME
-   御堂羽 一颯：色・背景・装飾のみ
-   レイアウトは layout.css で共通管理
+   IBUKI — ORGANIZATION PERSONNEL DOSSIER
+   一颯専用テーマ完成版
+   セクション構成・カード寸法・共通レスポンシブは layout.css を使用
 ========================================================= */
 
 :root {
-    --ibuki-black-01: #050505;
-    --ibuki-black-02: #090909;
-    --ibuki-black-03: #111010;
-    --ibuki-red-dark: #310609;
-    --ibuki-red-main: #5d0d13;
-    --ibuki-red-light: #8a1b24;
-    --ibuki-gold-dark: #786037;
-    --ibuki-gold-main: #c0a060;
-    --ibuki-gold-light: #e0c98f;
-    --ibuki-ivory: #eee5d2;
-    --ibuki-muted: #9b907e;
-    --ibuki-line: rgba(192, 160, 96, 0.32);
-    --ibuki-line-strong: rgba(224, 201, 143, 0.58);
-    --ibuki-red-line: rgba(138, 27, 36, 0.58);
-    --ibuki-panel: rgba(12, 11, 10, 0.94);
+    --ibuki-void: #030303;
+    --ibuki-black: #070706;
+    --ibuki-panel: rgba(8, 8, 7, 0.965);
+    --ibuki-panel-soft: rgba(13, 11, 9, 0.94);
+    --ibuki-wine: #72131c;
+    --ibuki-red: #a71e2c;
+    --ibuki-red-soft: rgba(167, 30, 44, 0.54);
+    --ibuki-gold-dark: #6f572e;
+    --ibuki-gold: #b99452;
+    --ibuki-gold-light: #e1ca94;
+    --ibuki-ivory: #eee6d6;
+    --ibuki-muted: #948873;
+    --ibuki-line: rgba(185, 148, 82, 0.38);
+    --ibuki-line-strong: rgba(225, 202, 148, 0.68);
 }
+
+/* =========================================================
+   BACKGROUND / OUTER FILE FRAME
+========================================================= */
 
 body.character-theme--ibuki {
     color: var(--ibuki-ivory);
     background:
-        radial-gradient(circle at 18% 8%, rgba(93, 13, 19, 0.26), transparent 27%),
-        radial-gradient(circle at 82% 20%, rgba(120, 96, 55, 0.08), transparent 25%),
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.012) 0 1px, transparent 1px 4px),
-        linear-gradient(180deg, var(--ibuki-black-01) 0%, #0b0909 45%, var(--ibuki-black-01) 100%);
+        radial-gradient(circle at 17% 8%, rgba(114, 19, 28, 0.22), transparent 26rem),
+        radial-gradient(circle at 82% 38%, rgba(185, 148, 82, 0.045), transparent 24rem),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.012) 0 1px,
+            transparent 1px 4px
+        ),
+        #020202;
 }
 
 .character-theme--ibuki .character-page {
     background:
-        linear-gradient(90deg, transparent 49.9%, rgba(192, 160, 96, 0.025) 50%, transparent 50.1%),
-        radial-gradient(circle, rgba(224, 201, 143, 0.04) 0 1px, transparent 1.5px);
-    background-size: 100% 100%, 34px 34px;
+        linear-gradient(90deg, transparent 49.9%, rgba(185,148,82,0.025) 50%, transparent 50.1%),
+        radial-gradient(circle, rgba(225,202,148,0.038) 0 1px, transparent 1.5px);
+    background-size: 100% 100%, 35px 35px;
 }
 
-.character-theme--ibuki .character-hero__eyebrow,
-.character-theme--ibuki .character-hero__subtitle,
-.character-theme--ibuki .section-heading__subtitle,
-.character-theme--ibuki .archive-item__caption {
-    color: var(--ibuki-muted);
-}
-
-.character-theme--ibuki .character-hero__title {
-    color: var(--ibuki-ivory);
-    text-shadow:
-        0 0 22px rgba(93, 13, 19, 0.34),
-        0 1px 0 rgba(224, 201, 143, 0.16);
-}
-
-.character-theme--ibuki .character-hero__divider-line {
-    background: linear-gradient(90deg, transparent, var(--ibuki-gold-main), transparent);
-}
-
-.character-theme--ibuki .character-hero__divider-mark {
-    color: var(--ibuki-gold-light);
-    text-shadow: 0 0 10px rgba(192, 160, 96, 0.45);
-}
-
-.character-theme--ibuki .character-panel,
-.character-theme--ibuki .character-portrait {
-    border-color: var(--ibuki-line);
+.character-theme--ibuki .character-page::before {
+    content: "";
+    position: absolute;
+    inset: 14px 0;
+    z-index: 0;
+    pointer-events: none;
+    border: 1px solid rgba(185,148,82,0.28);
     background:
-        linear-gradient(135deg, rgba(93, 13, 19, 0.08), transparent 38%),
-        var(--ibuki-panel);
-    box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.018),
-        0 18px 45px rgba(0, 0, 0, 0.28);
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) left 9px top 9px / 18px 1px no-repeat,
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) left 9px top 9px / 1px 18px no-repeat,
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) right 9px top 9px / 18px 1px no-repeat,
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) right 9px top 9px / 1px 18px no-repeat,
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) left 9px bottom 9px / 18px 1px no-repeat,
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) left 9px bottom 9px / 1px 18px no-repeat,
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) right 9px bottom 9px / 18px 1px no-repeat,
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)) right 9px bottom 9px / 1px 18px no-repeat;
+    opacity: 0.72;
 }
-
-.character-theme--ibuki .character-portrait {
-    background-color: var(--ibuki-black-03);
-}
-
-.character-theme--ibuki .character-portrait__image {
-    filter: saturate(0.82) contrast(1.04) brightness(0.92);
-}
-
-.character-theme--ibuki .section-heading__number,
-.character-theme--ibuki .section-heading__title,
-.character-theme--ibuki .profile-list__label {
-    color: var(--ibuki-gold-main);
-}
-
-.character-theme--ibuki .section-heading__number {
-    text-shadow: 0 0 9px rgba(192, 160, 96, 0.25);
-}
-
-.character-theme--ibuki .profile-list__row {
-    border-color: rgba(192, 160, 96, 0.18);
-}
-
-.character-theme--ibuki .profile-list__value,
-.character-theme--ibuki .character-copy {
-    color: var(--ibuki-ivory);
-}
-
-.character-theme--ibuki .character-voice {
-    border-color: var(--ibuki-red-line);
-    background:
-        linear-gradient(90deg, rgba(93, 13, 19, 0.2), transparent 32%, transparent 68%, rgba(93, 13, 19, 0.12)),
-        var(--ibuki-panel);
-}
-
-.character-theme--ibuki .character-special {
-    border-color: var(--ibuki-line-strong);
-    background:
-        radial-gradient(circle at 50% 120%, rgba(93, 13, 19, 0.25), transparent 46%),
-        linear-gradient(135deg, rgba(192, 160, 96, 0.08), transparent 42%),
-        var(--ibuki-panel);
-    box-shadow:
-        inset 0 0 30px rgba(93, 13, 19, 0.12),
-        0 18px 45px rgba(0, 0, 0, 0.3);
-}
-
-.character-theme--ibuki .character-special .section-heading__title {
-    color: var(--ibuki-gold-light);
-}
-
-.character-theme--ibuki .archive-track {
-    scrollbar-color: var(--ibuki-gold-dark) rgba(255, 255, 255, 0.04);
-}
-
-.character-theme--ibuki .archive-item {
-    border-color: var(--ibuki-line);
-    background: rgba(8, 8, 8, 0.82);
-}
-
-.character-theme--ibuki .archive-item__image-frame {
-    background: var(--ibuki-black-03);
-}
-
-.character-theme--ibuki .archive-item__image {
-    filter: saturate(0.82) contrast(1.04) brightness(0.9);
-    transition: filter 180ms ease;
-}
-
-.character-theme--ibuki .archive-item:hover .archive-item__image {
-    filter: saturate(0.96) contrast(1.05) brightness(0.98);
-}
-
-.character-theme--ibuki .character-navigation__link {
-    color: var(--ibuki-ivory);
-    border-color: var(--ibuki-line);
-    background:
-        linear-gradient(135deg, rgba(93, 13, 19, 0.08), transparent 48%),
-        rgba(10, 9, 9, 0.9);
-    transition:
-        color 180ms ease,
-        border-color 180ms ease,
-        background-color 180ms ease,
-        box-shadow 180ms ease;
-}
-
-.character-theme--ibuki .character-navigation__arrow {
-    color: var(--ibuki-gold-main);
-}
-
-.character-theme--ibuki .character-navigation__link:hover,
-.character-theme--ibuki .character-navigation__link:focus-visible {
-    color: var(--ibuki-gold-light);
-    border-color: var(--ibuki-line-strong);
-    background-color: rgba(93, 13, 19, 0.14);
-    box-shadow: inset 0 0 22px rgba(93, 13, 19, 0.12);
-}
-
-.character-theme--ibuki .character-navigation__link:focus-visible {
-    outline-color: var(--ibuki-gold-main);
-}
-
-.character-theme--ibuki ::selection {
-    color: var(--ibuki-ivory);
-    background: var(--ibuki-red-main);
-}
-
-.archive-item__image-frame {
-    background: url("../images/archive/ibuki_back.jpeg")
-        center / cover
-        no-repeat;
-}
-
 
 /* =========================================================
-   DOSSIER DECORATION OVERRIDES
-   元デザイン寄せ：配置・寸法は変更しない
+   HERO
 ========================================================= */
 
 .character-theme--ibuki .character-hero {
@@ -199,487 +78,492 @@ body.character-theme--ibuki {
     top: 0;
     font-size: 0.52rem;
     font-weight: 700;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
 }
 
 .character-theme--ibuki .character-hero::before {
     left: 0;
     content: "RESTRICTED ACCESS";
-    color: var(--ibuki-gold-dark);
+    color: var(--ibuki-red);
 }
 
 .character-theme--ibuki .character-hero::after {
     right: 0;
     content: "ACTIVE";
-    color: var(--ibuki-red-light);
+    color: var(--ibuki-red);
 }
 
-.character-theme--ibuki .character-hero__eyebrow {
-    color: var(--ibuki-gold-main);
-}
-
-.character-theme--ibuki .character-hero__eyebrow::after {
-    content: "  /  FILE NO. IBK-002";
-    color: var(--ibuki-muted);
-}
-
-.character-theme--ibuki .character-hero__title {
-    font-family:
-        "Yu Mincho",
-        "Hiragino Mincho ProN",
-        "Hiragino Mincho Pro",
-        serif;
-}
-
-.character-theme--ibuki .character-panel,
-.character-theme--ibuki .character-portrait {
-    box-shadow:
-        inset 0 0 0 1px rgba(223, 201, 143, 0.045),
-        inset 0 0 0 9px rgba(0, 0, 0, 0.16),
-        inset 0 0 0 10px rgba(175, 142, 79, 0.12),
-        0 18px 46px rgba(0, 0, 0, 0.34);
-}
-
-.character-theme--ibuki .character-panel::before {
-    content: "";
-    position: absolute;
-    inset: 8px;
-    pointer-events: none;
-    border: 1px solid rgba(175, 142, 79, 0.14);
-}
-
-.character-theme--ibuki .character-panel::after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 104px;
-    height: 104px;
-    pointer-events: none;
-    background:
-        url("../images/assets/target.png")
-        center / contain
-        no-repeat;
-    opacity: 0.075;
-    filter: sepia(1) saturate(0.55) brightness(1.25);
-}
-
-.character-theme--ibuki .section-heading {
-    position: relative;
-}
-
-.character-theme--ibuki .section-heading::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -8px;
-    height: 1px;
-    background: linear-gradient(
-        90deg,
-        var(--ibuki-red-light),
-        rgba(175, 142, 79, 0.2) 42%,
-        transparent
-    );
-}
-
-.character-theme--ibuki .section-heading__number {
-    color: var(--ibuki-red-light);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.65rem;
-    font-weight: 400;
-    line-height: 1;
-    text-shadow: 0 0 12px rgba(101, 16, 24, 0.48);
-}
-
-.character-theme--ibuki .section-heading__title {
-    color: var(--ibuki-ivory);
-    font-family: Georgia, "Times New Roman", serif;
-    letter-spacing: 0.16em;
-}
-
-.character-theme--ibuki .character-portrait {
-    box-shadow:
-        inset 0 0 0 1px rgba(223, 201, 143, 0.04),
-        inset 0 0 0 9px rgba(0, 0, 0, 0.18),
-        inset 0 0 0 10px rgba(175, 142, 79, 0.22),
-        0 18px 46px rgba(0, 0, 0, 0.34);
-}
-
-.character-theme--ibuki .character-portrait::before {
-    content: "SUBJECT / IBK                                      02";
-    position: absolute;
-    z-index: 2;
-    top: 16px;
-    left: 16px;
-    right: 16px;
-    color: var(--ibuki-gold-main);
-    font-size: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 0.24em;
-    white-space: pre;
-    pointer-events: none;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
-}
-
-.character-theme--ibuki .character-portrait::after {
-    content: "YOUNG HEAD                         CONFIDENTIAL";
-    position: absolute;
-    z-index: 2;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    color: var(--ibuki-gold-light);
-    font-size: 0.48rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    white-space: pre;
-    pointer-events: none;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
-}
-
-.character-theme--ibuki .character-profile::after {
-    opacity: 0.14;
-}
-
-.character-theme--ibuki .character-profile .section-heading__text::before {
-    content: "PERSONAL DATA";
-    display: block;
-    margin-bottom: 2px;
-    color: var(--ibuki-gold-dark);
-    font-size: 0.48rem;
-    font-weight: 700;
-    letter-spacing: 0.28em;
-}
-
-.character-theme--ibuki .character-profile .section-heading__text::after {
-    content: "ACCESS LEVEL / RESTRICTED";
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: var(--ibuki-red-light);
-    font-size: 0.43rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-}
-
-.character-theme--ibuki .character-voice::after {
-    background-image: url("../images/assets/emotion-angry.png");
-    opacity: 0.055;
-    filter: grayscale(1) sepia(1) hue-rotate(320deg) saturate(2);
-}
-
-.character-theme--ibuki .character-special::after {
-    background-image: url("../images/assets/target.png");
-    opacity: 0.12;
-}
-
-.character-theme--ibuki .character-navigation__link {
-    position: relative;
-    box-shadow:
-        inset 0 0 0 1px rgba(223, 201, 143, 0.035),
-        inset 0 0 0 7px rgba(0, 0, 0, 0.14),
-        inset 0 0 0 8px rgba(175, 142, 79, 0.1);
-}
-
-.character-theme--ibuki .character-navigation__link::after {
-    content: "";
-    position: absolute;
-    top: 9px;
-    right: 9px;
-    bottom: 9px;
-    left: 9px;
-    pointer-events: none;
-    border: 1px solid rgba(175, 142, 79, 0.12);
-}
-
-@media (max-width: 600px) {
-    .character-theme--ibuki .character-hero::before,
-    .character-theme--ibuki .character-hero::after {
-        font-size: 0.38rem;
-        letter-spacing: 0.16em;
-    }
-
-    .character-theme--ibuki .character-hero__eyebrow::after {
-        content: "";
-    }
-
-    .character-theme--ibuki .character-panel::after {
-        width: 72px;
-        height: 72px;
-    }
-
-    .character-theme--ibuki .character-profile .section-heading__text::after {
-        display: none;
-    }
-
-    .character-theme--ibuki .character-portrait::before,
-    .character-theme--ibuki .character-portrait::after {
-        font-size: 0.36rem;
-        letter-spacing: 0.14em;
-    }
-
-    .character-theme--ibuki .section-heading__number {
-        font-size: 1.2rem;
-    }
-}
-
-
-/* =========================================================
-   DOSSIER V2 — ORIGINAL DESIGN CLOSER MATCH
-   レイアウト・カード比率・共通寸法は変更しない
-========================================================= */
-
-/* HERO：旧デザインの文言と情報量へ寄せる */
 .character-theme--ibuki .character-hero__eyebrow {
     font-size: 0;
+    color: var(--ibuki-gold);
 }
 
 .character-theme--ibuki .character-hero__eyebrow::before {
     content: "ORGANIZATION PERSONNEL DOSSIER";
     font-size: 0.72rem;
-    color: var(--ibuki-gold-main);
-    letter-spacing: 0.32em;
+    letter-spacing: 0.34em;
 }
 
 .character-theme--ibuki .character-hero__eyebrow::after {
     content: "FILE NO. IBK-002";
     display: block;
     margin-top: 5px;
-    font-size: 0.5rem;
     color: var(--ibuki-muted);
+    font-size: 0.48rem;
     letter-spacing: 0.28em;
 }
 
-.character-theme--ibuki .character-hero::before,
-.character-theme--ibuki .character-hero::after {
-    top: 3px;
+.character-theme--ibuki .character-hero__title {
+    color: var(--ibuki-ivory);
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-weight: 600;
+    text-shadow:
+        0 0 28px rgba(114,19,28,0.36),
+        0 1px 0 rgba(225,202,148,0.2);
 }
 
-/* 見出し：番号を大きく、タイトルと一体化 */
+.character-theme--ibuki .character-hero__subtitle {
+    color: var(--ibuki-muted);
+}
+
+.character-theme--ibuki .character-hero__divider-line {
+    background: linear-gradient(90deg, transparent, var(--ibuki-gold), transparent);
+}
+
+.character-theme--ibuki .character-hero__divider-mark {
+    color: var(--ibuki-gold-light);
+    text-shadow: 0 0 12px rgba(185,148,82,0.55);
+}
+
+/* =========================================================
+   DOSSIER PANELS
+========================================================= */
+
+.character-theme--ibuki .character-panel,
+.character-theme--ibuki .character-portrait {
+    border-color: var(--ibuki-line);
+    background:
+        linear-gradient(135deg, rgba(114,19,28,0.06), transparent 38%),
+        linear-gradient(315deg, rgba(185,148,82,0.035), transparent 32%),
+        var(--ibuki-panel);
+    box-shadow:
+        inset 0 0 0 1px rgba(225,202,148,0.04),
+        inset 0 0 0 7px rgba(0,0,0,0.22),
+        inset 0 0 0 8px rgba(185,148,82,0.22),
+        inset 0 0 0 13px rgba(0,0,0,0.18),
+        inset 0 0 0 14px rgba(185,148,82,0.08),
+        0 17px 42px rgba(0,0,0,0.34);
+}
+
+.character-theme--ibuki .character-panel {
+    background-image:
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)),
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)),
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)),
+        linear-gradient(var(--ibuki-gold), var(--ibuki-gold)),
+        linear-gradient(135deg, rgba(114,19,28,0.06), transparent 38%),
+        linear-gradient(315deg, rgba(185,148,82,0.035), transparent 32%);
+    background-size:
+        15px 1px, 1px 15px, 15px 1px, 1px 15px,
+        100% 100%, 100% 100%;
+    background-position:
+        left 12px top 12px,
+        left 12px top 12px,
+        right 12px bottom 12px,
+        right 12px bottom 12px,
+        0 0, 0 0;
+    background-repeat: no-repeat;
+}
+
+.character-theme--ibuki .character-panel::before {
+    content: "";
+    position: absolute;
+    inset: 11px;
+    pointer-events: none;
+    border: 1px solid rgba(185,148,82,0.17);
+}
+
+.character-theme--ibuki .character-panel::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 112px;
+    height: 112px;
+    pointer-events: none;
+    background: url("../images/assets/target.png") center / contain no-repeat;
+    opacity: 0.105;
+    filter: sepia(1) saturate(0.45) brightness(1.45);
+}
+
+.character-theme--ibuki .character-panel__inner,
+.character-theme--ibuki .character-panel__inner > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
 .character-theme--ibuki .section-heading {
+    position: relative;
     align-items: center;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
+}
+
+.character-theme--ibuki .section-heading::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--ibuki-red) 0 46px,
+            rgba(185,148,82,0.31) 46px 72%,
+            transparent
+        );
 }
 
 .character-theme--ibuki .section-heading__number {
     display: block;
     min-width: auto;
     padding-top: 0;
-    font-size: clamp(1.55rem, 3vw, 2.25rem);
-    color: rgba(154, 32, 43, 0.72);
-    letter-spacing: 0.02em;
+    color: rgba(167,30,44,0.88);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.65rem, 3.2vw, 2.45rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0;
+    text-shadow: 0 0 14px rgba(114,19,28,0.52);
+}
+
+.character-theme--ibuki .section-heading__text::before {
+    content: attr(data-kicker);
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ibuki-gold);
+    font-size: 0.46rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.27em;
+    text-transform: uppercase;
 }
 
 .character-theme--ibuki .section-heading__title {
+    color: var(--ibuki-ivory);
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1rem, 1.8vw, 1.35rem);
+    letter-spacing: 0.15em;
 }
 
-/* 各カードに旧版風の分類ラベルを追加 */
-.character-theme--ibuki .character-section-grid:first-of-type
-.character-panel:nth-child(1) .section-heading__text::before {
-    content: "PERSONAL RECORD";
+.character-theme--ibuki .section-heading__subtitle,
+.character-theme--ibuki .archive-item__caption {
+    color: var(--ibuki-muted);
 }
 
-.character-theme--ibuki .character-section-grid:first-of-type
-.character-panel:nth-child(2) .section-heading__text::before {
-    content: "CLASSIFIED HISTORY";
-}
+/* =========================================================
+   PORTRAIT
+========================================================= */
 
-.character-theme--ibuki .character-section-grid:nth-of-type(2)
-.character-panel:nth-child(1) .section-heading__text::before {
-    content: "ASSOCIATED PERSONS";
-}
-
-.character-theme--ibuki .character-section-grid:nth-of-type(2)
-.character-panel:nth-child(2) .section-heading__text::before {
-    content: "IDENTIFICATION DATA";
-}
-
-.character-theme--ibuki .character-voice .section-heading__text::before {
-    content: "RECORDED STATEMENT";
-}
-
-.character-theme--ibuki .character-special .section-heading__text::before {
-    content: "CLASSIFIED BODY RECORD";
-}
-
-.character-theme--ibuki .character-archive .section-heading__text::before {
-    content: "VISUAL ARCHIVE";
-}
-
-.character-theme--ibuki .character-section-grid .section-heading__text::before,
-.character-theme--ibuki .character-voice .section-heading__text::before,
-.character-theme--ibuki .character-special .section-heading__text::before,
-.character-theme--ibuki .character-archive .section-heading__text::before {
-    display: block;
-    margin-bottom: 2px;
-    color: var(--ibuki-gold-dark);
-    font-size: 0.46rem;
-    font-weight: 700;
-    letter-spacing: 0.28em;
-}
-
-/* 赤い短線＋金の細線 */
-.character-theme--ibuki .section-heading::after {
-    bottom: -5px;
-    height: 1px;
-    background:
-        linear-gradient(
-            90deg,
-            var(--ibuki-red-light) 0 42px,
-            rgba(175, 142, 79, 0.26) 42px 70%,
-            transparent 100%
-        );
-}
-
-/* パネルの内枠を旧版の細い多重線へ */
-.character-theme--ibuki .character-panel,
 .character-theme--ibuki .character-portrait {
-    box-shadow:
-        inset 0 0 0 1px rgba(223, 201, 143, 0.05),
-        inset 0 0 0 7px rgba(0, 0, 0, 0.22),
-        inset 0 0 0 8px rgba(175, 142, 79, 0.18),
-        inset 0 0 0 13px rgba(0, 0, 0, 0.13),
-        inset 0 0 0 14px rgba(175, 142, 79, 0.08),
-        0 18px 46px rgba(0, 0, 0, 0.34);
+    background-color: #060606;
 }
 
-.character-theme--ibuki .character-panel::before {
-    inset: 11px;
-    border-color: rgba(175, 142, 79, 0.19);
-}
-
-/* targetを旧版の見え方に近づける */
-.character-theme--ibuki .character-panel::after {
-    top: 18px;
-    right: 16px;
-    width: 124px;
-    height: 124px;
-    opacity: 0.13;
-}
-
-/* PROFILE専用 */
-.character-theme--ibuki .character-profile .section-heading {
-    padding-right: 44px;
-}
-
-.character-theme--ibuki .character-profile .section-heading__text::after {
-    top: 4px;
-    right: 2px;
-    padding: 3px 5px;
-    border: 1px solid rgba(154, 32, 43, 0.34);
-    background: rgba(101, 16, 24, 0.08);
-}
-
-/* 写真フレーム四隅の情報を見やすく */
 .character-theme--ibuki .character-portrait::before {
     content: "SUBJECT / IBK                                      02";
+    position: absolute;
+    z-index: 2;
     top: 17px;
-    left: 18px;
     right: 18px;
+    left: 18px;
     color: var(--ibuki-gold-light);
+    font-size: 0.48rem;
+    font-weight: 700;
+    letter-spacing: 0.23em;
+    white-space: pre;
+    pointer-events: none;
+    text-shadow: 0 1px 5px #000;
 }
 
 .character-theme--ibuki .character-portrait::after {
     content: "YOUNG HEAD                         CONFIDENTIAL";
-    left: 18px;
+    position: absolute;
+    z-index: 2;
     right: 18px;
     bottom: 17px;
+    left: 18px;
+    color: var(--ibuki-gold-light);
+    font-size: 0.46rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    white-space: pre;
+    pointer-events: none;
+    text-shadow: 0 1px 5px #000;
 }
 
-/* VOICEだけ赤枠にならないよう統一 */
+.character-theme--ibuki .character-portrait__image {
+    filter: saturate(0.72) contrast(1.09) brightness(0.86) sepia(0.07);
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.character-theme--ibuki .character-profile::after {
+    width: 128px;
+    height: 128px;
+    opacity: 0.16;
+}
+
+.character-theme--ibuki .character-profile .character-panel__inner::after {
+    content: "ACCESS LEVEL\A RESTRICTED";
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    right: 22px;
+    color: var(--ibuki-red);
+    font-size: 0.48rem;
+    font-weight: 700;
+    line-height: 1.65;
+    letter-spacing: 0.16em;
+    text-align: right;
+    white-space: pre;
+}
+
+.character-theme--ibuki .character-profile .section-heading {
+    padding-right: 88px;
+}
+
+.character-theme--ibuki .profile-list__row {
+    border-color: rgba(185,148,82,0.22);
+}
+
+.character-theme--ibuki .profile-list__label {
+    color: var(--ibuki-gold);
+}
+
+.character-theme--ibuki .profile-list__value {
+    color: var(--ibuki-ivory);
+    border-color: rgba(185,148,82,0.45);
+}
+
+.character-theme--ibuki .character-copy {
+    color: var(--ibuki-ivory);
+}
+
+/* =========================================================
+   VOICE / SPECIAL
+========================================================= */
+
 .character-theme--ibuki .character-voice {
     border-color: var(--ibuki-line);
-    background:
-        linear-gradient(
-            90deg,
-            rgba(175, 142, 79, 0.055),
-            transparent 32%,
-            transparent 68%,
-            rgba(175, 142, 79, 0.03)
-        ),
-        var(--ibuki-panel);
+    background-color: var(--ibuki-panel);
 }
 
-/* SPECIALは赤ではなく金を主役に */
+.character-theme--ibuki .character-voice::after {
+    background-image: url("../images/assets/target.png");
+    opacity: 0.08;
+}
+
 .character-theme--ibuki .character-special {
     border-color: var(--ibuki-line-strong);
+    background-color: var(--ibuki-panel-soft);
+    box-shadow:
+        inset 0 0 36px rgba(114,19,28,0.11),
+        inset 0 0 0 1px rgba(225,202,148,0.04),
+        inset 0 0 0 7px rgba(0,0,0,0.22),
+        inset 0 0 0 8px rgba(185,148,82,0.22),
+        inset 0 0 0 13px rgba(0,0,0,0.18),
+        inset 0 0 0 14px rgba(185,148,82,0.08),
+        0 17px 42px rgba(0,0,0,0.34);
+}
+
+/* =========================================================
+   ARCHIVE
+========================================================= */
+
+.character-theme--ibuki .archive-track {
+    scrollbar-color: var(--ibuki-gold-dark) rgba(255,255,255,0.04);
+}
+
+.character-theme--ibuki .archive-item {
+    background: rgba(5,5,5,0.9);
+}
+
+.character-theme--ibuki .archive-item__image-frame {
+    border-color: var(--ibuki-line);
+    background: url("../images/archive/ibuki_back.jpeg") center / cover no-repeat;
+    box-shadow:
+        inset 0 0 0 1px rgba(225,202,148,0.08),
+        0 0 0 1px rgba(0,0,0,0.5);
+}
+
+.character-theme--ibuki .archive-item__image {
+    filter: saturate(0.78) contrast(1.05) brightness(0.9);
+    transition: filter 180ms ease, transform 180ms ease;
+}
+
+.character-theme--ibuki .archive-item:hover .archive-item__image {
+    filter: saturate(0.96) contrast(1.06) brightness(1);
+    transform: scale(1.01);
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.character-theme--ibuki .character-navigation__link {
+    position: relative;
+    color: var(--ibuki-gold-light);
+    border-color: var(--ibuki-line);
     background:
-        radial-gradient(
-            circle at 50% 120%,
-            rgba(101, 16, 24, 0.16),
-            transparent 46%
-        ),
-        linear-gradient(
-            135deg,
-            rgba(175, 142, 79, 0.075),
-            transparent 42%
-        ),
-        var(--ibuki-panel);
+        linear-gradient(135deg, rgba(114,19,28,0.08), transparent 46%),
+        rgba(6,6,6,0.96);
+    box-shadow:
+        inset 0 0 0 1px rgba(225,202,148,0.035),
+        inset 0 0 0 7px rgba(0,0,0,0.16),
+        inset 0 0 0 8px rgba(185,148,82,0.12);
 }
 
-/* ナビにも管理ファイル風の上部ラベル */
-.character-theme--ibuki .character-navigation__link--previous::before {
-    content: "RETURN TO INDEX";
-}
-
-.character-theme--ibuki .character-navigation__link--next::before {
-    content: "ASSOCIATED FILE";
-}
-
-.character-theme--ibuki .character-navigation__link::before {
+.character-theme--ibuki .character-navigation__link::after {
+    content: "";
     position: absolute;
-    top: 8px;
-    left: 12px;
-    color: var(--ibuki-gold-dark);
-    font-size: 0.4rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
+    inset: 9px;
+    pointer-events: none;
+    border: 1px solid rgba(185,148,82,0.13);
 }
 
-/* スマホでも番号を表示 */
+.character-theme--ibuki .character-navigation__arrow {
+    color: var(--ibuki-red);
+}
+
+.character-theme--ibuki .character-navigation__link:hover,
+.character-theme--ibuki .character-navigation__link:focus-visible {
+    color: var(--ibuki-ivory);
+    border-color: var(--ibuki-line-strong);
+    box-shadow:
+        inset 0 0 0 1px rgba(225,202,148,0.06),
+        inset 0 0 0 7px rgba(0,0,0,0.16),
+        inset 0 0 0 8px rgba(185,148,82,0.18),
+        inset 0 0 26px rgba(114,19,28,0.13);
+}
+
+/* =========================================================
+   SMARTPHONE DECORATION
+========================================================= */
+
 @media (max-width: 600px) {
-    .character-theme--ibuki .section-heading__number {
-        display: block;
-        font-size: 1.28rem;
+    .character-theme--ibuki .character-page::before {
+        inset-inline: -2px;
     }
 
-    .character-theme--ibuki .section-heading {
-        gap: 8px;
+    .character-theme--ibuki .character-hero::before,
+    .character-theme--ibuki .character-hero::after {
+        top: 2px;
+        font-size: 0.36rem;
+        letter-spacing: 0.14em;
     }
 
     .character-theme--ibuki .character-hero__eyebrow::before {
-        font-size: 0.56rem;
-        letter-spacing: 0.2em;
-    }
-
-    .character-theme--ibuki .character-hero__eyebrow::after {
-        display: block;
-        font-size: 0.4rem;
+        font-size: 0.55rem;
         letter-spacing: 0.18em;
     }
 
-    .character-theme--ibuki .character-panel::after {
-        width: 88px;
-        height: 88px;
-        opacity: 0.11;
-    }
-
-    .character-theme--ibuki .character-profile .section-heading__text::after {
-        display: none;
-    }
-
-    .character-theme--ibuki .character-section-grid .section-heading__text::before,
-    .character-theme--ibuki .character-voice .section-heading__text::before,
-    .character-theme--ibuki .character-special .section-heading__text::before,
-    .character-theme--ibuki .character-archive .section-heading__text::before {
-        font-size: 0.36rem;
+    .character-theme--ibuki .character-hero__eyebrow::after {
+        font-size: 0.38rem;
         letter-spacing: 0.16em;
     }
 
-    .character-theme--ibuki .character-navigation__link::before {
+    .character-theme--ibuki .character-panel::after {
+        width: 74px;
+        height: 74px;
+        opacity: 0.075;
+    }
+
+    .character-theme--ibuki .section-heading {
+        gap: 6px;
+        padding-bottom: 7px;
+    }
+
+    .character-theme--ibuki .section-heading__number {
+        display: block;
+        font-size: 1.15rem;
+    }
+
+    .character-theme--ibuki .section-heading__text::before {
+        font-size: 0.31rem;
+        letter-spacing: 0.12em;
+    }
+
+    .character-theme--ibuki .section-heading__title {
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+    }
+
+    .character-theme--ibuki .section-heading__subtitle {
+        font-size: 0.56rem;
+    }
+
+    .character-theme--ibuki .character-profile .section-heading {
+        padding-right: 0;
+    }
+
+    .character-theme--ibuki .character-profile .character-panel__inner::after {
         display: none;
     }
+
+    .character-theme--ibuki .character-portrait::before,
+    .character-theme--ibuki .character-portrait::after {
+        right: 13px;
+        left: 13px;
+        font-size: 0.32rem;
+        letter-spacing: 0.1em;
+    }
+
+    .character-theme--ibuki .character-portrait::before {
+        content: "SUBJECT / IBK";
+    }
+
+    .character-theme--ibuki .character-portrait::after {
+        content: "YOUNG HEAD       CONFIDENTIAL";
+    }
+
+    .character-theme--ibuki .character-panel,
+    .character-theme--ibuki .character-portrait {
+        box-shadow:
+            inset 0 0 0 1px rgba(225,202,148,0.04),
+            inset 0 0 0 5px rgba(0,0,0,0.2),
+            inset 0 0 0 6px rgba(185,148,82,0.18),
+            inset 0 0 0 9px rgba(0,0,0,0.16),
+            inset 0 0 0 10px rgba(185,148,82,0.07);
+    }
+
+    .character-theme--ibuki .character-panel::before {
+        inset: 8px;
+    }
+}
+
+@media (max-width: 374px) {
+    .character-theme--ibuki .section-heading__number {
+        font-size: 1rem;
+    }
+
+    .character-theme--ibuki .section-heading__title {
+        font-size: 0.68rem;
+    }
+
+    .character-theme--ibuki .section-heading__text::before {
+        display: none;
+    }
+}
+
+.character-theme--ibuki ::selection {
+    color: var(--ibuki-ivory);
+    background: var(--ibuki-wine);
 }
