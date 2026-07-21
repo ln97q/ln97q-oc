@@ -1402,3 +1402,9 @@ a {
     .character-decoration--hajime-pen { right: -2px; bottom: 14px; width: 26px; }
     .character-decoration--hajime-ink { left: -7px; bottom: 32px; width: 36px; }
 }
+
+/* ゆきのボタンを黄色にする */
+.character-card--yuki .character-card__button {
+    background: linear-gradient(135deg, #f1cf79, #dda842) !important;
+    box-shadow: 0 7px 15px rgba(221, 168, 66, 0.3) !important;
+}
