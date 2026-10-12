@@ -1,0 +1,16 @@
+/* 犬丸 琥汰 — shared profile layout */
+.character-theme--kota { --accent:#be9368; color:#625e66; background:linear-gradient(135deg,#fff,#f5f0f7); }
+.character-theme--kota .character-page { background:radial-gradient(circle,#c9b9d133 1px,transparent 1.5px) 0 0/24px 24px; }
+.character-theme--kota .character-hero__title { color:var(--accent); font-family:"Noto Serif JP",serif; }
+.character-theme--kota .character-hero__eyebrow,.character-theme--kota .character-hero__subtitle { color:var(--accent); }
+.character-theme--kota .character-hero__divider-line { background:var(--accent); opacity:.4; }
+.character-theme--kota .character-hero__divider-mark { color:var(--accent); }
+.character-theme--kota .character-panel { border:1px solid #be936866; background:#ffffffdf; border-radius:22px; box-shadow:0 10px 30px #be936818; }
+.character-theme--kota .section-heading__number { color:var(--accent); border:1px solid #be936877; border-radius:50%; }
+.character-theme--kota .section-heading__title,.character-theme--kota .profile-list__label { color:var(--accent); }
+.character-theme--kota .profile-list__row { border-bottom:1px dashed #be936844; }
+.character-theme--kota .character-portrait { padding:18px; border:1px solid #be936866; border-radius:26px; background:#fff; box-shadow:0 12px 30px #be936822; }
+.character-theme--kota .character-portrait__image { object-fit:contain; }
+.character-theme--kota .archive-item__image-frame { border:1px solid #be936866; border-radius:14px; background:#fff; }
+.character-theme--kota .archive-item__image { object-fit:contain; }
+.character-theme--kota .character-navigation__link { color:var(--accent); border:1px solid #be936866; border-radius:999px; background:#fff; }

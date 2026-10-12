@@ -1397,3 +1397,10 @@ a {
     background: linear-gradient(135deg, #f1cf79, #dda842) !important;
     box-shadow: 0 7px 15px rgba(221, 168, 66, 0.3) !important;
 }
+
+.character-card--akari { --accent:#82b9cc; --accent-soft:#82b9cc22; --button-from:#82b9cc; --button-to:#82b9cc; }
+
+.character-card--kota { --accent:#be9368; --accent-soft:#be936822; --button-from:#be9368; --button-to:#be9368; }
+
+.pair-banner__visual--single img {object-fit:contain;}
+.pair-banner--kota-akari {--accent:#82b9cc;}

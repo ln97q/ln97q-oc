@@ -1,0 +1,16 @@
+/* 日々 希莉 — shared profile layout */
+.character-theme--akari { --accent:#82b9cc; color:#625e66; background:linear-gradient(135deg,#fff,#f5f0f7); }
+.character-theme--akari .character-page { background:radial-gradient(circle,#c9b9d133 1px,transparent 1.5px) 0 0/24px 24px; }
+.character-theme--akari .character-hero__title { color:var(--accent); font-family:"Noto Serif JP",serif; }
+.character-theme--akari .character-hero__eyebrow,.character-theme--akari .character-hero__subtitle { color:var(--accent); }
+.character-theme--akari .character-hero__divider-line { background:var(--accent); opacity:.4; }
+.character-theme--akari .character-hero__divider-mark { color:var(--accent); }
+.character-theme--akari .character-panel { border:1px solid #82b9cc66; background:#ffffffdf; border-radius:22px; box-shadow:0 10px 30px #82b9cc18; }
+.character-theme--akari .section-heading__number { color:var(--accent); border:1px solid #82b9cc77; border-radius:50%; }
+.character-theme--akari .section-heading__title,.character-theme--akari .profile-list__label { color:var(--accent); }
+.character-theme--akari .profile-list__row { border-bottom:1px dashed #82b9cc44; }
+.character-theme--akari .character-portrait { padding:18px; border:1px solid #82b9cc66; border-radius:26px; background:#fff; box-shadow:0 12px 30px #82b9cc22; }
+.character-theme--akari .character-portrait__image { object-fit:contain; }
+.character-theme--akari .archive-item__image-frame { border:1px solid #82b9cc66; border-radius:14px; background:#fff; }
+.character-theme--akari .archive-item__image { object-fit:contain; }
+.character-theme--akari .character-navigation__link { color:var(--accent); border:1px solid #82b9cc66; border-radius:999px; background:#fff; }
